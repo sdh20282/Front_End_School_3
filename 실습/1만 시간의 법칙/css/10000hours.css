@@ -1,0 +1,184 @@
+@import url(./reset.css);
+
+@font-face {
+    font-family: 'OTEnjoystoriesBA';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/OTEnjoystoriesBA.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'GmarketSansBold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'GmarketSansMedium';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Noto Sans KR';
+    font-style: normal;
+    font-weight: 400;
+    src: url("https://fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.woff2") format('woff2'),
+    url("https://fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.woff") format('woff'),
+    url("https://fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.otf") format('opentype');
+}
+
+/* Components */
+
+/* share */
+
+.hidden {
+    font-size: 0px;
+}
+
+.main_background {
+    background-color: #5B2386;
+    text-align: center;
+}
+
+/* header */
+
+.title_logo {
+    background-image: url(../img/clock.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 130px 0px 30px 0px;
+    padding: 76px;
+}
+
+.title_logo img {
+    width: 564px;
+    height: 112px;
+}
+
+/* main */
+
+/* share */
+
+.desc_text {
+    font-family: 'GmarketSansMedium';
+    font-size: 25px;
+    color: white;
+
+    margin: 0px 0px 25px 0px;
+}
+
+.btn_input {
+    font-family: 'GmarketSansBold';
+    font-size: 25px;
+    font-weight: bold;
+    color: #5B2386;
+    background-color: #FCEE21;
+
+    border-radius: 30px;
+
+    padding: 13px 50px 13px 50px;
+    margin: 100px 0px 120px 0px;
+
+}
+
+/* section - whatis10000hour */
+
+.whatis10000hour .subtitle_10000hour {
+    font-family: 'OTEnjoystoriesBA';
+    font-size: 36px;
+    color: #F5DF4D;
+
+    margin: 20px;
+}
+
+.whatis10000hour .desc_1000hour {
+    background-image: url(../img/quotes.png);
+    background-position: center;
+    background-repeat: no-repeat;
+
+    font-family: 'GmarketSansMedium';
+    font-size: 17px;
+    color: white;
+    line-height: 180%;
+    letter-spacing: 1px;
+
+    margin: 50px;
+}
+
+.whatis10000hour .desc_1000hour strong{
+    font-weight: bold;
+    font-size: 23px;
+}
+
+/* section - tobeaspecialist */
+
+.tobeaspecialist {
+    margin: 90px 0px 50px 0px;
+}
+
+.tobeaspecialist .user_input {
+    text-align: center;
+    font-family: 'GmarketSansMedium';
+    font-size: 23px;
+
+    border-width: 0px;
+    border-radius: 7px;
+
+    width: 230px;
+    height: 60px;
+    margin: 0px 15px 0px 15px;
+}
+
+.tobeaspecialist .user_input::placeholder {
+    opacity: 50%;
+}
+
+.tobeaspecialist .finger {
+    width: 740px;
+    margin: 0 auto;
+
+    background-image: url(../img/click.png);
+    background-repeat: no-repeat;
+    background-position: right 60%;
+}
+
+/* section - result */
+
+.result .desc_text strong {
+    font-family: 'GmarketSansBold';
+    font-size: 70px;
+}
+
+.result .btn_share {
+    font-family: 'GmarketSansBold';
+    font-size: 25px;
+    font-weight: bold;
+    color: #5B2386;
+    background-color: white;
+
+    border-radius: 30px;
+
+    padding: 18px 50px 13px 50px;
+    margin: 80px 0px 80px 20px;
+}
+
+/* footer */
+
+.extra_info {
+    padding: 0px 0px 70px 0px;
+}
+
+.extra_info .company_logo img {
+    width: 125px;
+    height: 25px;
+    margin: 19px;
+}
+
+.extra_info .copyright {
+    font-size: 12px;
+    color: white;
+    opacity: 80%;
+}
