@@ -171,10 +171,14 @@
     padding: 0px 0px 70px 0px;
 }
 
-.extra_info .company_logo img {
+.extra_info img {
     width: 125px;
     height: 25px;
     margin: 19px;
+
+    display: block;
+
+    margin: 0 auto 20px auto;
 }
 
 .extra_info .copyright {
