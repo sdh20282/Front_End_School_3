@@ -1,5 +1,3 @@
-@import url(./reset.css);
-
 @font-face {
     font-family: 'OTEnjoystoriesBA';
     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/OTEnjoystoriesBA.woff') format('woff');
@@ -32,8 +30,6 @@
 
 /* Components */
 
-/* share */
-
 .hidden {
     font-size: 0px;
 }
@@ -41,6 +37,7 @@
 .main_background {
     background-color: #5B2386;
     text-align: center;
+    margin: 0 auto;
 }
 
 /* header */
@@ -49,140 +46,370 @@
     background-image: url(../img/clock.png);
     background-position: center;
     background-repeat: no-repeat;
-    margin: 130px 0px 30px 0px;
-    padding: 76px;
+    background-size: 20%;
+
+    margin-top: 4%;
+    padding: 10%;
 }
 
 .title_logo img {
-    width: 564px;
-    height: 112px;
+    width: 60%;
 }
 
 /* main */
 
-/* share */
-
-.desc_text {
-    font-family: 'GmarketSansMedium';
-    font-size: 25px;
-    color: white;
-
-    margin: 0px 0px 25px 0px;
-}
-
-.btn_input {
-    font-family: 'GmarketSansBold';
-    font-size: 25px;
-    font-weight: bold;
-    color: #5B2386;
-    background-color: #FCEE21;
-
-    border-radius: 30px;
-
-    padding: 13px 50px 13px 50px;
-    margin: 100px 0px 120px 0px;
-
-}
-
 /* section - whatis10000hour */
+
+.whatis10000hour {
+    margin-bottom: 7%;
+}
 
 .whatis10000hour .subtitle_10000hour {
     font-family: 'OTEnjoystoriesBA';
-    font-size: 36px;
+    font-size: 3vw;
     color: #F5DF4D;
 
-    margin: 20px;
+    margin-bottom: 4%;
 }
 
 .whatis10000hour .desc_1000hour {
     background-image: url(../img/quotes.png);
     background-position: center;
     background-repeat: no-repeat;
+    background-size: 41%;
 
     font-family: 'GmarketSansMedium';
-    font-size: 17px;
+    font-size: 1.4vw;
     color: white;
-    line-height: 180%;
-    letter-spacing: 1px;
-
-    margin: 50px;
+    line-height: 2em;
+    
+    padding-top: 3%;
 }
 
 .whatis10000hour .desc_1000hour strong{
     font-weight: bold;
-    font-size: 23px;
+    font-size: 2vw;
 }
 
 /* section - tobeaspecialist */
 
-.tobeaspecialist {
-    margin: 90px 0px 50px 0px;
+.desc_text {
+    font-family: 'GmarketSansMedium';
+    font-size: 2vw;
+    color: white;
+    line-height: 4em;
+}
+
+.btn_start {
+    font-family: 'GmarketSansBold';
+    font-size: 2.1vw;
+    font-weight: bold;
+    color: #5B2386;
+
+    background-color: #FCEE21;
+    border-radius: 6% 6% 6% 6% / 50% 50% 50% 50%;
+    box-shadow: 0 0 1em 0 #666;
+
+    height: 2.5em;
+    padding: 0 6%;
 }
 
 .tobeaspecialist .user_input {
     text-align: center;
     font-family: 'GmarketSansMedium';
-    font-size: 23px;
+    font-size: 2vw;
 
-    border-width: 0px;
-    border-radius: 7px;
+    border-radius: 3% 3% 3% 3% / 15% 15% 15% 15%;
 
-    width: 230px;
-    height: 60px;
-    margin: 0px 15px 0px 15px;
+    width: 15%;
+    height: 2.3em;
+    padding: 0 3%;
+    margin: 0 1%;
 }
 
 .tobeaspecialist .user_input::placeholder {
     opacity: 50%;
 }
 
-.tobeaspecialist .finger {
-    width: 740px;
+.tobeaspecialist .desc_text {
+    margin-bottom: -1%;
+}
+
+.tobeaspecialist .finger_image {
+    width: 60%;
     margin: 0 auto;
 
     background-image: url(../img/click.png);
     background-repeat: no-repeat;
-    background-position: right 60%;
+    background-position: 94% 70%;
+    background-size: 8%;
+
+    margin: 4% auto 8%;
+    padding: 5%;
 }
 
 /* section - result */
 
+.result {
+    margin-bottom: 10%;
+}
+
 .result .desc_text strong {
     font-family: 'GmarketSansBold';
-    font-size: 70px;
+    font-weight: bold;
+    font-size: 6vw;
+
+    padding: 0 0.7% 0 0.7%;
+    vertical-align: middle;
+}
+
+.result .btn_start{
+    border-radius: 8% 8% 8% 8% / 50% 50% 50% 50%;
+    padding: 0 4%;
 }
 
 .result .btn_share {
     font-family: 'GmarketSansBold';
-    font-size: 25px;
+    font-size: 2.1vw;
     font-weight: bold;
     color: #5B2386;
+
     background-color: white;
+    border-radius: 15% 15% 15% 15% / 50% 50% 50% 50%;
+    box-shadow: 0 0 1em 0 #666;
 
-    border-radius: 30px;
+    height: 2.5em;
+    padding: 0 4%;
 
-    padding: 18px 50px 13px 50px;
-    margin: 80px 0px 80px 20px;
+    margin-top: 7%;
+    margin-left: 2%;
 }
 
 /* footer */
 
 .extra_info {
-    padding: 0px 0px 70px 0px;
+    margin-bottom: 5%;
 }
 
 .extra_info img {
-    width: 125px;
-    height: 25px;
-    margin: 19px;
+    width: 11%;
+    margin: 0 auto;
 
     display: block;
-
-    margin: 0 auto 20px auto;
 }
 
 .extra_info .copyright {
-    font-size: 12px;
+    font-size: 2vw;
     color: white;
+    line-height: 1.5em;
     opacity: 80%;
+
+    scale: 50%;
+}
+
+/* toggle */
+
+.toggle {
+    width: 40%;
+    background-color: white;
+
+    margin: 0 auto;
+    padding: 5%;
+
+    border-radius: 5%;
+    box-shadow: 0 0 1em 0 #666;
+
+    text-align: center;
+
+    margin-bottom: 5%;
+}
+
+.toggle .toggle_title {
+    font-family: 'OTEnjoystoriesBA';
+    font-size: 5vw;
+    color: #5B2386;
+
+    margin-bottom: 1%;
+}
+
+.toggle .toggle_desc {
+    font-family: 'OTEnjoystoriesBA';
+    font-size: 2vw;
+    color: #5B2386;
+
+    margin-bottom: 5%;
+}
+
+.toggle img {
+    width: 60%;
+    margin-bottom: 5%;
+}
+
+.toggle .btn_start {
+    font-size: 1.8vw;
+    margin: 8% 0 2%;
+}
+
+/* 반응형 */
+
+@media ( max-width: 725px ) {
+    .title_logo {
+        background-size: 31%;
+        margin-top: 10%;
+    }
+
+    .title_logo img {
+        width: 90%;
+        height: 10%;
+    }
+
+    .whatis10000hour {
+        margin-top: 10%;
+        margin-bottom: 0%;
+    }
+
+    .whatis10000hour .subtitle_10000hour {
+        font-size: 6.2vw;
+        margin-bottom: 15%;
+    }
+
+    .whatis10000hour .desc_1000hour {
+        background-size: 100%;
+
+        font-size: 4.2vw;
+        line-height: 2em;
+        
+        padding-top: 3%;
+        scale: 90%;
+
+        margin-bottom: 20%;
+    }
+
+    .whatis10000hour .desc_1000hour strong{
+        font-size: 5vw;
+    }
+
+    .desc_text {
+        font-size: 4vw;
+        margin-bottom: 0;
+        scale: 100%;
+        line-height: 3em;
+    }
+
+    .tobeaspecialist .desc_text span {
+        display: block;
+    }
+
+    .tobeaspecialist .user_input {
+        font-size: 4vw;
+
+        border-radius: 3% 3% 3% 3% / 15% 15% 15% 15%;
+
+        width: 40%;
+        height: 2.3em;
+        margin: 0;
+    }
+
+    .tobeaspecialist .finger_image {
+        background-position: 96% 88%;
+        background-size: 10%;
+
+        width: 100%;
+        padding: 5% 0;
+        margin: 10% auto 15%;
+    }
+
+    .tobeaspecialist .finger_image .btn_start  {
+        font-size: 4vw;
+
+        border-radius: 4% 4% 4% 4% / 15% 15% 15% 15%;
+
+        height: 3em;
+        padding: 5% 10% 12%;
+    }
+
+    .tobeaspecialist .finger_image .btn_start span {
+        display: block;
+    }
+
+    /* section - result */
+
+    .result {
+        margin-bottom: 30%;
+    }
+
+    .result .desc_text strong {
+        font-size: 7vw;
+
+        padding: 0;
+    }
+    .result .btn_start{
+        font-size: 4vw;
+        padding: 0 5%;
+    }
+
+    .result .btn_share {
+        font-size: 4vw;
+        padding: 0 5%;
+        margin-top: 15%;
+        margin-left: 3%;
+    }
+
+    .extra_info {
+        margin-bottom: 20%;
+    }
+
+    .extra_info img {
+        width: 25%;
+        margin-bottom: 4%;
+    }
+
+    .extra_info .copyright {
+        font-size: 2vw;
+        line-height: 1.5em;
+        opacity: 80%;
+
+        scale: 100%;
+    }
+
+    .toggle {
+        width: 40%;
+
+        margin: 0 auto;
+        padding: 5%;
+
+        border-radius: 7% 7% 7% 7% / 5% 5% 5% 5%;
+        margin-bottom: 5%;
+    }
+
+    .toggle .toggle_title {
+        font-size: 10vw;
+        margin-bottom: 1%;
+    }
+
+    .toggle .toggle_title span {
+        font-size: 0;
+    }
+
+    .toggle .toggle_desc {
+        font-size: 5vw;
+
+        margin-bottom: 5%;
+    }
+
+    .toggle img {
+        width: 100%;
+        margin-bottom: 5%;
+    }
+
+    .toggle .btn_start {
+        font-size: 2vw;
+        line-height: 1.2em;
+        padding: 7% 17% 18% 17%;
+        border-radius: 4% 4% 4% 4% / 15% 15% 15% 15%;
+    }
+
+    .toggle .btn_start span {
+        display: block;
+    }
 }
