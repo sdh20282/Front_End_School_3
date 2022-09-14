@@ -24,8 +24,8 @@
     font-style: normal;
     font-weight: 400;
     src: url("https://fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.woff2") format('woff2'),
-    url("https://fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.woff") format('woff'),
-    url("https://fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.otf") format('opentype');
+        url("https://fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.woff") format('woff'),
+        url("https://fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.otf") format('opentype');
 }
 
 /* Components */
@@ -81,12 +81,12 @@
     font-family: 'GmarketSansMedium';
     font-size: 1.4vw;
     color: white;
-    line-height: 2em;
-    
+    line-height: 2;
+
     padding-top: 3%;
 }
 
-.whatis10000hour .desc_1000hour strong{
+.whatis10000hour .desc_1000hour strong {
     font-weight: bold;
     font-size: 2vw;
 }
@@ -163,7 +163,7 @@
     vertical-align: middle;
 }
 
-.result .btn_start{
+.result .btn_start {
     border-radius: 8% 8% 8% 8% / 50% 50% 50% 50%;
     padding: 0 4%;
 }
@@ -252,7 +252,7 @@
 
 /* 반응형 */
 
-@media ( max-width: 725px ) {
+@media (max-width: 725px) {
     .title_logo {
         background-size: 31%;
         margin-top: 10%;
@@ -278,14 +278,14 @@
 
         font-size: 4.2vw;
         line-height: 2em;
-        
+
         padding-top: 3%;
         scale: 90%;
 
         margin-bottom: 20%;
     }
 
-    .whatis10000hour .desc_1000hour strong{
+    .whatis10000hour .desc_1000hour strong {
         font-size: 5vw;
     }
 
@@ -318,7 +318,7 @@
         margin: 10% auto 15%;
     }
 
-    .tobeaspecialist .finger_image .btn_start  {
+    .tobeaspecialist .finger_image .btn_start {
         font-size: 4vw;
 
         border-radius: 4% 4% 4% 4% / 15% 15% 15% 15%;
@@ -342,7 +342,8 @@
 
         padding: 0;
     }
-    .result .btn_start{
+
+    .result .btn_start {
         font-size: 4vw;
         padding: 0 5%;
     }
