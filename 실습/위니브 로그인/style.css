@@ -1,0 +1,140 @@
+/* Font */
+
+@import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css);
+
+/* Reset */
+
+html, body, h1, h2, p, img, a {
+    margin: 0;
+	padding: 0;
+	border: 0;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+body {
+	line-height: 1;
+}
+
+button {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* Contents */
+
+.clearfix::before,
+.clearfix::after {
+    content:'';
+	display:block;
+	clear:both;
+}
+
+.blind {
+    position: absolute;
+    clip: rect(0 0 0 0);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+}
+
+.login_window {
+    width: 350px;
+
+    padding: 19px 16px 18px 16px;
+    margin: 30% auto;
+
+    border: 1px solid #DBDBDB;
+    border-radius: 7px;
+    box-sizing: border-box;
+
+    position: relative;
+}
+
+.login_window .title {
+    font-family: 'Spoqa Han Sans Neo', 'sans-serif';
+    font-size: 12px;
+
+    margin-bottom: 6%;
+}
+
+.login_window .loginbtn {
+    width: 100%;
+    height: 40px;
+
+    margin: auto 0;
+
+    font-family: 'Spoqa Han Sans Neo', 'sans-serif';
+    font-size: 12px;
+    color: white;
+
+    border-width: 0;
+    border-radius: 7px;
+
+    background-color: #711BFF;
+}
+
+.login_window .loginbtn img {
+    width: 64px;
+    height: 18px;
+
+    vertical-align: -20%;
+}
+
+.login_window .extra_menu {
+    margin-top: 6%;
+}
+
+.login_window .extra_menu a {
+    font-family: 'Spoqa Han Sans Neo', 'sans-serif';
+    font-size: 12px;
+    color: #767676;
+}
+
+.login_window .extra_menu img{
+    width: 16px;
+    height: 16px;
+}
+
+.login_window .extra_menu .lock_icon {
+    float: left;
+}
+
+.login_window .extra_menu .user_icon {
+    float: right;
+}
+
+.login_window .extra_menu .find_id {
+    float: left;
+
+    position: relative;
+    top: 2px;
+
+    padding-left: 4px;
+    padding-right: 6px;
+
+    border-right: 1px solid #767676;
+}
+
+.login_window .extra_menu .find_pw {
+    float: left;
+
+    position: relative;
+    top: 2px;
+
+    padding-left: 6px;
+}
+
+.login_window .extra_menu .join {
+    float: right;
+
+    position: relative;
+    top: 2px;
+
+    padding-left: 6px;
+}
