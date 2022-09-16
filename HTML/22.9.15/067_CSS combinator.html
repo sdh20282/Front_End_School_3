@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+            /* 입접 형제 콤비네이터 */
+            /* h1 + ul {
+                color: red;
+            } */
+
+            /* 일반 형제 콤비네이터 */
+            h1 ~ ul {
+                color: red;
+            }
+        </style>
+    </head>
+    <body>
+        <ul>
+            <li>hello world 1</li>
+            <li>hello world</li>
+            <li>hello world</li>
+        </ul>
+        <h1>hello world</h1>
+        <ul>
+            <li>hello world 2</li>
+            <li>hello world</li>
+            <li>hello world</li>
+        </ul>
+        <ul>
+            <li>hello world 3</li>
+            <li>hello world</li>
+            <li>hello world</li>
+        </ul>
+        <h2>hello world</h2>
+        <ul>
+            <li>hello world 4</li>
+            <li>hello world</li>
+            <li>hello world</li>
+        </ul>
+        <div>
+            <ul>
+                <li>hello world 5</li>
+                <li>hello world</li>
+                <li>hello world</li>
+            </ul>
+        </div>
+    </body>
+</html>

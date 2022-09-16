@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <style>
+        .one {
+            font-size: 1cm;  /* 1cm = 37.8px */
+        }
+        .two {
+            font-size: 10mm; /* 37.8px */
+        }
+        .three {
+            font-size: 40Q;  /* Quarter-millimeters. 1Q = 1/40 of 1cm. 37.8px */
+        }
+        .four {
+            /* Inches. 1in = 2.54cm = 96px */
+            font-size: 0.4in;
+        }
+        .five {
+            line-height: 1;
+            font-family: 'Pacifico', cursive;
+            margin: 0;
+            padding: 0;
+            font-size: 1ex;
+        }
+				/* 그 외에도 여러 단위가 있습니다.
+        pc	Picas	1pc = 1/6th of 1in
+        pt	포인트	1pt = 1/72th of 1in
+        px	픽셀	1px = 1/96th of 1in 
+        */
+    </style>
+</head>
+<body>
+    <!-- 고정 -->
+    <p class="one">hello</p>
+    <p class="two">hello</p>
+    <p class="three">hello</p>
+    <p class="four">hello</p>
+    <!-- 가변 -->
+    <p class="five">hello x y</p>
+    <p class="five">hello x y</p>
+    <p class="five">hello x y</p>
+</body>
+</html>

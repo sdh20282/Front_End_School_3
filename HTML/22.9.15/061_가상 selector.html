@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        /* 0부터 시작하지 않음 */
+        /* 어떤 프로그래밍 언어를 배우더라도 넘버링은 0부터 */
+        /* div:nth-child(1) {
+            background-color: red;
+        } */
+
+
+        /* div:nth-child(n) {
+            background-color: red;
+        } */
+
+        /* 그렇지만 n은 0부터 시작, 증가 */
+        /* div:nth-child(2n) {
+            background-color: red;
+        } */
+        /* div:nth-child(3n) {
+            background-color: red;
+        } */
+        /* div:nth-child(2n + 1) {
+            background-color: red;
+        } */
+
+        /* 키워드도 사용 가능 */
+        /* odd 홀수, even 짝수 */
+        /* div:nth-child(odd) {
+            background-color: red;
+        } */
+
+        /* a:visited {
+            color: green;
+        } */
+
+        /* 부정 가상 선택자 */
+        div:not(.test) {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 
+        가상 클래스 선택자 : 클래스가 없는데 있는 것처럼 처리 (콜론 1개)
+
+        가상 요소 선택자 : 요소가 없는데 있는 것처럼 처리 (콜론 2개)
+     -->
+
+    <!-- <div>hello</div>
+    <div>hello</div>
+    <div>hello</div>
+    <div>hello</div>
+    <div>hello</div>
+    <div>hello</div> -->
+
+    <!-- <a href="https://paullab.co.kr">hello</a> -->
+
+    <div class="temp">hi</div>
+    <div class="test">hi</div>
+</body>
+
+</html>

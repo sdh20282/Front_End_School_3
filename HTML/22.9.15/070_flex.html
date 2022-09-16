@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+        /* 1차원 배열 : flex */
+        /* 2차원 배열 : grid */
+        div {
+            width: 300px;
+            height: 300px;
+        }
+
+        .one {
+            display: flex;
+            flex-direction: row;
+        }
+
+        .two {
+            display: flex;
+            flex-direction: row-reverse;
+        }
+
+        .three {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .four {
+            display: flex;
+            flex-direction: column-reverse;
+        }
+
+        .item {
+            width: 50px;
+            height: 50px;
+            background-color: aquamarine;
+            border: 3px solid black;
+        }
+    </style>
+</head>
+<body>
+    <div class="one">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+        <div class="item">6</div>
+    </div>
+    <div class="two">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+        <div class="item">6</div>
+    </div>
+    <div class="three">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+        <div class="item">6</div>
+    </div>
+    <div class="four">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+        <div class="item">6</div>
+    </div>
+</body>
+</html>

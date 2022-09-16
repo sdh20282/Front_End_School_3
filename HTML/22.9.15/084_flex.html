@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <style>
+            .container {
+                display: flex;
+            }
+            .item {
+                /* width를 지정할 경우 화면에 나타나는 텍스트와 관계 없이 width를 기준으로 여백이 잡힘 */
+                width: 50px;
+                height: 50px;
+                background-color: aqua;
+                border: 1px solid black;
+            }
+            .item:nth-child(1) {
+                flex-grow: 3;
+            }
+            .item:nth-child(2) {
+                flex-grow: 2;
+            }
+            .item:nth-child(3) {
+                flex-grow: 1;
+            }
+            .item:nth-child(4) {
+                flex-grow: 1;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="item">Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio rem, rerum nesciunt tenetur reiciendis earum dolores omnis? Pariatur fugit veniam nemo quas esse maiores, laboriosam veritatis modi aliquid voluptates laborum.</div>
+            <div class="item">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto suscipit quam molestiae quia ipsum. Sequi laboriosam id recusandae fugit, tempora eveniet in quia quidem, voluptatibus obcaecati dignissimos debitis delectus excepturi?</div>
+            <div class="item">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione repellendus ad nesciunt unde! Id reiciendis iste tempora recusandae, dolorum accusamus similique velit, quod ipsam hic dicta minus eveniet odio quo?</div>
+            <div class="item">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odit fuga consequuntur rerum repellendus quia facere. Numquam facilis, facere hic, sunt perferendis et labore tenetur itaque in necessitatibus eaque incidunt error.</div>
+        </div>
+    </body>
+</html>

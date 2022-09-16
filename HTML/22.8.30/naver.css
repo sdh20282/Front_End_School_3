@@ -1,0 +1,1354 @@
+.ly_inputko {
+	position: absolute;
+	top: 38px;
+	left: 404px;
+	z-index: 900;
+	width: 313px;
+	padding: 0 10px;
+	border: 1px solid #b8b8b8;
+	line-height: 14px;
+	background-color: #f6f6f6;
+}
+
+.ly_inputko.ly_inputko_over {
+	border: 1px solid #72747f;
+	cursor: move;
+}
+
+.ly_inputko button {
+	border: 0;
+	background: none;
+	cursor: pointer;
+}
+
+.ly_inputko .tab_inkey {
+	display: inline-block;
+	position: absolute;
+	top: 15px;
+	left: 10px;
+	width: 78px;
+	height: 11px;
+	background: url(https://ssl.pstatic.net/sstatic/search/img3/btn_sp_v3.png) no-repeat -80px -660px;
+}
+
+.ly_inputko .tab_inkey button {
+	display: block;
+	width: 78px;
+	height: 11px;
+}
+
+.ly_inputko .inkeyon {
+	background-position: -80px -640px;
+}
+
+.ly_inputko .tab_inms {
+	display: inline-block;
+	position: absolute;
+	top: 15px;
+	left: 108px;
+	width: 78px;
+	height: 11px;
+	background: url(https://ssl.pstatic.net/sstatic/search/img3/btn_sp_v3.png) no-repeat -174px -660px;
+}
+
+.ly_inputko .tab_inms button {
+	display: block;
+	width: 78px;
+	height: 11px;
+}
+
+.ly_inputko .inmson {
+	background-position: -174px -640px;
+}
+
+.ly_inputko .bar {
+	position: absolute;
+	top: 16px;
+	left: 93px;
+}
+
+.ly_inputko .inputko_info {
+	clear: both;
+	position: relative;
+	z-index: 2;
+	width: 100%;
+	padding: 9px 0 0;
+	background: #f6f6f6 url(https://ssl.pstatic.net/sstatic/search/img3/bg_sp_x.gif) repeat-x;
+}
+
+.ly_inputko .inputko_info li {
+	padding: 2px 0 0 8px;
+	background: url(https://ssl.pstatic.net/sstatic/search/img3/bu_sp.gif) no-repeat 0 -393px;
+	font-size: 11px;
+	color: #333;
+	letter-spacing: -1px;
+	text-align: left;
+}
+
+.ly_inputko .inputko_info li span {
+	display: inline-block;
+	width: 9px;
+	height: 9px;
+	*height: 11px;
+	margin: 0 1px 0 2px;
+	background: url(https://ssl.pstatic.net/sstatic/search/img3/bu_sp.gif) no-repeat 0 -60px;
+}
+
+.ly_inputko .inputko_info li em {
+	color: #666;
+}
+
+.ly_inputko .btn_ly_cl {
+	position: absolute;
+	top: 12px;
+	right: 12px;
+	width: 12px;
+	height: 12px;
+	background: url(https://ssl.pstatic.net/sstatic/search/img3/btn_sp_v3.png) no-repeat -60px -80px;
+}
+
+.ly_inputko .btn_ly_cl button {
+	width: 12px;
+	height: 12px;
+}
+
+.ly_inputko .setkorhelp {
+	margin: 4px 0 12px 5px;
+	text-align: left;
+}
+
+.ly_inputko .setkorhelp a {
+	font-size: 11px;
+	color: #666;
+	letter-spacing: -1px;
+	text-decoration: underline;
+}
+
+/* keyboard */
+.ly_inputko .inputko_keyboard {
+	width: 313px;
+	margin-top: 39px;
+	background-color: #f6f6f6;
+}
+
+.ly_inputko .keyboard {
+	position: relative;
+	z-index: 2;
+	height: 105px;
+	padding-bottom: 14px;
+	background-color: #f6f6f6;
+}
+
+.ly_inputko .keyboard_info {
+	overflow: auto;
+	width: 313px;
+	height: 105px;
+}
+
+.ly_inputko .keyboard_info h3 {
+	font-size: 12px;
+}
+
+.ly_inputko .keyboard_info h4 {
+	clear: both;
+	font-size: 11px;
+}
+
+.ly_inputko .keyboard_info li {
+	float: left;
+	margin-right: 5px;
+	font-size: 11px;
+}
+
+.ly_inputko .keyboard_img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 313px;
+	height: 105px;
+	background: url(https://ssl.pstatic.net/sstatic/search/img3/bg_sp.gif) no-repeat;
+}
+
+.ly_inputko .inputko_keyboard .setkorhelp {
+	position: relative;
+	z-index: 2;
+	margin: 0 0 0 8px;
+	padding: 4px 0 12px;
+	background-color: #f6f6f6;
+}
+
+/* mouse */
+.ly_inputko .inputko_mouse {
+	width: 313px;
+	margin-top: 57px;
+}
+
+.ly_inputko .inputko_mouse .btn_inko {
+	position: absolute;
+	z-index: 1;
+	width: 25px;
+	height: 25px;
+	background: url(https://ssl.pstatic.net/sstatic/search/img3/btn_sp_v3.png) no-repeat 0 -280px;
+}
+
+.ly_inputko .inputko_mouse .btn_inko button {
+	width: 25px;
+	height: 25px;
+}
+
+.ly_inputko .inputko_mouse .inputko_info {
+	z-index: 1;
+	margin-top: 10px;
+}
+
+.ly_inputko .inputko_mouse .bar2 {
+	position: absolute;
+	top: 39px;
+	left: 34px;
+	color: #ddd;
+}
+
+.ly_inputko .inputko_mouse .inputko_info li {
+	padding: 2px 0 0 4px;
+	background: none;
+}
+
+.ly_inputko .mouse_kor, .mouse_eng {
+	display: none;
+}
+
+.ly_inputko .btn_kor {
+	position: absolute;
+	top: 40px;
+	left: 11px;
+	z-index: 1;
+	width: 22px;
+	height: 10px;
+	background: url(https://ssl.pstatic.net/sstatic/search/img3/btn_sp_v3.png) no-repeat -380px -40px;
+}
+
+.ly_inputko .btn_kor_on {
+	position: absolute;
+	top: 40px;
+	left: 11px;
+	z-index: 1;
+	width: 22px;
+	height: 10px;
+	background: url(https://ssl.pstatic.net/sstatic/search/img3/btn_sp_v3.png) no-repeat -420px -40px;
+}
+
+.ly_inputko .btn_eng {
+	position: absolute;
+	top: 40px;
+	left: 43px;
+	width: 22px;
+	height: 10px;
+	background: url(https://ssl.pstatic.net/sstatic/search/img3/btn_sp_v3.png) no-repeat -380px -60px;
+}
+
+.ly_inputko .btn_eng_on {
+	position: absolute;
+	top: 40px;
+	left: 43px;
+	width: 22px;
+	height: 10px;
+	background: url(https://ssl.pstatic.net/sstatic/search/img3/btn_sp_v3.png) no-repeat -420px -60px;
+}
+
+.ly_inputko .btn_kor button, .ly_inputko .btn_kor_on button, .ly_inputko .btn_eng button, .ly_inputko .btn_eng_on button {
+	display: block;
+	width: 22px;
+	height: 11px;
+}
+
+.ly_inputko .btn_mouse {
+	overflow: hidden;
+	clear: both;
+	width: 131px;
+	height: 20px;
+	_height: 27px;
+	margin: 0 auto;
+	padding-top: 7px;
+}
+
+.ly_inputko .btn_space {
+	display: inline-block;
+	width: 47px;
+	height: 20px;
+	background: url(https://ssl.pstatic.net/sstatic/search/img3/btn_sp_v3.png) no-repeat -160px -40px;
+}
+
+.ly_inputko .btn_space button {
+	width: 47px;
+	height: 20px;
+}
+
+.ly_inputko .btn_space_over {
+	background-position: -160px -60px;
+}
+
+.ly_inputko .btn_del {
+	display: inline-block;
+	width: 39px;
+	height: 20px;
+	margin-left: 3px;
+	background: url(https://ssl.pstatic.net/sstatic/search/img3/btn_sp_v3.png) no-repeat -220px -40px;
+}
+
+.ly_inputko .btn_del button {
+	width: 39px;
+	height: 20px;
+}
+
+.ly_inputko .btn_del_over {
+	background-position: -220px -60px;
+}
+
+.ly_inputko .btn_reset {
+	display: inline-block;
+	width: 39px;
+	height: 20px;
+	margin-left: 3px;
+	background: url(https://ssl.pstatic.net/sstatic/search/img3/btn_sp_v3.png) no-repeat -260px -40px;
+}
+
+.ly_inputko .btn_reset button {
+	width: 39px;
+	height: 20px;
+}
+
+.ly_inputko .btn_reset_over {
+	background-position: -260px -60px;
+}
+
+.ly_inputko .number {
+	overflow: hidden;
+	float: left;
+	_float: none;
+	position: relative;
+	width: 313px;
+	height: 28px;
+	background: url(https://ssl.pstatic.net/sstatic/search/img3/bg_sp.gif) no-repeat 0 -202px;
+}
+
+.ly_inputko .number .num {
+	top: 1px;
+	left: 1px;
+	background-position: 0 -400px;
+}
+
+.ly_inputko .number .num2 {
+	top: 1px;
+	left: 27px;
+	background-position: -40px -400px;
+}
+
+.ly_inputko .number .num3 {
+	top: 1px;
+	left: 53px;
+	background-position: -80px -400px;
+}
+
+.ly_inputko .number .num4 {
+	top: 1px;
+	left: 79px;
+	background-position: -120px -400px;
+}
+
+.ly_inputko .number .num5 {
+	top: 1px;
+	left: 105px;
+	background-position: -160px -400px;
+}
+
+.ly_inputko .number .num6 {
+	top: 1px;
+	left: 131px;
+	background-position: -200px -400px;
+}
+
+.ly_inputko .number .num7 {
+	top: 1px;
+	left: 157px;
+	background-position: -240px -400px;
+}
+
+.ly_inputko .number .num8 {
+	top: 1px;
+	left: 183px;
+	background-position: -280px -400px;
+}
+
+.ly_inputko .number .num9 {
+	top: 1px;
+	left: 209px;
+	background-position: -320px -400px;
+}
+
+.ly_inputko .number .num0 {
+	top: 1px;
+	left: 235px;
+	background-position: -360px -400px;
+}
+
+.ly_inputko .number .period {
+	top: 1px;
+	left: 261px;
+	background-position: -400px -400px;
+}
+
+.ly_inputko .number .num_over {
+	top: 0;
+	left: 0;
+	width: 27px;
+	height: 27px;
+	background-position: 0 -240px;
+}
+
+.ly_inputko .number .num2_over {
+	top: 0;
+	left: 26px;
+	width: 27px;
+	height: 27px;
+	background-position: -40px -240px;
+}
+
+.ly_inputko .number .num3_over {
+	top: 0;
+	left: 52px;
+	width: 27px;
+	height: 27px;
+	background-position: -80px -240px;
+}
+
+.ly_inputko .number .num4_over {
+	top: 0;
+	left: 78px;
+	width: 27px;
+	height: 27px;
+	background-position: -120px -240px;
+}
+
+.ly_inputko .number .num5_over {
+	top: 0;
+	left: 104px;
+	width: 27px;
+	height: 27px;
+	background-position: -160px -240px;
+}
+
+.ly_inputko .number .num6_over {
+	top: 0;
+	left: 130px;
+	width: 27px;
+	height: 27px;
+	background-position: -200px -240px;
+}
+
+.ly_inputko .number .num7_over {
+	top: 0;
+	left: 156px;
+	width: 27px;
+	height: 27px;
+	background-position: -240px -240px;
+}
+
+.ly_inputko .number .num8_over {
+	top: 0;
+	left: 182px;
+	width: 27px;
+	height: 27px;
+	background-position: -280px -240px;
+}
+
+.ly_inputko .number .num9_over {
+	top: 0;
+	left: 208px;
+	width: 27px;
+	height: 27px;
+	background-position: -320px -240px;
+}
+
+.ly_inputko .number .num0_over {
+	top: 0;
+	left: 234px;
+	width: 27px;
+	height: 27px;
+	background-position: -360px -240px;
+}
+
+.ly_inputko .number .period_over {
+	top: 0;
+	left: 260px;
+	width: 27px;
+	height: 27px;
+	background-position: -400px -240px;
+}
+
+/* mouse korean */
+.ly_inputko .consonantal {
+	float: left;
+	position: relative;
+	width: 181px;
+	height: 79px;
+	margin-bottom: 3px;
+	background: url(https://ssl.pstatic.net/sstatic/search/img3/bg_sp.gif) no-repeat 0 -120px;
+}
+
+.ly_inputko .vowel {
+	position: absolute;
+	top: 57px;
+	left: 194px;
+	width: 129px;
+	height: 79px;
+	background: url(https://ssl.pstatic.net/sstatic/search/img3/bg_sp.gif) no-repeat -184px -120px;
+}
+
+.ly_inputko .consonantal .con {
+	top: 1px;
+	left: 1px;
+	width: 24px;
+	background-position: 0 -280px;
+}
+
+.ly_inputko .consonantal .con2 {
+	top: 1px;
+	left: 26px;
+	background-position: -40px -280px;
+}
+
+.ly_inputko .consonantal .con3 {
+	top: 1px;
+	left: 52px;
+	background-position: -80px -280px;
+}
+
+.ly_inputko .consonantal .con4 {
+	top: 1px;
+	left: 78px;
+	background-position: -120px -280px;
+}
+
+.ly_inputko .consonantal .con5 {
+	top: 1px;
+	left: 104px;
+	background-position: -160px -280px;
+}
+
+.ly_inputko .consonantal .con6 {
+	top: 1px;
+	left: 130px;
+	background-position: -200px -280px;
+}
+
+.ly_inputko .consonantal .con7 {
+	top: 1px;
+	left: 156px;
+	background-position: -240px -280px;
+}
+
+.ly_inputko .consonantal .con8 {
+	top: 27px;
+	left: 1px;
+	width: 24px;
+	background-position: 0 -320px;
+}
+
+.ly_inputko .consonantal .con9 {
+	top: 27px;
+	left: 26px;
+	background-position: -40px -320px;
+}
+
+.ly_inputko .consonantal .con10 {
+	top: 27px;
+	left: 52px;
+	background-position: -80px -320px;
+}
+
+.ly_inputko .consonantal .con11 {
+	top: 27px;
+	left: 78px;
+	background-position: -120px -320px;
+}
+
+.ly_inputko .consonantal .con12 {
+	top: 27px;
+	left: 104px;
+	background-position: -160px -320px;
+}
+
+.ly_inputko .consonantal .con13 {
+	top: 27px;
+	left: 130px;
+	background-position: -200px -320px;
+}
+
+.ly_inputko .consonantal .con14 {
+	top: 27px;
+	left: 156px;
+	background-position: -240px -320px;
+}
+
+.ly_inputko .consonantal .con15 {
+	top: 53px;
+	left: 1px;
+	width: 24px;
+	background-position: 0 -360px;
+}
+
+.ly_inputko .consonantal .con16 {
+	top: 53px;
+	left: 26px;
+	background-position: -40px -360px;
+}
+
+.ly_inputko .consonantal .con17 {
+	top: 53px;
+	left: 52px;
+	background-position: -80px -360px;
+}
+
+.ly_inputko .consonantal .con18 {
+	top: 53px;
+	left: 78px;
+	background-position: -120px -360px;
+}
+
+.ly_inputko .consonantal .con19 {
+	top: 53px;
+	left: 104px;
+	background-position: -160px -360px;
+}
+
+.ly_inputko .consonantal .con_over {
+	top: 0;
+	left: 0;
+	width: 26px;
+	height: 27px;
+	background-position: 0 -120px;
+}
+
+.ly_inputko .consonantal .con2_over {
+	top: 0;
+	left: 25px;
+	width: 27px;
+	height: 27px;
+	background-position: -40px -120px;
+}
+
+.ly_inputko .consonantal .con3_over {
+	top: 0;
+	left: 51px;
+	width: 27px;
+	height: 27px;
+	background-position: -80px -120px;
+}
+
+.ly_inputko .consonantal .con4_over {
+	top: 0;
+	left: 77px;
+	width: 27px;
+	height: 27px;
+	background-position: -120px -120px;
+}
+
+.ly_inputko .consonantal .con5_over {
+	top: 0;
+	left: 103px;
+	width: 27px;
+	height: 27px;
+	background-position: -160px -120px;
+}
+
+.ly_inputko .consonantal .con6_over {
+	top: 0;
+	left: 129px;
+	width: 27px;
+	height: 27px;
+	background-position: -200px -120px;
+}
+
+.ly_inputko .consonantal .con7_over {
+	top: 0;
+	left: 155px;
+	width: 27px;
+	height: 27px;
+	background-position: -240px -120px;
+}
+
+.ly_inputko .consonantal .con8_over {
+	top: 26px;
+	left: 0;
+	width: 26px;
+	height: 27px;
+	background-position: 0 -160px;
+}
+
+.ly_inputko .consonantal .con9_over {
+	top: 26px;
+	left: 25px;
+	width: 27px;
+	height: 27px;
+	background-position: -40px -160px;
+}
+
+.ly_inputko .consonantal .con10_over {
+	top: 26px;
+	left: 51px;
+	width: 27px;
+	height: 27px;
+	background-position: -80px -160px;
+}
+
+.ly_inputko .consonantal .con11_over {
+	top: 26px;
+	left: 77px;
+	width: 27px;
+	height: 27px;
+	background-position: -120px -160px;
+}
+
+.ly_inputko .consonantal .con12_over {
+	top: 26px;
+	left: 103px;
+	width: 27px;
+	height: 27px;
+	background-position: -160px -160px;
+}
+
+.ly_inputko .consonantal .con13_over {
+	top: 26px;
+	left: 129px;
+	width: 27px;
+	height: 27px;
+	background-position: -200px -160px;
+}
+
+.ly_inputko .consonantal .con14_over {
+	top: 26px;
+	left: 155px;
+	width: 27px;
+	height: 27px;
+	background-position: -240px -160px;
+}
+
+.ly_inputko .consonantal .con15_over {
+	top: 52px;
+	left: 0;
+	width: 26px;
+	height: 27px;
+	background-position: 0 -200px;
+}
+
+.ly_inputko .consonantal .con16_over {
+	top: 52px;
+	left: 25px;
+	width: 27px;
+	height: 27px;
+	background-position: -40px -200px;
+}
+
+.ly_inputko .consonantal .con17_over {
+	top: 52px;
+	left: 51px;
+	width: 27px;
+	height: 27px;
+	background-position: -80px -200px;
+}
+
+.ly_inputko .consonantal .con18_over {
+	top: 52px;
+	left: 77px;
+	width: 27px;
+	height: 27px;
+	background-position: -120px -200px;
+}
+
+.ly_inputko .consonantal .con19_over {
+	top: 52px;
+	left: 103px;
+	width: 27px;
+	height: 27px;
+	background-position: -160px -200px;
+}
+
+.ly_inputko .vowel .vow {
+	top: 1px;
+	left: 1px;
+	width: 24px;
+	background-position: -280px -280px;
+}
+
+.ly_inputko .vowel .vow2 {
+	top: 1px;
+	left: 26px;
+	background-position: -320px -280px;
+}
+
+.ly_inputko .vowel .vow3 {
+	top: 1px;
+	left: 52px;
+	background-position: -360px -280px;
+}
+
+.ly_inputko .vowel .vow4 {
+	top: 1px;
+	left: 78px;
+	background-position: -400px -280px;
+}
+
+.ly_inputko .vowel .vow5 {
+	top: 1px;
+	left: 104px;
+	width: 24px;
+	background-position: -440px -280px;
+}
+
+.ly_inputko .vowel .vow6 {
+	top: 27px;
+	left: 1px;
+	width: 24px;
+	background-position: -280px -320px;
+}
+
+.ly_inputko .vowel .vow7 {
+	top: 27px;
+	left: 26px;
+	background-position: -320px -320px;
+}
+
+.ly_inputko .vowel .vow8 {
+	top: 27px;
+	left: 52px;
+	background-position: -360px -320px;
+}
+
+.ly_inputko .vowel .vow9 {
+	top: 27px;
+	left: 78px;
+	background-position: -400px -320px;
+}
+
+.ly_inputko .vowel .vow10 {
+	top: 27px;
+	left: 104px;
+	width: 24px;
+	background-position: -440px -320px;
+}
+
+.ly_inputko .vowel .vow11 {
+	top: 53px;
+	left: 1px;
+	width: 24px;
+	background-position: -280px -360px;
+}
+
+.ly_inputko .vowel .vow12 {
+	top: 53px;
+	left: 26px;
+	background-position: -320px -360px;
+}
+
+.ly_inputko .vowel .vow13 {
+	top: 53px;
+	left: 52px;
+	background-position: -360px -360px;
+}
+
+.ly_inputko .vowel .vow14 {
+	top: 53px;
+	left: 78px;
+	background-position: -400px -360px;
+}
+
+.ly_inputko .vowel .vow_over {
+	top: 0;
+	left: 0;
+	width: 26px;
+	height: 27px;
+	background-position: -280px -120px;
+}
+
+.ly_inputko .vowel .vow2_over {
+	top: 0;
+	left: 25px;
+	width: 27px;
+	height: 27px;
+	background-position: -320px -120px;
+}
+
+.ly_inputko .vowel .vow3_over {
+	top: 0;
+	left: 51px;
+	width: 27px;
+	height: 27px;
+	background-position: -360px -120px;
+}
+
+.ly_inputko .vowel .vow4_over {
+	top: 0;
+	left: 77px;
+	width: 27px;
+	height: 27px;
+	background-position: -400px -120px;
+}
+
+.ly_inputko .vowel .vow5_over {
+	top: 0;
+	left: 103px;
+	width: 26px;
+	height: 27px;
+	background-position: -440px -120px;
+}
+
+.ly_inputko .vowel .vow6_over {
+	top: 26px;
+	left: 0;
+	width: 26px;
+	height: 27px;
+	background-position: -280px -160px;
+}
+
+.ly_inputko .vowel .vow7_over {
+	top: 26px;
+	left: 25px;
+	width: 27px;
+	height: 27px;
+	background-position: -320px -160px;
+}
+
+.ly_inputko .vowel .vow8_over {
+	top: 26px;
+	left: 51px;
+	width: 27px;
+	height: 27px;
+	background-position: -360px -160px;
+}
+
+.ly_inputko .vowel .vow9_over {
+	top: 26px;
+	left: 77px;
+	width: 27px;
+	height: 27px;
+	background-position: -400px -160px;
+}
+
+.ly_inputko .vowel .vow10_over {
+	top: 26px;
+	left: 103px;
+	width: 26px;
+	height: 27px;
+	background-position: -440px -160px;
+}
+
+.ly_inputko .vowel .vow11_over {
+	top: 52px;
+	left: 0;
+	width: 26px;
+	height: 27px;
+	background-position: -280px -200px;
+}
+
+.ly_inputko .vowel .vow12_over {
+	top: 52px;
+	left: 25px;
+	width: 27px;
+	height: 27px;
+	background-position: -320px -200px;
+}
+
+.ly_inputko .vowel .vow13_over {
+	top: 52px;
+	left: 51px;
+	width: 27px;
+	height: 27px;
+	background-position: -360px -200px;
+}
+
+.ly_inputko .vowel .vow14_over {
+	top: 52px;
+	left: 77px;
+	width: 27px;
+	height: 27px;
+	background-position: -400px -200px;
+}
+
+.ly_inputko .consonantal .con button, .ly_inputko .consonantal .con8 button, .ly_inputko .consonantal .con15 button, .ly_inputko .vowel .vow button, .ly_inputko .vowel .vow5 button, .ly_inputko .vowel .vow6 button, .ly_inputko .vowel .vow10 button, .ly_inputko .vowel .vow11 button {
+	width: 24px;
+}
+
+/* mouse english */
+.ly_inputko .alphabet {
+	position: relative;
+	width: 313px;
+	height: 79px;
+	margin-bottom: 3px;
+	background: url(https://ssl.pstatic.net/sstatic/search/img3/bg_sp.gif) no-repeat 0 -240px;
+}
+
+.ly_inputko .alphabet .alp {
+	top: 1px;
+	left: 1px;
+	background-position: 0 -560px;
+}
+
+.ly_inputko .alphabet .alp2 {
+	top: 1px;
+	left: 27px;
+	background-position: -40px -560px;
+}
+
+.ly_inputko .alphabet .alp3 {
+	top: 1px;
+	left: 53px;
+	background-position: -80px -560px;
+}
+
+.ly_inputko .alphabet .alp4 {
+	top: 1px;
+	left: 79px;
+	background-position: -120px -560px;
+}
+
+.ly_inputko .alphabet .alp5 {
+	top: 1px;
+	left: 105px;
+	background-position: -160px -560px;
+}
+
+.ly_inputko .alphabet .alp6 {
+	top: 1px;
+	left: 131px;
+	background-position: -200px -560px;
+}
+
+.ly_inputko .alphabet .alp7 {
+	top: 1px;
+	left: 157px;
+	background-position: -240px -560px;
+}
+
+.ly_inputko .alphabet .alp8 {
+	top: 1px;
+	left: 183px;
+	background-position: -280px -560px;
+}
+
+.ly_inputko .alphabet .alp9 {
+	top: 1px;
+	left: 209px;
+	background-position: -320px -560px;
+}
+
+.ly_inputko .alphabet .alp10 {
+	top: 1px;
+	left: 235px;
+	background-position: -360px -560px;
+}
+
+.ly_inputko .alphabet .alp11 {
+	top: 1px;
+	left: 261px;
+	background-position: -400px -560px;
+}
+
+.ly_inputko .alphabet .alp12 {
+	top: 1px;
+	left: 287px;
+	background-position: -440px -560px;
+}
+
+.ly_inputko .alphabet .alp13 {
+	top: 27px;
+	left: 1px;
+	background-position: 0 -600px;
+}
+
+.ly_inputko .alphabet .alp14 {
+	top: 27px;
+	left: 27px;
+	background-position: -40px -600px;
+}
+
+.ly_inputko .alphabet .alp15 {
+	top: 27px;
+	left: 53px;
+	background-position: -80px -600px;
+}
+
+.ly_inputko .alphabet .alp16 {
+	top: 27px;
+	left: 79px;
+	background-position: -120px -600px;
+}
+
+.ly_inputko .alphabet .alp17 {
+	top: 27px;
+	left: 105px;
+	background-position: -160px -600px;
+}
+
+.ly_inputko .alphabet .alp18 {
+	top: 27px;
+	left: 131px;
+	background-position: -200px -600px;
+}
+
+.ly_inputko .alphabet .alp19 {
+	top: 27px;
+	left: 157px;
+	background-position: -240px -600px;
+}
+
+.ly_inputko .alphabet .alp20 {
+	top: 27px;
+	left: 183px;
+	background-position: -280px -600px;
+}
+
+.ly_inputko .alphabet .alp21 {
+	top: 27px;
+	left: 209px;
+	background-position: -320px -600px;
+}
+
+.ly_inputko .alphabet .alp22 {
+	top: 27px;
+	left: 235px;
+	background-position: -360px -600px;
+}
+
+.ly_inputko .alphabet .alp23 {
+	top: 27px;
+	left: 261px;
+	background-position: -400px -600px;
+}
+
+.ly_inputko .alphabet .alp24 {
+	top: 27px;
+	left: 287px;
+	background-position: -440px -600px;
+}
+
+.ly_inputko .alphabet .alp25 {
+	top: 53px;
+	left: 1px;
+	background-position: 0 -640px;
+}
+
+.ly_inputko .alphabet .alp26 {
+	top: 53px;
+	left: 27px;
+	background-position: -40px -640px;
+}
+
+.ly_inputko .alphabet .alp_over {
+	top: 0;
+	left: 0;
+	width: 27px;
+	height: 27px;
+	background-position: 0 -440px;
+}
+
+.ly_inputko .alphabet .alp2_over {
+	top: 0;
+	left: 26px;
+	width: 27px;
+	height: 27px;
+	background-position: -40px -440px;
+}
+
+.ly_inputko .alphabet .alp3_over {
+	top: 0;
+	left: 52px;
+	width: 27px;
+	height: 27px;
+	background-position: -80px -440px;
+}
+
+.ly_inputko .alphabet .alp4_over {
+	top: 0;
+	left: 78px;
+	width: 27px;
+	height: 27px;
+	background-position: -120px -440px;
+}
+
+.ly_inputko .alphabet .alp5_over {
+	top: 0;
+	left: 104px;
+	width: 27px;
+	height: 27px;
+	background-position: -160px -440px;
+}
+
+.ly_inputko .alphabet .alp6_over {
+	top: 0;
+	left: 130px;
+	width: 27px;
+	height: 27px;
+	background-position: -200px -440px;
+}
+
+.ly_inputko .alphabet .alp7_over {
+	top: 0;
+	left: 156px;
+	width: 27px;
+	height: 27px;
+	background-position: -240px -440px;
+}
+
+.ly_inputko .alphabet .alp8_over {
+	top: 0;
+	left: 182px;
+	width: 27px;
+	height: 27px;
+	background-position: -280px -440px;
+}
+
+.ly_inputko .alphabet .alp9_over {
+	top: 0;
+	left: 208px;
+	width: 27px;
+	height: 27px;
+	background-position: -320px -440px;
+}
+
+.ly_inputko .alphabet .alp10_over {
+	top: 0;
+	left: 234px;
+	width: 27px;
+	height: 27px;
+	background-position: -360px -440px;
+}
+
+.ly_inputko .alphabet .alp11_over {
+	top: 0;
+	left: 260px;
+	width: 27px;
+	height: 27px;
+	background-position: -400px -440px;
+}
+
+.ly_inputko .alphabet .alp12_over {
+	top: 0;
+	left: 286px;
+	width: 27px;
+	height: 27px;
+	background-position: -440px -440px;
+}
+
+.ly_inputko .alphabet .alp13_over {
+	top: 26px;
+	left: 0;
+	width: 27px;
+	height: 27px;
+	background-position: 0 -480px;
+}
+
+.ly_inputko .alphabet .alp14_over {
+	top: 26px;
+	left: 26px;
+	width: 27px;
+	height: 27px;
+	background-position: -40px -480px;
+}
+
+.ly_inputko .alphabet .alp15_over {
+	top: 26px;
+	left: 52px;
+	width: 27px;
+	height: 27px;
+	background-position: -80px -480px;
+}
+
+.ly_inputko .alphabet .alp16_over {
+	top: 26px;
+	left: 78px;
+	width: 27px;
+	height: 27px;
+	background-position: -120px -480px;
+}
+
+.ly_inputko .alphabet .alp17_over {
+	top: 26px;
+	left: 104px;
+	width: 27px;
+	height: 27px;
+	background-position: -160px -480px;
+}
+
+.ly_inputko .alphabet .alp18_over {
+	top: 26px;
+	left: 130px;
+	width: 27px;
+	height: 27px;
+	background-position: -200px -480px;
+}
+
+.ly_inputko .alphabet .alp19_over {
+	top: 26px;
+	left: 156px;
+	width: 27px;
+	height: 27px;
+	background-position: -240px -480px;
+}
+
+.ly_inputko .alphabet .alp20_over {
+	top: 26px;
+	left: 182px;
+	width: 27px;
+	height: 27px;
+	background-position: -280px -480px;
+}
+
+.ly_inputko .alphabet .alp21_over {
+	top: 26px;
+	left: 208px;
+	width: 27px;
+	height: 27px;
+	background-position: -320px -480px;
+}
+
+.ly_inputko .alphabet .alp22_over {
+	top: 26px;
+	left: 234px;
+	width: 27px;
+	height: 27px;
+	background-position: -360px -480px;
+}
+
+.ly_inputko .alphabet .alp23_over {
+	top: 26px;
+	left: 260px;
+	width: 27px;
+	height: 27px;
+	background-position: -400px -480px;
+}
+
+.ly_inputko .alphabet .alp24_over {
+	top: 26px;
+	left: 286px;
+	width: 27px;
+	height: 27px;
+	background-position: -440px -480px;
+}
+
+.ly_inputko .alphabet .alp25_over {
+	top: 52px;
+	left: 0;
+	width: 27px;
+	height: 27px;
+	background-position: 0 -520px;
+}
+
+.ly_inputko .alphabet .alp26_over {
+	top: 52px;
+	left: 26px;
+	width: 27px;
+	height: 27px;
+	background-position: -40px -520px;
+}
+
+/*# sourceMappingURL=api_setkr_https.css.map */

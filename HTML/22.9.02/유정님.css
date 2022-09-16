@@ -1,0 +1,187 @@
+style.css 
+
+/* Reset */
+
+body {
+    background-image: url(images/background.gif);
+    background-size: cover;
+}
+
+li {
+    list-style-type: none;
+}
+
+h1, h2, p, ul {
+    /* 어? 타입 셀렉터 쓰지 말자고 하시지 않았나요?
+    이건 의도된 거예여 ㅋ 기본 스타일을 없애는 것
+    타입셀렉터를 적극 활용해서 마진을 없애줄게용 */
+    margin: initial; 
+    /* ㄴ> 명시적으로 초기화해준 것 
+    caniuse.com 
+    css 프로퍼티와 밸류는 버전을 좀 탑니다 
+    IE 에서 initial 키워드 지원 안함 ㅋ
+    물론. IE 를 지원해야하는 프로젝트가 아예 없어진 게 아니예용 
+    
+    지금 머리속에 있어야 할 것: 초기화를 왜 해줘야 하나?
+    왜 굳이 타입 셀렉터로 초기화를 해줘야 하나 ?
+    */
+    padding: 0;
+}
+
+h1,h2 {
+    /* font-size: 16px; 요렇게 기본 사이즈를 적어서 초기화 하는 건 ㄴㄴ! 적절치 않아 */
+    font-size: inherit; /* 강제 상속 받을랭 */
+    font-weight: inherit; /* 부모인 헤더의 그것을 따라가게끔 해줬당 ~ */
+}
+
+
+a {
+    color: inherit;
+    text-decoration: inherit;
+}
+
+
+/* Components */
+.wrapper {
+    /* 언제나 우리는 내가 원하는 걸 구체적으로, 섬세하게 선택하는 방법을 알아야 한다 */
+    width: 800px;
+    background-color: rgb(225, 224, 224);
+    margin: 0 auto;
+    /* div {} 이렇게 그대로 두면 안돼! 너무 광범위해! 위험해 */
+}
+
+.header {
+    background-image: url(images/cover04.png);
+    text-align: center;
+    /* 얘를 한다고 해도 h1과 p는 가운데 정렬이 된 적이 없음. 뭔 말일까요?
+    배경색을 넣어보면 무슨 말인지 이해갑니당.
+    h1은 width 가 지정되지 않은 블록레벨 엘리먼츠죵?
+    width auto == h1의 직계부모, 헤더가 제공해주는 컨텐츠 영역의 크기만큼 자동으로 가득 채운다
+    그래서 h1의 크기가 여기서부터 여기만큼 된 거예영
+    마진 오토 == 블록레벨 가운데 정렬
+
+    h1 등.. 
+    인라인 엘리먼츠 == 내부에 있는 텍스트, 이미지 (부모가 지정한 텍스트 얼라인 센터에 영향을 받음)
+    얘는 기본적으로 baseline이 존재함
+    그안에 작성이 되는게 (마치 새가 앉아있는듯하게...)
+    
+    h1이 가운데로 온 게 아님 !!!!
+    h1 {width: 300px}
+    왜 왼쪽에 있나요? 블록레벨 엘리먼츠에 있는 그 것들은 성질이 모두 동일함
+    h1 자체 가운데 정렬 == margin: 0 auto;
+    한줄을 다 차지함!
+    */
+   padding: 80px 0; /* 상하 50 좌우 0 */
+   background-size: cover;
+   color: white;
+
+}
+
+.header img.profile{
+    border-radius: 50%;
+    width: 120px;
+    border: 5px solid white;
+}
+
+.header h1 {
+    font-size: 80px;
+    font-weight: bold;
+}
+
+.header p {
+    /* p 요소는 블럭레벨엘리먼츠. 안에 있는 텍스트는 inline */
+    width: fit-content;
+    /* IE 도 지정해줘야 하면? inline-block */
+    /* 내부 컨텐츠 크기만큼 width 값이 결정됨 */
+    /* max-content min-content 같이 공부해보기 */
+    margin: 0 auto;
+    border-top: 5px solid;
+    padding: 10px 20px;
+}
+
+/* header>img
+   여기서 > 는 combinator. 결합자. */
+
+/*
+img {
+    border-radius: 50%;
+    border: 5px solid white;
+}
+
+타입 셀렉터는 구체적인 셀렉터가 아니다!
+모든 이미지들이 난리남 ㅋ
+
+.header img == 하위 셀렉터. 모든 자손들에 다 영향을 미침
+
+css 는 내가 무심코 작성한 한 줄의 코드가 엄청난 파장을 일으킬 수 있음!
+이 경험 프로젝트 할 때 해봤자나 누가 p 에 바로 먹여가지고......!!!!!!!!
+
+*/
+
+.section {
+    background-image: url(images/icon-information.png);
+    background-repeat: no-repeat;
+    background-position: right 30px center;
+    background-color: white;
+    margin: 20px;
+    padding: 20px;
+    /* 마진 병합현상! 찾아보쟈 ~~~ */
+}
+
+.skill {
+    background-image: url(images/icon-skills.png);
+}
+
+.section h2 {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: deeppink;
+}
+
+
+/* 보통 헤더 푸터를 만든 다음에 컨텐츠 영역을 만듭니당
+   컨텐츠는 수정할 일이 많잖아요~!~!
+*/
+
+.footer {
+    text-align: center;
+    background-color: rgb(255, 239, 242);
+    padding: 20px 0;
+}
+
+.link { /* link == 공통 분모 */
+    padding: 10px 20px;
+    display: inline-block; /* 이렇게 하면 더이상 인라인엘리먼츠가 아닙니당 */
+    border-radius: 40px;
+    border: 2px solid;
+    color: hotpink;
+
+
+    /* 
+    인라인-블럭 : 인라인엘리먼츠 블록엘리먼츠 두가지의 특성을 모두 가져감 
+    
+    인라인은 마진 줬을 때 좌우로만 조절돼!
+    새가 전깃줄 위에 있을 때 좌우로는 움직일 수 있자낭
+    얘네들은 padding이 상하좌우 모두 적용되긴 하는데
+    공간을 모두 차지하진 못한다 ~ 
+
+    display: 인라인 엘리먼츠를 블록화한다!
+    또는 블록 엘리먼츠를 인라인화 한다!
+     */
+}
+
+
+/* 얘네는 플러스 알파들 */
+
+.link.navy {
+    color: navy;
+}
+
+.link.pink {
+    color: hotpink;
+}
+
+.link.skyblue {
+    color: skyblue;
+}
