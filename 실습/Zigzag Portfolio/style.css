@@ -1,3 +1,5 @@
+/* Reset */
+
 :root {
     font-family: 'Montserrat', sans-serif;
 	/*
@@ -6,3 +8,97 @@
 	*/
 }
 
+h1, h2, p, strong, body {
+	padding: 0;
+	margin: 0;
+}
+
+body {
+	background-color: #673399;
+	line-height: 1;
+}
+
+h1, h2, p, strong {
+	font-size: inherit;
+	font-weight: inherit;
+}
+
+/* Contents */
+
+/* header */
+
+.blind {
+    position: absolute;
+    clip: rect(0 0 0 0);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+}
+
+.wrapper {
+	margin: 0 auto;
+	padding: 0 40px;
+}
+
+.portfolio_header {
+	max-width: 1080px;
+	display: flex;
+	margin-top: 100px;
+	margin-bottom: 100px;
+}
+
+.portfolio_title {
+	font-size: 40px;
+	color: white;
+	white-space: nowrap;
+	line-height: 1.4;
+}
+
+.portfolio_title strong {
+	display: block;
+	position: relative;
+	width: fit-content;
+}
+
+.portfolio_title strong::before {
+	content: '';
+	background-color: orangered;
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	height: 0.6em;
+	z-index: -1;
+}
+
+.portfolio_title_description {
+	font-size: 14px;
+	color: #bd8fe8;
+	max-width: 600px;
+	line-height: 1.8;
+	display: flex;
+	align-items: center;
+}
+
+/* 뒤의 내용이랑 before의 길이랑 비례?해서 화면에 나타난다...? */
+/* flex에서 before를 추가했을 때 화면의 크기를 줄이다보면 before의 크기가 절반 정도일 때 더 이상 줄어들지 않는 구간이 생김 -> before가 없으면 생기지 않음 */
+/* before의 넓이와 비례해서 min-width 속성이 설정됨...? */
+/* 한 엘리먼트가 flex-item일때 해당 엘리먼트의 min-width는 0이 아니라 해당 엘리먼트의 컨텐츠의 크기와 같음(p 태그일 경우 가장 긴 단어의 넓이..?) */
+/* 한 flex-item인 엘리먼트가 ::before를 가지고 있을 때 해당 엘리먼트의 min-width는 ( 해당 엘리먼트의 컨텐츠의 크기 + before의 크기 ) 로 설정됨, width나 max-width는 설정해준대로 */
+/* 다만 화면에는 표시되는 내용은 ::before과 컨텐츠 크기의 비율을 따라감...? */
+.portfolio_title_description::before {
+	content: '';
+	width: 300px;
+	height: 2px;
+	background-color: #bd8fe8;
+	margin: 0 30px;
+}
+
+/* main */
+
+.portfolio_contents {
+	max-width: 1080px;
+	display: flex;
+	flex-direction: column;
+}
