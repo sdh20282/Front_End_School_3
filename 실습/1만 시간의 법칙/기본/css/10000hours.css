@@ -1,0 +1,289 @@
+@font-face {
+    font-family: 'OTEnjoystoriesBA';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/OTEnjoystoriesBA.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'GmarketSansBold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'GmarketSansMedium';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Noto Sans KR';
+    font-style: normal;
+    font-weight: 400;
+    src: url("https://fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.woff2") format('woff2'),
+        url("https://fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.woff") format('woff'),
+        url("https://fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.otf") format('opentype');
+}
+
+/* ########## Reset ########## */
+
+body {
+    background-color: #5B2386;
+    text-align: center;
+    line-height: 1;
+}
+
+/* ########## Components ########## */
+
+.blind {
+    position: absolute;
+    clip: rect(0 0 0 0);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+}
+
+/* ###### header ###### */
+
+.title_loto {
+    background-image: url(../img/clock.png);
+    background-repeat: no-repeat;
+    background-position: center;
+
+    height: 265px;
+    margin-top: 100px;
+}
+
+.title_loto .title_logo_img {
+    width: 564px;
+    height: 112px;
+
+    position: relative;
+    top: 75px;
+}
+
+/* ###### main ###### */
+
+.main_content {
+    display: flex;
+    flex-direction: column;
+    
+    margin-top: 46px;
+    margin-bottom: 130px;
+}
+
+.description_text {
+    font-family: 'GmarketSansMedium';
+    font-size: 24px;
+    color: white;
+}
+
+.btn_start {
+    font-family: 'GmarketSansBold';
+    font-size: 24px;
+    color: #5B2386;
+
+    background-color: #FCEE21;
+    box-shadow: 0 0 1em 0 #666;
+}
+
+/* #### first section #### */
+
+.about_10000hour {
+    margin-bottom: 102px;
+}
+
+.about_10000hour .about_10000hour_subtitle {
+    font-family: 'OTEnjoystoriesBA';
+    font-size: 36.5px;
+    color: #F5DF4D;
+
+    margin-bottom: 50px;
+}
+
+.about_10000hour .about_10000hour_description {
+    background-image: url(../img/quotes.png);
+    background-position: center;
+    background-repeat: no-repeat;
+
+    font-family: 'GmarketSansMedium';
+    font-size: 18px;
+    color: white;
+    line-height: 1.8;
+
+    padding-top: 28px;
+}
+
+.about_10000hour .about_10000hour_description strong {
+    font-weight: bold;
+    font-size: 24px;
+}
+
+/* #### second section #### */
+
+.become_specialist {
+    margin-bottom: 147px;
+}
+
+.become_specialist .contents_input {
+    margin: 0;
+}
+
+.become_specialist .contents_input .description_text {
+    line-height: 3.8;
+}
+
+.become_specialist .contents_input .description_text input {
+    width: 228px;
+    height: 57px;
+    margin: 0 8px;
+    padding-top: 5px;
+    border-radius: 10px;
+}
+
+.become_specialist .contents_input .description_text input::placeholder {
+    text-align: center;
+    opacity: 50%;
+}
+
+.become_specialist .contents_input .decorate_button {
+    width: fit-content;
+    margin: 115px auto 0 auto;
+
+    position: relative;
+}
+
+.become_specialist .contents_input .decorate_button::after {
+    content: '';
+
+    background-image: url(../img/click.png);
+    background-repeat: no-repeat;
+    background-position: right;
+
+    width: 70px;
+    height: 70px;
+    
+    top: 18px;
+    right: -70px;
+
+    position: absolute;
+}
+
+.become_specialist .contents_input .decorate_button .btn_start {
+    padding: 24px 49px 16px;
+    border-radius: 32px;
+}
+
+/* #### third section #### */
+
+.specialist_result {
+    margin: 0;
+}
+
+.specialist_result .description_text {
+    line-height: 1.3;
+}
+
+.specialist_result .description_text strong {
+    font-family: 'GmarketSansBold';
+    font-weight: bold;
+    font-size: 72px;
+
+    padding: 0 10px;
+
+    vertical-align: -15%;
+}
+
+.specialist_result .button_list {
+    margin-top: 127px;
+}
+
+.specialist_result .button_list .btn_start {
+    font-size: 26px;
+
+    padding: 24px 49px 16px;
+    border-radius: 32px;
+
+    margin-right: 20px;
+}
+
+.specialist_result .button_list .bth_share {
+    font-family: 'GmarketSansBold';
+    font-size: 26px;
+    color: #5B2386;
+
+    padding: 24px 49px 16px;
+    border-radius: 32px;
+}
+
+/* ###### footer ###### */
+
+.extra_info {
+    margin-bottom: 70px;
+}
+
+.extra_info img {
+    width: 125px;
+    display: block;
+
+    margin: 0 auto 20px;
+}
+
+.extra_info .copyright {
+    font-size: 11px;
+    color: white;
+    line-height: 1.5;
+    opacity: 80%;
+}
+
+/* ###### modal ###### */
+
+.modal {
+    width: 800px;
+    height: 800px;
+
+    background-color: white;
+    border-radius: 30px;
+    box-sizing: border-box;
+
+    margin: 0 auto 100px;
+    padding: 76px 0 68px;
+}
+
+.modal p {
+    font-family: 'OTEnjoystoriesBA';
+    color: #5B2386;
+}
+
+.modal .modal_title {
+    font-size: 96px;
+
+    margin-bottom: 10px;
+}
+
+.modal .modal_desc {
+    font-size: 36px;
+
+    margin-bottom: 30px;
+}
+
+.modal img {
+    width: 443px;
+    height: 337px;
+    margin-bottom: 74px;
+}
+
+.modal .btn_start {
+    font-size: 26px;
+    padding: 24px 49px 16px;
+    border-radius: 32px;
+}
+
+
+@media (max-width: 800px) {
+
+}

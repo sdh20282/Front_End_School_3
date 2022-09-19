@@ -155,7 +155,7 @@ li {
 
 .project_content {
 	padding: 24px;
-	width: 72%;
+	flex-grow: 1;
 }
 
 .project_title {
