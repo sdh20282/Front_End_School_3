@@ -64,6 +64,7 @@ li {
 .portfolio_title strong::before {
 	content: '';
 	background-color: orangered;
+	display: inline-block;
 	position: absolute;
 	right: 0;
 	bottom: 0;
@@ -88,6 +89,7 @@ li {
 	display: inline-block;
 	background-color: #bd8fe8;
 	margin: 0 30px;
+	
 }
 
 /* main */
