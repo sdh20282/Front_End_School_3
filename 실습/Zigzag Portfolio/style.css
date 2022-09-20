@@ -81,12 +81,6 @@ li {
 	align-items: center;
 }
 
-/* 뒤의 내용이랑 before의 길이랑 비례?해서 화면에 나타난다...? */
-/* flex에서 before를 추가했을 때 화면의 크기를 줄이다보면 before의 크기가 절반 정도일 때 더 이상 줄어들지 않는 구간이 생김 -> before가 없으면 생기지 않음 */
-/* before의 넓이와 비례해서 min-width 속성이 설정됨...? */
-/* 한 엘리먼트가 flex-item일때 해당 엘리먼트의 min-width는 0이 아니라 해당 엘리먼트의 컨텐츠의 크기와 같음(p 태그일 경우 가장 긴 단어의 넓이..?) */
-/* 한 flex-item인 엘리먼트가 ::before를 가지고 있을 때 해당 엘리먼트의 min-width는 ( 해당 엘리먼트의 컨텐츠의 크기 + before의 크기 ) 로 설정됨, width나 max-width는 설정해준대로 */
-/* 다만 화면에는 표시되는 내용은 ::before과 컨텐츠 크기의 비율을 따라감...? */
 .portfolio_title_description::before {
 	content: '';
 	width: 250px;
@@ -121,7 +115,7 @@ li {
 .project_category {
 	font-size: 30px;
 	color: white;
-	width: 28%;
+	width: 26%;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -207,10 +201,5 @@ li {
 	.project_category {
 		width: 100%;
 		height: 25vw;
-	}
-
-	.project_content {
-		width: 100%;
-		box-sizing: border-box;
 	}
 }

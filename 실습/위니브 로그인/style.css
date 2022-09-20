@@ -77,6 +77,7 @@ a {
     border-radius: 7px;
 
     background-color: #711BFF;
+    cursor: pointer;
 }
 
 .login_window .loginbtn img {
