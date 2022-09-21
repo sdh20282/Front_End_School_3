@@ -54,7 +54,6 @@ body {
     background-repeat: no-repeat;
     background-position: center;
     background-size: 261px;
-
     height: 265px;
     margin-top: 100px;
 }
@@ -62,7 +61,6 @@ body {
 .title_loto .title_logo_img {
     width: 564px;
     height: 112px;
-
     position: relative;
     top: 74px;
 }
@@ -72,7 +70,6 @@ body {
 .main_content {
     display: flex;
     flex-direction: column;
-    
     margin-top: 46px;
     margin-bottom: 130px;
 }
@@ -87,7 +84,6 @@ body {
     font-family: 'GmarketSansBold';
     font-size: 24px;
     color: #5B2386;
-
     background-color: #FCEE21;
     box-shadow: 0 0 1em 0 #666;
 }
@@ -102,7 +98,6 @@ body {
     font-family: 'OTEnjoystoriesBA';
     font-size: 37px;
     color: #F5DF4D;
-
     margin-bottom: 50px;
 }
 
@@ -110,13 +105,15 @@ body {
     background-image: url(../img/quotes.png);
     background-position: center;
     background-repeat: no-repeat;
-
     font-family: 'GmarketSansMedium';
     font-size: 18px;
     color: white;
     line-height: 1.8;
-
     padding-top: 28px;
+}
+
+.about_10000hour .about_10000hour_description span {
+    display: block;   
 }
 
 .about_10000hour .about_10000hour_description strong {
@@ -150,24 +147,19 @@ body {
 .become_specialist .decorate_button {
     width: fit-content;
     margin: 115px auto 0 auto;
-
     position: relative;
 }
 
 .become_specialist .decorate_button::after {
     content: '';
-
     background-image: url(../img/click.png);
     background-repeat: no-repeat;
     background-position: right;
     background-size: 64px;
-
     width: 70px;
     height: 70px;
-    
     top: 18px;
     right: -70px;
-
     position: absolute;
 }
 
@@ -190,9 +182,7 @@ body {
     font-family: 'GmarketSansBold';
     font-weight: bold;
     font-size: 72px;
-
     padding: 0 10px;
-
     vertical-align: -15%;
 }
 
@@ -202,10 +192,8 @@ body {
 
 .specialist_result .button_list .btn_start {
     font-size: 26px;
-
     padding: 24px 49px 16px;
     border-radius: 32px;
-
     margin-right: 20px;
 }
 
@@ -213,9 +201,9 @@ body {
     font-family: 'GmarketSansBold';
     font-size: 26px;
     color: #5B2386;
-
     padding: 24px 49px 16px;
     border-radius: 32px;
+    box-shadow: 0 0 1em 0 #666;
 }
 
 /* ###### footer ###### */
@@ -227,7 +215,6 @@ body {
 .extra_info img {
     width: 125px;
     display: block;
-
     margin: 0 auto 20px;
 }
 
@@ -238,16 +225,18 @@ body {
     opacity: 80%;
 }
 
+.extra_info .copyright span {
+    display: block;
+}
+
 /* ###### modal ###### */
 
 .modal {
     width: 800px;
     height: 800px;
-
     background-color: white;
     border-radius: 30px;
     box-sizing: border-box;
-
     margin: 0 auto 100px;
     padding: 76px 0 68px;
 }
@@ -259,13 +248,11 @@ body {
 
 .modal .modal_title {
     font-size: 96px;
-
     margin-bottom: 10px;
 }
 
 .modal .modal_desc {
     font-size: 36px;
-
     margin-bottom: 30px;
 }
 
@@ -280,8 +267,6 @@ body {
     padding: 24px 49px 16px;
     border-radius: 32px;
 }
-
-
 
 @media (max-width: 825px) {
     /* ###### header ###### */
@@ -368,10 +353,8 @@ body {
     
     .become_specialist .decorate_button::after {
         background-size: 43px;
-        
         top: 22px;
         right: -50px;
-    
         position: absolute;
     }
     
@@ -384,7 +367,6 @@ body {
     .become_specialist .decorate_button .btn_start span {
         display: block;
     }
-
     
     /* #### third section #### */
     
@@ -408,16 +390,13 @@ body {
     
     .specialist_result .button_list .btn_start {
         font-size: 14px;
-    
         padding: 16px 20px 13px;
         border-radius: 32px;
-    
         margin-right: 13px;
     }
     
     .specialist_result .button_list .bth_share {
         font-size: 14px;
-    
         padding: 16px 20px 13px;
         border-radius: 32px;
     }
@@ -445,7 +424,6 @@ body {
     .modal {
         width: 330px;
         height: 500px;
-
         border-radius: 20px;
         padding: 40px 0 45px;
     }
