@@ -146,7 +146,7 @@ body {
 
 .become_specialist .decorate_button {
     width: fit-content;
-    margin: 115px auto 0 auto;
+    margin: 115px auto 0;
     position: relative;
 }
 
