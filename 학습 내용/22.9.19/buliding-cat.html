@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        body,
+        img,
+        div {
+            padding: 0;
+            margin: 0;
+        }
+
+        @keyframes one {
+            from {
+                background-position: 0px, 0px;
+            }
+
+            to {
+                background-position: -3730px, 0;
+            }
+        }
+
+        @keyframes two {
+            from {
+                background-position: 0px, 0px;
+            }
+
+            to {
+                background-position: -5346px, 0;
+            }
+        }
+
+        @keyframes seven {
+            from {
+                background-position: 0px, 0px;
+            }
+
+            to {
+                background-position: -3300px, 0;
+            }
+        }
+
+        @keyframes cat {
+            10% {
+                transform: translateY(0) scale(0.3);
+                background: url(./image/cat/1.png) no-repeat;
+            }
+
+            20% {
+                transform: translateX(-20px) scale(0.3);
+                background: url(./image/cat/2.png) no-repeat;
+            }
+
+            30% {
+                transform: translateX(-40px) scale(0.3);
+                background: url(./image/cat/3.png) no-repeat;
+            }
+
+            40% {
+                transform: translateX(-60px) scale(0.3);
+                background: url(./image/cat/1.png) no-repeat;
+            }
+
+            50% {
+                transform: translateX(-80px) scale(0.3);
+                background: url(./image/cat/2.png) no-repeat;
+            }
+
+            60% {
+                transform: translateX(-100px) scale(0.3);
+                background: url(./image/cat/3.png) no-repeat;
+            }
+
+            70% {
+                transform: translateX(-120px) scale(0.3);
+                background: url(./image/cat/1.png) no-repeat;
+            }
+
+            80% {
+                transform: translateX(-140px) scale(0.3);
+                background: url(./image/cat/2.png) no-repeat;
+            }
+
+            90% {
+                transform: translateX(-160px) scale(0.3);
+                background: url(./image/cat/3.png) no-repeat;
+            }
+
+            100% {
+                transform: translateX(-180px) scale(0.3);
+                background: url(./image/cat/1.png) no-repeat;
+            }
+        }
+
+        .building1 {
+            width: 110px;
+            height: 180px;
+            background: url(./image/building/building1.png) no-repeat;
+            animation: one 5s steps(33);
+            animation-fill-mode: forwards;
+            transform: scale(0.5);
+            position: absolute;
+            top: 10px;
+            left: 10px;
+        }
+
+        .building2 {
+            width: 165px;
+            height: 180px;
+            background: url(./image/building/building2.png) no-repeat;
+            animation: two 5s steps(32);
+            animation-fill-mode: forwards;
+            transform: scale(0.5);
+            position: absolute;
+            top: 300px;
+            left: 300px;
+        }
+
+        .building7 {
+            width: 150px;
+            height: 180px;
+            background: url(./image/building/building7.png) no-repeat;
+            animation: seven 5s steps(22);
+            animation-fill-mode: forwards;
+            position: absolute;
+            top: 170px;
+            left: 150px;
+        }
+
+        .cat {
+            width: 313px;
+            height: 436px;
+            background: url(./image/cat.png) no-repeat;
+            animation: cat 3s linear;
+            animation-fill-mode: forwards;
+            transform: scale(0.3);
+            position: absolute;
+            top: 10px;
+            left: 600px;
+        }
+
+        .back {
+            width: 100vw;
+            height: 150vh;
+            background-color: YellowGreen;
+            position: relative;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="back">
+        <div class="cat"></div>
+        <div class="building1"></div>
+        <div class="building2"></div>
+        <div class="building7"></div>
+    </div>
+</body>
+
+</html>

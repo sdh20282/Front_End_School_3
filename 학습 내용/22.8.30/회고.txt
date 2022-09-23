@@ -1,0 +1,16 @@
+프론트엔드 관련 전반적인 강의 진행, 지식 습득
+
+vs 코드 설정 및 단축키, emmet 사용법, snippet 설정 및 사용법
+- 각종 sheet
+
+회고 팀 생성/이야기
+
+시맨틱 태그
+
+섹션
+https://paullabworkspace.notion.site/5-Sections-ac189efe533e490abf54f8561a4b62f8
+
+깃 사용해보기
+
+https://paullabworkspace.notion.site/HTML-28e185f9cfe5474d837eb513193c73a2
+sections까지, 태그 빼고

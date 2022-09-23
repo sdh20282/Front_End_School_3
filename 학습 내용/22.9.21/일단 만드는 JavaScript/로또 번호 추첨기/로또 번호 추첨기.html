@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+        .ball {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            display: inline-block;
+            text-align: center;
+            line-height: 100px;
+            font-size: 32px;
+            color: white;
+            margin: 30px;
+        }
+
+        .ball1  {
+            background-color: blue;
+        }
+
+        .ball2  {
+            background-color: blueviolet;
+        }
+
+        .ball3  {
+            background-color: green;
+        }
+
+        .ball4  {
+            background-color: red;
+        }
+
+        .ball5  {
+            background-color: orangered;
+        }
+
+        .ball6  {
+            background-color: darkblue;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>로또 번호 추첨기</h1>
+    <script>
+        var lotto = [];
+
+        while(lotto.length < 6) {
+            var num = parseInt(Math.random() * 45 + 1);
+
+            if (lotto.indexOf(num) == -1) {
+                lotto.push(num);
+            }
+        }
+
+        lotto.sort((a, b)=>a-b);
+        document.write("<div class='ball ball1'>" + lotto[0] + "</div>");
+        document.write("<div class='ball ball2'>" + lotto[1] + "</div>");
+        document.write("<div class='ball ball3'>" + lotto[2] + "</div>");
+        document.write("<div class='ball ball4'>" + lotto[3] + "</div>");
+        document.write("<div class='ball ball5'>" + lotto[4] + "</div>");
+        document.write("<div class='ball ball6'>" + lotto[5] + "</div>");
+    </script>   
+</body>
+
+</html>

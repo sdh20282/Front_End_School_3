@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>template areas</title>
+    <style>
+        .container {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-areas:
+                ' . . time'
+                ' header header header '
+                ' aside_left main aside_right '
+                ' footer footer footer ';
+
+            background-color: beige;
+            width: 800px;
+            margin: auto;
+            z-index: 100;
+        }
+
+        header {
+            grid-area: header;
+            background-color: pink;
+        }
+
+        time {
+            grid-area: time;
+            background-color: aqua;
+        }
+
+        main {
+            grid-area: main;
+            background-color: royalblue;
+
+            z-index: 3;
+        }
+
+        .aside_a {
+            grid-area: aside_left;
+            background-color: violet;
+
+
+            position: relative;
+            width: 100px;
+            height: 100px;
+            left: -50px;
+
+            z-index: 0;
+        }
+
+        .aside_a:hover {
+            transform: scale(2);
+        }
+
+        .aside_b {
+            grid-area: aside_right;
+            background-color: lightgreen;
+        }
+
+        footer {
+            grid-area: footer;
+            background-color: aquamarine;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header>header</header>
+        <time>time</time>
+        <main>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error repellat earum iure id natus, consectetur,
+            aut
+            a adipisci, suscipit dolore in quam commodi recusandae magni excepturi sapiente quasi optio accusantium?
+        </main>
+        <aside class="aside_a">aside left</aside>
+        <aside class="aside_b">aside right</aside>
+        <footer>footer</footer>
+    </div>
+</body>
+
+</html>
