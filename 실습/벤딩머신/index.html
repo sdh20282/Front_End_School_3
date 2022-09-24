@@ -17,7 +17,7 @@
     <!-- 현재 주어진 페이지에서는 콜라가 핵심 내용처럼 보여짐. 하지만 확장성 같은 부분들을 고려하면 자판기나 다른 포괄적인 의미를 갖는 내용으로 하는 것이 옳아보임. -->
     <header>
         <!-- 보다 넓은 범위의 'store'라는 의미를 현재 페이지의 핵심 내용으로 설정. -->
-        <h1 class="screen_out">Store</h1>
+        <h1 class="blind">Store</h1>
     </header>
     <main>
         <!-- 위에서 웹페이지의 전체 헤더를 'store'로 지정했기 때문에 자판기를 하나의 섹션으로 보는 것이 옳을 것 같음. -->
@@ -108,6 +108,9 @@
                     <button class="change light_gray_normal_border border_5px button_shadow">거스름돈 반환</button>
 
                     <!-- 사용자로부터 입력 받는 것이므로 form 태그 사용 -->
+                    <!-- 잔액과 획득까지 form 태그로 묶어야 하는가? -->
+                    <!-- 잔액과 장바구니 목록은 사용자가 로그아웃해도 남아있어야 하지 않을까..? -->
+                    <!-- 그렇다면 해당 부분들은 데이터베이스에 저장, 목록만 읽어와서 사용자에게 보여줄 것임. 그렇기 때문에 '데이터를 제출'한다고 보기에는 적절하지 않아 보임. -->
                     <form class="input_money" action="get">
                         <input class="input light_gray_normal_border border_5px" type="text" placeholder="입금액 입력">
                         <button class="submit light_gray_normal_border border_5px button_shadow">
@@ -125,6 +128,24 @@
                                 </figcaption>
                             </figure>
                             <p class="selected_product_count light_gray_normal_border border_5px">1</p>
+                        </li>
+                        <li class="selected_product border_5px">
+                            <figure class="selected_product_image">
+                                <img src="./images/green_cola.png" alt="">
+                                <figcaption>
+                                    <p class="product_name">Green_Cola</p>
+                                </figcaption>
+                            </figure>
+                            <p class="selected_product_count light_gray_normal_border border_5px">2</p>
+                        </li>
+                        <li class="selected_product border_5px">
+                            <figure class="selected_product_image">
+                                <img src="./images/green_cola.png" alt="">
+                                <figcaption>
+                                    <p class="product_name">Green_Cola</p>
+                                </figcaption>
+                            </figure>
+                            <p class="selected_product_count light_gray_normal_border border_5px">2</p>
                         </li>
                         <li class="selected_product border_5px">
                             <figure class="selected_product_image">
@@ -183,6 +204,69 @@
                                     </figcaption>
                                 </figure>
                                 <p class="selected_product_count light_gray_normal_border border_5px">1</p>
+                            </li>
+                            <li class="selected_product border_5px">
+                                <figure class="selected_product_image">
+                                    <img src="./images/violet_cola.png" alt="">
+                                    <figcaption>
+                                        <p class="product_name">Violet_Cola</p>
+                                    </figcaption>
+                                </figure>
+                                <p class="selected_product_count light_gray_normal_border border_5px">5</p>
+                            </li>
+                            <li class="selected_product border_5px">
+                                <figure class="selected_product_image">
+                                    <img src="./images/violet_cola.png" alt="">
+                                    <figcaption>
+                                        <p class="product_name">Violet_Cola</p>
+                                    </figcaption>
+                                </figure>
+                                <p class="selected_product_count light_gray_normal_border border_5px">5</p>
+                            </li>
+                            <li class="selected_product border_5px">
+                                <figure class="selected_product_image">
+                                    <img src="./images/violet_cola.png" alt="">
+                                    <figcaption>
+                                        <p class="product_name">Violet_Cola</p>
+                                    </figcaption>
+                                </figure>
+                                <p class="selected_product_count light_gray_normal_border border_5px">5</p>
+                            </li>
+                            <li class="selected_product border_5px">
+                                <figure class="selected_product_image">
+                                    <img src="./images/violet_cola.png" alt="">
+                                    <figcaption>
+                                        <p class="product_name">Violet_Cola</p>
+                                    </figcaption>
+                                </figure>
+                                <p class="selected_product_count light_gray_normal_border border_5px">5</p>
+                            </li>
+                            <li class="selected_product border_5px">
+                                <figure class="selected_product_image">
+                                    <img src="./images/violet_cola.png" alt="">
+                                    <figcaption>
+                                        <p class="product_name">Violet_Cola</p>
+                                    </figcaption>
+                                </figure>
+                                <p class="selected_product_count light_gray_normal_border border_5px">5</p>
+                            </li>
+                            <li class="selected_product border_5px">
+                                <figure class="selected_product_image">
+                                    <img src="./images/violet_cola.png" alt="">
+                                    <figcaption>
+                                        <p class="product_name">Violet_Cola</p>
+                                    </figcaption>
+                                </figure>
+                                <p class="selected_product_count light_gray_normal_border border_5px">5</p>
+                            </li>
+                            <li class="selected_product border_5px">
+                                <figure class="selected_product_image">
+                                    <img src="./images/violet_cola.png" alt="">
+                                    <figcaption>
+                                        <p class="product_name">Violet_Cola</p>
+                                    </figcaption>
+                                </figure>
+                                <p class="selected_product_count light_gray_normal_border border_5px">5</p>
                             </li>
                             <li class="selected_product border_5px">
                                 <figure class="selected_product_image">

@@ -121,6 +121,9 @@ body {
 
 /* Products */
 
+
+/* 상품 각각을 전체 그리드에 위치할 수도 있지만 의미상으로 맞지 않아 보여서 분리 */
+/* 위치 지정 역시 어느 정도는 유동적으로 변할 수 있게 설정 */
 .vending_machine .product_list {
     grid-area: product_list;
     margin-bottom: 20px;
@@ -213,6 +216,7 @@ body {
 
 /* Balance & Change */
 
+/* 구매 내역 부분에서도 사용되므로 부모 클래스를 명시하지 않음 */
 .money_info {
     grid-area: balance;
     box-sizing: border-box;
@@ -267,6 +271,7 @@ body {
 
 /* Product List & Get Products */
 
+/* 마찬가지로 구매 내역 부분에서 사용되므로 부모 클래스 명시하지 않음 */
 .shopping_cart {
     grid-area: shopping_cart;
     background-color: var(--light_violet);
