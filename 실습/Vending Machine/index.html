@@ -42,8 +42,7 @@
                     <!-- 현재 판배중인 상품의 목록을 나타내기 위해 ul 사용, 순서는 상관 없다고 생각됨. -->
                     <ul class="product_list">
                         <li>
-                            <figure
-                                class="product selected location_1 button_shadow light_gray_normal_border border_10px">
+                            <figure class="product location_1 button_shadow light_gray_normal_border border_10px">
                                 <img src="./images/red_cola.png" alt="">
                                 <figcaption class="product_desc">
                                     <p class="product_name">Original_Cola</p>
@@ -80,8 +79,7 @@
                             </figure>
                         </li>
                         <li>
-                            <figure
-                                class="product selected location_5 button_shadow light_gray_normal_border border_10px">
+                            <figure class="product location_5 button_shadow light_gray_normal_border border_10px">
                                 <img src="./images/green_cola.png" alt="">
                                 <figcaption class="product_desc">
                                     <p class="product_name">Green_Cola</p>
@@ -103,9 +101,14 @@
                     <!-- 잔액에 관련된 부분을 묶어주고, 꾸며주기 위해 div 태그 사용 -->
                     <div class="money_info border_5px">
                         <p>잔액 :</p>
-                        <p>1,000 원</p>
+                        <p class="money_now">1,000</p>
                     </div>
-                    <button class="change light_gray_normal_border border_5px button_shadow">거스름돈 반환</button>
+                    <!-- 추후 form 형태로 변경, 화면에 표시되지 않는 input 태그를 통해 잔액 관리, 옆의 p태그와 연결 -->
+                    <!-- 옆의 잔액을 나타내는 텍스트와 직접 연결할 경우 사용자가 수정할 수 있는 가능성이 존재? -->
+                    <form class="change">
+                        <input id="money" type="hidden" value="0">
+                        <button class="change_button light_gray_normal_border border_5px button_shadow">거스름돈 반환</button>
+                    </form>
 
                     <!-- 사용자로부터 입력 받는 것이므로 form 태그 사용 -->
                     <!-- 잔액과 획득까지 form 태그로 묶어야 하는가? -->
@@ -157,9 +160,14 @@
                             <p class="selected_product_count light_gray_normal_border border_5px">2</p>
                         </li>
                     </ul>
-                    <button class="buy_product button_shadow border_5px">
-                        획득
-                    </button>
+                    <!-- 추후 form 형태로 화면에 표시되지 않는 여러 개의 input 태그를 통해 리스트 관리, 옆의 리스트와 연결 -->
+                    <form class="buy_product">
+                        <input id="original_cola" type="hidden" value="1">
+                        <input id="green_cola" type="hidden" value="2">
+                        <button class="buy_product_button button_shadow border_5px">
+                            획득
+                        </button>
+                    </form>
                 </section>
                 <!-- 오른쪽 섹션, 구매 내역과 관련된 파트 -->
                 <section class="vending_machine_components right_side">
@@ -169,7 +177,7 @@
                     <div class="money_total border_10px">
                         <div class="money_info border_5px">
                             <p>소지금 :</p>
-                            <p>25,000 원</p>
+                            <p class="money_now">25,000</p>
                         </div>
                     </div>
                     <!-- 구매 내역에 관련된 부분들을 꾸며주기 위해 div 태그 사용 -->
