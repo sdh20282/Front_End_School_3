@@ -111,7 +111,7 @@ body {
     grid-template-areas:
         'product_list   product_list   product_list'
         'balance        balance        change'
-        'money_input    money_input    money_input'
+        'money_input    money_input    input_button'
         'shopping_cart  shopping_cart  buy_product';
 
     column-gap: 12px;
@@ -170,24 +170,11 @@ body {
     overflow: hidden;
 }
 
-.vending_machine .product_list .sold_out::before {
-    content: ' ';
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    background-color: black;
-    opacity: 70%;
-}
-
 .vending_machine .product_list .sold_out::after {
     content: ' ';
     position: absolute;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.7);
     background-image: url(../images/sold_out.png);
     background-repeat: no-repeat;
     background-position: center;
@@ -254,22 +241,22 @@ body {
     content: ' 원';
 }
 
-.vending_machine .change {
+/* .vending_machine .change {
     grid-area: change;
     margin-bottom: 12px;
-}
+} */
 
-.vending_machine .change .change_button {
-    width: 100%;
-    height: 100%;
+.vending_machine .change_button {
+    grid-area: change;
     background-color: white;
     font-size: 13px;
+    margin-bottom: 12px;
 }
 
 
 /* Insert Money */
 
-.vending_machine .input_money {
+/* .vending_machine .input_money {
     grid-area: money_input;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -277,20 +264,22 @@ body {
         'input input button';
     column-gap: 12px;
     margin-bottom: 12px;
+} */
+
+.vending_machine .input {
+    grid-area: money_input;
+    margin-bottom: 12px;
 }
 
-.vending_machine .input_money .input {
-    grid-area: input;
-}
-
-.vending_machine .input_money .input::placeholder {
+.vending_machine .input::placeholder {
     font-size: 13px;
     padding: 0 6px;
     opacity: 60%;
 }
 
-.vending_machine .input_money .submit {
-    grid-area: button;
+.vending_machine .input_button {
+    grid-area: input_button;
+    margin-bottom: 12px;
     background-color: white;
     font-size: 13px;
 }
@@ -360,13 +349,13 @@ body {
     margin-top: 6px;
 }
 
-.vending_machine .buy_product {
+/* .vending_machine .buy_product {
     grid-area: buy_product;
-}
+} */
 
-.vending_machine .buy_product .buy_product_button {
+.vending_machine .buy_product_button {
+    grid-area: buy_product;
     width: 100%;
-    height: 100%;
     background-color: var(--blue_violet);
     color: white;
     font-weight: 700;

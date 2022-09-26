@@ -1,6 +1,6 @@
 /* Reset */
 
-body, div, h1, h2, p, strong {
+body, div, ul, li, h1, h2, p, strong {
 	margin: 0;
 	padding: 0;
 	font-size: inherit;
@@ -9,6 +9,10 @@ body, div, h1, h2, p, strong {
 
 img {
 	vertical-align: top;
+}
+
+ul {
+	list-style: none;
 }
 
 
@@ -84,18 +88,45 @@ img {
 	width: 600px;
 	margin: auto 0;
 	color: #bd8fe8;
-	padding-left: 200px;
+	position: relative;
 }
 
-.portfolio_header .portfolio_header_description::before {
+/* .portfolio_header .portfolio_header_description::before {
 	content: ' ';
-	width: 200px;
-	height: 2px;
-	display: inline-block;
+	position: absolute;
+	width: 10px;
+	height: 10px;
 	background-color: #bd8fe8;
-	margin-left: -200px;
+} */
+
+.portfolio_project_list {
+	background-color: bisque;
 }
 
-.portfolio_list {
-	background-color: aqua;
+.portfolio_project_list .portfolio_project {
+	background-color: darksalmon;
+	display: flex;
 }
+
+.portfolio_project_list .portfolio_project + .portfolio_project {
+	margin-top: 24px;
+}
+
+.portfolio_project .portfolio_project_cover {
+	width: 26%;
+	position: relative;
+}
+
+.portfolio_project_cover .project_category {
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+}
+
+.portfolio_project_cover .project_cover_img {
+	width: 100%;
+	opacity: 50%;
+}
+
