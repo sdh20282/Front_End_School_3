@@ -98,75 +98,76 @@
                         </li>
                     </ul>
 
-                    <!-- 잔액에 관련된 부분을 묶어주고, 꾸며주기 위해 div 태그 사용 -->
-                    <div class="money_info border_5px">
-                        <p>잔액 :</p>
-                        <p class="money_now">1,000</p>
-                    </div>
-                    <!-- 추후 form 형태로 변경, 화면에 표시되지 않는 input 태그를 통해 잔액 관리, 옆의 p태그와 연결 -->
-                    <!-- 옆의 잔액을 나타내는 텍스트와 직접 연결할 경우 사용자가 수정할 수 있는 가능성이 존재? -->
-                    <!-- <form class="change"> -->
-                    <!-- form 태그는 서버로 데이터 전달 -> 현재 서버로 데이터 전달이 필요할까...? 모르겠음. -->
-                    <!-- 추후 데이터베이스 부분이 추가될 때 form 태그를 사용하면 될 것으로 보임 -->
-                    <input id="money" type="hidden" value="0">
-                    <button class="change_button light_gray_normal_border border_5px button_shadow">거스름돈 반환</button>
-                    <!-- </form> -->
-
-                    <!-- 사용자로부터 입력 받는 것이므로 form 태그 사용 -->
-                    <!-- <form class="input_money" action="get"> -->
-                    <input class="input light_gray_normal_border border_5px" type="text" placeholder="입금액 입력">
-                    <button class="input_button light_gray_normal_border border_5px button_shadow">
-                        입금
-                    </button>
-                    <!-- </form> -->
-
-                    <!-- 현재 장바구니에 담은 목록을 나타내기 위해 ul 사용, 순서는 크게 상관 없다고 생각됨 -->
-                    <ul class="shopping_cart light_gray_normal_border border_5px">
-                        <li class="selected_product border_5px">
-                            <figure class="selected_product_image">
-                                <img src="./images/red_cola.png" alt="">
-                                <figcaption>
-                                    <p class="product_name">Original_Cola</p>
-                                </figcaption>
-                            </figure>
-                            <p class="selected_product_count light_gray_normal_border border_5px">1</p>
-                        </li>
-                        <li class="selected_product border_5px">
-                            <figure class="selected_product_image">
-                                <img src="./images/green_cola.png" alt="">
-                                <figcaption>
-                                    <p class="product_name">Green_Cola</p>
-                                </figcaption>
-                            </figure>
-                            <p class="selected_product_count light_gray_normal_border border_5px">2</p>
-                        </li>
-                        <li class="selected_product border_5px">
-                            <figure class="selected_product_image">
-                                <img src="./images/green_cola.png" alt="">
-                                <figcaption>
-                                    <p class="product_name">Green_Cola</p>
-                                </figcaption>
-                            </figure>
-                            <p class="selected_product_count light_gray_normal_border border_5px">2</p>
-                        </li>
-                        <li class="selected_product border_5px">
-                            <figure class="selected_product_image">
-                                <img src="./images/green_cola.png" alt="">
-                                <figcaption>
-                                    <p class="product_name">Green_Cola</p>
-                                </figcaption>
-                            </figure>
-                            <p class="selected_product_count light_gray_normal_border border_5px">2</p>
-                        </li>
-                    </ul>
-                    <!-- 추후 form 형태로 화면에 표시되지 않는 여러 개의 input 태그를 통해 리스트 관리, 옆의 리스트와 연결 -->
-                    <!-- <form class="buy_product"> -->
-                    <input id="original_cola" type="hidden" value="1">
-                    <input id="green_cola" type="hidden" value="2">
-                    <button class="buy_product_button button_shadow border_5px">
-                        획득
-                    </button>
-                    <!-- </form> -->
+                    <!-- 입력을 위해 form 태그 사용 -->
+                    <form class="purchase">
+                        <!-- 잔액에 관련된 부분을 묶어주고, 꾸며주기 위해 div 태그 사용 -->
+                        <div class="money_info border_5px">
+                            <p>잔액 :</p>
+                            <p class="money_now">1,000</p>
+                        </div>
+                        <!-- 추후 form 형태로 변경, 화면에 표시되지 않는 input 태그를 통해 잔액 관리, 옆의 p태그와 연결 -->
+                        <!-- 옆의 잔액을 나타내는 텍스트와 직접 연결할 경우 사용자가 수정할 수 있는 가능성이 존재? -->
+                        <!-- <form class="change"> -->
+                        <!-- form 태그는 서버로 데이터 전달 -> 현재 서버로 데이터 전달이 필요할까...? 모르겠음. -->
+                        <!-- 추후 데이터베이스 부분이 추가될 때 form 태그를 사용하면 될 것으로 보임 -->
+                        <input id="money" type="hidden" value="0">
+                        <button class="change_button light_gray_normal_border border_5px button_shadow">거스름돈 반환</button>
+                        <!-- </form> -->
+    
+                        <!-- 사용자로부터 입력 받는 것이므로 form 태그 사용 -->
+                        <!-- <form class="input_money" action="get"> -->
+                        <input class="input light_gray_normal_border border_5px" type="text" placeholder="입금액 입력">
+                        <button class="input_button light_gray_normal_border border_5px button_shadow">
+                            입금
+                        </button>
+                        <!-- </form> -->
+    
+                        <!-- 현재 장바구니에 담은 목록을 나타내기 위해 ul 사용, 순서는 크게 상관 없다고 생각됨 -->
+                        <ul class="shopping_cart light_gray_normal_border border_5px">
+                            <li class="selected_product border_5px">
+                                <figure class="selected_product_image">
+                                    <img src="./images/red_cola.png" alt="">
+                                    <figcaption>
+                                        <p class="product_name">Original_Cola</p>
+                                    </figcaption>
+                                </figure>
+                                <p class="selected_product_count light_gray_normal_border border_5px">1</p>
+                            </li>
+                            <li class="selected_product border_5px">
+                                <figure class="selected_product_image">
+                                    <img src="./images/green_cola.png" alt="">
+                                    <figcaption>
+                                        <p class="product_name">Green_Cola</p>
+                                    </figcaption>
+                                </figure>
+                                <p class="selected_product_count light_gray_normal_border border_5px">2</p>
+                            </li>
+                            <li class="selected_product border_5px">
+                                <figure class="selected_product_image">
+                                    <img src="./images/green_cola.png" alt="">
+                                    <figcaption>
+                                        <p class="product_name">Green_Cola</p>
+                                    </figcaption>
+                                </figure>
+                                <p class="selected_product_count light_gray_normal_border border_5px">2</p>
+                            </li>
+                            <li class="selected_product border_5px">
+                                <figure class="selected_product_image">
+                                    <img src="./images/green_cola.png" alt="">
+                                    <figcaption>
+                                        <p class="product_name">Green_Cola</p>
+                                    </figcaption>
+                                </figure>
+                                <p class="selected_product_count light_gray_normal_border border_5px">2</p>
+                            </li>
+                        </ul>
+                        <!-- 추후 form 형태로 화면에 표시되지 않는 여러 개의 input 태그를 통해 리스트 관리, 옆의 리스트와 연결 -->
+                        <!-- <form class="buy_product"> -->
+                        <input id="original_cola" type="hidden" value="1">
+                        <input id="green_cola" type="hidden" value="2">
+                        <button class="buy_product_button button_shadow border_5px">획득</button>
+                        <!-- </form> -->
+                    </form>
                 </section>
                 <!-- 오른쪽 섹션, 구매 내역과 관련된 파트 -->
                 <section class="vending_machine_components right_side">

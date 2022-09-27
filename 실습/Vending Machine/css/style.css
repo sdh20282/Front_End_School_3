@@ -11,6 +11,10 @@
     --light_gray: #B5B5B6;
 }
 
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
 body {
     background-color: var(--light_violet);
     font-family: 'Noto Sans KR', sans-serif;
@@ -46,7 +50,6 @@ body {
 
 .light_gray_normal_border {
     border: 1px solid var(--light_gray);
-    box-sizing: border-box;
 }
 
 .border_10px {
@@ -99,21 +102,18 @@ body {
 /* Vending Machine - Left Side */
 
 .vending_machine .left_side {
-    box-sizing: border-box;
     background-color: white;
 
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 292px 44px 44px 106px;
+    grid-template-rows: 292px 194px;
     /* grid-template-rows: repeat(5, 1fr); */
 
     /* 현제 페이지에서는 areas로 직접 위치를 정해줄 필요는 없어 보이지만 상폼 순서 변경이나 UI 위치 변경 등을 고려하기 위해 위치 지정 */
     grid-template-areas:
         'product_list   product_list   product_list'
-        'balance        balance        change'
-        'money_input    money_input    input_button'
-        'shopping_cart  shopping_cart  buy_product';
-
+        'purchase       purchase       purchase';
+        
     column-gap: 12px;
     padding: 31px 27px 28px;
 }
@@ -219,55 +219,54 @@ body {
 }
 
 
+.vending_machine_components .purchase {
+    grid-area: purchase;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas:
+        'balance        balance        change'
+        'money_input    money_input    input_button'
+        'shopping_cart  shopping_cart  buy_product';
+
+    column-gap: 12px;
+}
+
+
 /* Balance & Change */
 
 /* 구매 내역 부분에서도 사용되므로 부모 클래스를 명시하지 않음 */
 .money_info {
     grid-area: balance;
-    box-sizing: border-box;
     background-color: var(--light_violet);
     display: flex;
     justify-content: space-between;
-    padding: 6px 10px;
+    padding: 0px 10px;
     margin-bottom: 12px;
     font-size: 14px;
 }
 
 .money_info p {
-    line-height: 20px;
+    line-height: 32px;
 }
 
 .money_info .money_now::after {
     content: ' 원';
 }
 
-/* .vending_machine .change {
-    grid-area: change;
-    margin-bottom: 12px;
-} */
-
 .vending_machine .change_button {
     grid-area: change;
     background-color: white;
     font-size: 13px;
+    line-height: 30px;
     margin-bottom: 12px;
 }
 
 
 /* Insert Money */
 
-/* .vending_machine .input_money {
-    grid-area: money_input;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-areas:
-        'input input button';
-    column-gap: 12px;
-    margin-bottom: 12px;
-} */
-
 .vending_machine .input {
     grid-area: money_input;
+    line-height: 30px;
     margin-bottom: 12px;
 }
 
@@ -282,6 +281,7 @@ body {
     margin-bottom: 12px;
     background-color: white;
     font-size: 13px;
+    line-height: 30px;
 }
 
 
@@ -322,7 +322,6 @@ body {
     align-items: center;
     justify-content: space-between;
     padding: 6px 8px 6px 10px;
-    box-sizing: border-box;
 }
 
 .shopping_cart .selected_product .selected_product_image {
@@ -348,10 +347,6 @@ body {
 .shopping_cart .selected_product + .selected_product {
     margin-top: 6px;
 }
-
-/* .vending_machine .buy_product {
-    grid-area: buy_product;
-} */
 
 .vending_machine .buy_product_button {
     grid-area: buy_product;
@@ -383,7 +378,6 @@ body {
 .vending_machine .right_side .purchased_products {
     background-color: white;
     height: 474px;
-    box-sizing: border-box;
     padding: 24px 27px 26px;
     text-align: center;
 } 
