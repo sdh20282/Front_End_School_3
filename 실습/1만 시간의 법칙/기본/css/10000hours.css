@@ -32,8 +32,11 @@
 
 body {
     background-color: #5B2386;
-    text-align: center;
     line-height: 1;
+}
+
+button {
+    cursor: pointer;
 }
 
 /* ########## Components ########## */
@@ -47,13 +50,16 @@ body {
     overflow: hidden;
 }
 
+.wrapper {
+    width: 780px;
+    margin: 0 auto;
+    text-align: center;
+}
+
 /* ###### header ###### */
 
 .title_loto {
-    background-image: url(../img/clock.png);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 261px;
+    background: url(../img/clock.png) no-repeat center / 261px;
     height: 265px;
     margin-top: 100px;
 }
@@ -68,8 +74,6 @@ body {
 /* ###### main ###### */
 
 .main_content {
-    display: flex;
-    flex-direction: column;
     margin-top: 46px;
     margin-bottom: 130px;
 }
@@ -86,17 +90,20 @@ body {
     color: #5B2386;
     background-color: #FCEE21;
     box-shadow: 0 0 1em 0 #666;
+    height: 66px;
+    line-height: 66px;
 }
 
 /* #### first section #### */
 
 .about_10000hour {
-    margin-bottom: 102px;
+    /* NOTE:: 여기서 102px로 간격을 주었는데 아래 .description_text와의 실제 간격을 보면 102px 이상입니다. 지금의 경우는 .description_text의 line-height 값 때문에 추가 간격이 생긴건데요 지금 마크업이 p태그로 각각 되어있어서 각 p태그 사이의 간격을 조정하는 식으로 css를 수정하는 것이 좋을 것 같습니다 :) */
+    margin-bottom: 80px;
 }
 
 .about_10000hour .about_10000hour_subtitle {
     font-family: 'OTEnjoystoriesBA';
-    font-size: 37px;
+    font-size: 36px;
     color: #F5DF4D;
     margin-bottom: 50px;
 }
@@ -108,7 +115,7 @@ body {
     font-family: 'GmarketSansMedium';
     font-size: 18px;
     color: white;
-    line-height: 1.8;
+    line-height: 1.6;
     padding-top: 28px;
 }
 
@@ -146,7 +153,7 @@ body {
 
 .become_specialist .decorate_button {
     width: fit-content;
-    margin: 115px auto 0;
+    margin: 90px auto 0;
     position: relative;
 }
 
@@ -164,7 +171,7 @@ body {
 }
 
 .become_specialist .decorate_button .btn_start {
-    padding: 24px 49px 16px;
+    padding: 5px 49px;
     border-radius: 32px;
 }
 
@@ -175,33 +182,35 @@ body {
 }
 
 .specialist_result .description_text {
-    line-height: 1.3;
+    line-height: 1.25;
 }
 
 .specialist_result .description_text strong {
     font-family: 'GmarketSansBold';
     font-weight: bold;
     font-size: 72px;
-    padding: 0 10px;
+    padding: 0 6px;
     vertical-align: -15%;
 }
 
 .specialist_result .button_list {
-    margin-top: 127px;
+    margin-top: 113px;
 }
 
 .specialist_result .button_list .btn_start {
-    font-size: 26px;
-    padding: 24px 49px 16px;
+    /* NOTE:: 저는 button의 경우 요소 크기를 직접 지정하기도 합니다. width는 버튼의 텍스트 길이에 따라 가변적이지만 height는 보통 동일해서 px단위로 고정적인 경우가 많이 있어서요. padding으로 주어도 나쁜 것은 아니지만 이렇게 각각의 값을 다르게 넣게된다면 height를 px단위로 고정, width를 padding으로 설정하는 방법도 있습니다. */
+    padding: 5px 50px;
     border-radius: 32px;
-    margin-right: 20px;
+    margin-right: 10px;
 }
 
 .specialist_result .button_list .bth_share {
     font-family: 'GmarketSansBold';
-    font-size: 26px;
+    font-size: 24px;
     color: #5B2386;
-    padding: 24px 49px 16px;
+    padding: 5px 50px;
+    height: 66px;
+    line-height: 66px;
     border-radius: 32px;
     box-shadow: 0 0 1em 0 #666;
 }
@@ -269,6 +278,10 @@ body {
 }
 
 @media (max-width: 825px) {
+    .wrapper {
+        width: 320px;
+    }
+
     /* ###### header ###### */
 
     .title_loto {
@@ -301,7 +314,7 @@ body {
     /* #### first section #### */
     
     .about_10000hour {
-        margin-bottom: 62px;
+        margin-bottom: 60px;
     }
     
     .about_10000hour .about_10000hour_subtitle {
@@ -313,6 +326,7 @@ body {
         background-size: 312px;
         padding-top: 6px;
         font-size: 14px;
+        line-height: 1.7;
     }
     
     .about_10000hour .about_10000hour_description strong {
@@ -326,7 +340,7 @@ body {
     }
 
     .become_specialist .description_text {
-        line-height: 3.2;
+        line-height: 3.1;
     }
     
     .become_specialist .description_text span {
@@ -359,7 +373,7 @@ body {
     }
     
     .become_specialist .decorate_button .btn_start {
-        padding: 18px 37px 14px;
+        padding: 18px 37px;
         border-radius: 12px;
         line-height: 1.3;
     }
@@ -385,19 +399,23 @@ body {
     }
     
     .specialist_result .button_list {
-        margin-top: 55px;
+        margin-top: 40px;
     }
     
     .specialist_result .button_list .btn_start {
+        height: 40px;
+        line-height: 40px;
         font-size: 14px;
-        padding: 16px 20px 13px;
+        padding: 0 20px;
         border-radius: 32px;
         margin-right: 13px;
     }
     
     .specialist_result .button_list .bth_share {
+        height: 40px;
+        line-height: 40px;
         font-size: 14px;
-        padding: 16px 20px 13px;
+        padding: 0 20px;
         border-radius: 32px;
     }
     
@@ -415,8 +433,8 @@ body {
     .extra_info .copyright {
         font-size: 8px;
         color: white;
-        line-height: 1.5;
-        opacity: 80%;
+        line-height: 1;
+        opacity: 60%;
     }
     
     /* ###### modal ###### */
