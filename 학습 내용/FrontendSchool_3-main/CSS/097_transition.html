@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Transition Test</title>
+        <style>
+            /* 
+            : - 가상클래스선택자
+            :: - 가상요소선택자 
+            */
+
+            .one {
+                font-size: 16px;
+                width: 100px;
+                height: 100px;
+                background-color: red;
+                transition: all 1s;
+                /* transition: 1000ms; */
+                /* transition-delay: 1s; */
+                /* transition-duration: 1s; */
+                /* transition-property: font-size, background-color; */
+                /* transition-timing-function: linear; */
+                /* transition-timing-function: cubic-bezier(0, 0.39, 1, 0.55); */
+                /* transition-timing-function: steps(3, start); */
+                /* transition-timing-function: steps(3, end); */
+            }
+
+            .one:hover {
+                font-size: 32px;
+                width: 300px;
+                height: 300px;
+                background-color: blue;
+                /* transition-duration: 1s; */
+            }
+
+            .one:active {
+                font-size: 32px;
+                width: 1000px;
+                height: 1000px;
+                background-color: greenyellow;
+                /* transition-duration: 10s; */
+            }
+
+            .one::before {
+                content: "가상요소야!";
+                display: block;
+                width: 100px;
+                height: 100px;
+                background-color: brown;
+                transition: all 1s;
+            }
+            .one:hover::before {
+                content: "가상요소야!";
+                display: block;
+                width: 200px;
+                height: 200px;
+                background-color: green;
+            }
+
+            .two {
+                width: 100px;
+                height: 100px;
+                background-color: blue;
+                transition: all 1s;
+                transition-delay: 1s;
+            }
+
+            .two:hover {
+                width: 300px;
+                height: 300px;
+                background-color: red;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="one">hello world</div>
+        <div class="two">hello world</div>
+    </body>
+</html>

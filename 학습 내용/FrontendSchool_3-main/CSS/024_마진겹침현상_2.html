@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+            /* 부모와 자식 간의 마진 겹침현상 */
+            .parent {
+                background-color: red;
+                height: 200px;
+                margin-top: 50px;
+                /* overflow: hidden; */
+                /* display: inline-block; */
+                /* border: 0.01px solid black; */
+                /* border: 1px solid transparent; */
+                /* 아래 방법은 IE 지원 불가로 사용이 어려울 수 있습니다. */
+                /* display: flow-root; */
+            }
+            .child {
+                margin-top: 100px;
+                width: 100px;
+                height: 100px;
+                background-color: blue;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="parent">
+            <div class="child"></div>
+        </div>
+    </body>
+</html>

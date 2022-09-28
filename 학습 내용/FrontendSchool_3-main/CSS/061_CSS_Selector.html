@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+            /* 0부터 시작하지 않습니다. */
+            /* 어떤 프로그래밍 언어를 배우셔도 넘버링은 0부터에요. 그래서 헷갈립니다. */
+            /* div:nth-child(1) {
+                background-color: red;
+            } */
+            /* div:nth-child(n) {
+                background-color: red;
+            } */
+
+            /* 그런데 말입니다. n은 0부터 시작합니다. */
+            /* div:nth-child(2n) {
+                background-color: red;
+            } */
+
+            /* div:nth-child(2n + 1) {
+                background-color: red;
+            } */
+
+            /* odd(홀수), even(짝수)키워드를 사용할 수도 있습니다. */
+            /* div:nth-child(odd) {
+                background-color: red;
+            } */
+            /* a:visited {
+                color: red;
+            } */
+
+            li:not(.one) {
+                color: red;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- 
+            가상 클래스 선택자 : 클래스가 없는데 있는 것처럼 처리(콜론이 1개입니다.)
+            가상 요소 선택자 : 요소가 없는데 있는 것처럼 처리(콜론이 2개입니다.)
+        -->
+        <a href="https://paullab.co.kr">hello</a>
+        <a href="https://paullabs.co.kr">hello</a>
+        <div>hello</div>
+        <div>hello</div>
+        <div>hello</div>
+        <div>hello</div>
+        <div>hello</div>
+        <div>hello</div>
+        <ul>
+            <li>hello wolrd</li>
+            <li>hello wolrd</li>
+            <li class="one">hello wolrd</li>
+            <li>hello wolrd</li>
+            <li>hello wolrd</li>
+        </ul>
+    </body>
+</html>

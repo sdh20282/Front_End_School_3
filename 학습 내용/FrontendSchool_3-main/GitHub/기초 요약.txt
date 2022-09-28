@@ -1,0 +1,114 @@
+$ ls
+$ mkdir leehojun    # 폴더 생성
+$ cd ..                   # 상위 폴더 이동
+$ cd test               # test 폴더 이동
+$ cd leehojun
+$ touch test.html    # test.html 파일 생성
+$ vi test.html         # 실무 vim을 사용합니다.
+i
+ESC
+:wq!
+$ cat test.html
+$ cd ..
+$ rmdir leehojun
+
+---
+
+$ git --version
+$ git config --global user.name "hojun.lee"
+$ git config --global user.email email@example.com
+$ git config --list
+$ git init
+$ ls -al
+$ touch README.md
+$ git status
+$ git add .
+$ git commit -m 'first commit'
+
+---
+
+우리가 목표하는 명령어(지금 실습하는 명령어 아닙니다.)
+git clone repo주소 .
+파일 수정이나 추가
+git add .
+git commit -m 'hello1'
+git push
+
+git pull
+파일 수정이나 추가
+git add .
+git commit -m 'hello2'
+git push
+
+git pull
+파일 수정이나 추가
+git add .
+git commit -m 'hello3'
+git push
+
+---
+
+https://paullabkorea.github.io/test/
+https://paullabkorea.github.io/test/index.html
+https://paullabkorea.github.io/test/a
+https://paullabkorea.github.io/test/a/index.html
+https://paullabkorea.github.io/test/b
+https://paullabkorea.github.io/test/b/index.html
+
+https://paullabkorea.github.io/
+babylion.co.kr
+
+---
+
+0. (기획자) 기획자가 기획
+
+1. (백엔드) URL 구조
+www.hojun.com/
+www.hojun.com/a/
+www.hojun.com/b/
+www.hojun.com/c/
+
+2. (백엔드, DBA) model 설계
+게시판
+  - 게시물 제목
+  - 게시물 내용
+  - 사진
+  ....
+
+3. (디자이너) 디자인(3번이 아니라 기획과 동시 진행될 수도 있습니다.)
+4. (프론트엔드) templates 작성
+5. (프론트엔드, 백엔드) model 설계한 것과 templates 연동
+6. URL 연결
+
+---
+
+git clone repo주소 . : GitHub -> 로컬
+파일 수정이나 추가
+git add .                       : 로컬
+git commit -m 'hello1'     : 로컬
+git push                        : 로컬 -> GitHub
+
+git pull : GitHub -> 로컬
+파일 수정이나 추가
+git add .                       : 로컬
+git commit -m 'hello2'     : 로컬
+git push                        : 로컬 -> GitHub
+
+---
+
+git clone repo주소 . : gitlab -> 로컬
+파일 수정이나 추가
+git add .                       : 로컬
+git commit -m 'hello1'     : 로컬
+git push                        : 로컬 -> gitlab 
+
+git pull : gitlab -> 로컬
+파일 수정이나 추가
+git add .                       : 로컬
+git commit -m 'hello2'     : 로컬
+git push                        : 로컬 -> gitlab 
+
+---
+
+git clone(.git폴더까지 다 가져옵니다.)
+git pull(내가 이미 .git 폴더를 가지고 있고, 작업하고 있는 파일도 있는 상태)

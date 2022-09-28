@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+            h1 {
+                color: blue; /* 0001 점 */
+            }
+            section h1 {
+                color: red; /* 0002 점으로 선택 */
+            }
+            .sector {
+                color: blue; /* 0010 점 */
+            }
+            section .sector {
+                color: red; /* 0011 점으로 선택 */
+            }
+            #one {
+                color: blue; /* 0100 점 */
+            }
+            section .sector #one {
+                color: red; /* 0111 점으로 선택 */
+            }
+
+            #one.two.three {
+                color: red;
+            }
+            h1.one.two.three {
+                color: blue;
+            }
+            section h2.one.two {
+                color: red;
+            }
+        </style>
+    </head>
+    <body></body>
+</html>

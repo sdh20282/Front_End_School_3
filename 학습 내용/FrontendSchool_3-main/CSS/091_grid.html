@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>grid</title>
+        <style>
+            .container {
+                display: grid;
+                /* 1. columns 수정 */
+                /* fr은 fraction(분수, 일부, 비율) */
+                /* grid-template-columns: 1fr 1fr 1fr;
+                grid-template-columns: 1fr 1fr 1fr 1fr;
+                grid-template-columns: 5% 10% 15% 70%;
+                grid-template-columns: 100px 200px;
+                grid-template-columns: 1fr 2fr 1fr;
+                grid-template-columns: repeat(3, 1fr); */
+
+                /* 2. row 수정 */
+                /* grid-template-rows: 100px;
+                grid-template-rows: repeat(3, 100px);
+                grid-template-columns: 1fr 1fr 1fr; */
+                /* grid-template-rows: 100px 200px 100px 200px; */
+                /* grid-template-rows: repeat(3, 100px 200px); */
+
+                /* 3. minmax */
+                /* 열방향 그리드 트랙의 최소 넓이를 50px, 최대 넓이를 150px로 합니다. */
+                /* grid-template-columns: repeat(3, minmax(50px, 150px)); */
+
+                /* 행방향 그리드 트랙의 최소 높이를 120px, 최대 높이를 가용할 수 있는 최대 크기로 합니다. */
+                /* grid-template-rows: repeat(3, minmax(120px, auto)); */
+
+                /* 4. auto-fill & auto-fit */
+                /* 실습을 위해 요소를 5개 정도로 줄여야 합니다. */
+                /* grid-template-columns: repeat(3, minmax(50px, 150px)); */
+                grid-template-columns: repeat(auto-fill, minmax(50px, auto));
+                /* grid-template-columns: repeat(auto-fit, minmax(50px, auto)); */
+            }
+            .item {
+                border: 1px solid black;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="item">1</div>
+            <div class="item">2</div>
+            <div class="item">3</div>
+            <div class="item">4</div>
+            <div class="item">5</div>
+            <div class="item">5</div>
+            <div class="item">5</div>
+            <div class="item">5</div>
+            <div class="item">5</div>
+            <div class="item">5</div>
+            <div class="item">5</div>
+            <div class="item">5</div>
+        </div>
+    </body>
+</html>

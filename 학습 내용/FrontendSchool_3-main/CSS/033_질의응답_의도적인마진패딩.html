@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+            html {
+                /* 이렇게 조절한 이유? 폰트를 키우기 위해서 -> 그런데 결론은 폰트도 커지지만, 박스모델이 커짐으로 UI가 깨지는 현상이 발생될 확률이 높습니다. */
+                font-size: 32px;
+            }
+            body {
+                margin: 0;
+            }
+            div {
+                background-color: red;
+                width: 2rem;
+                height: 2rem;
+            }
+            p {
+                margin: -30px;
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <p>hello world</p>
+        </div>
+    </body>
+</html>

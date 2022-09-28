@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+            /* 자손 */
+            div p {
+                color: red;
+            }
+
+            /* 형제 */
+            div + p {
+                color: blue;
+            }
+
+            /* 직계자식 */
+            div > p {
+                color: green;
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <p>hello world</p>
+        </div>
+        <div>
+            <section>
+                <h2>hello</h2>
+                <p>hello world</p>
+            </section>
+        </div>
+        <p>hello world</p>
+        <!-- 12번 챕터에서 다시 진행합니다. -->
+        <!-- https://developer.mozilla.org/ko/docs/Web/CSS/CSS_Selectors -->
+        <!-- https://developer.mozilla.org/ko/docs/Web/CSS/Reference -->
+    </body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>animation</title>
+        <style>
+            @keyframes hojun {
+                0% {
+                    transform: translate(0, 0);
+                }
+                25% {
+                    transform: translate(500px, 0);
+                }
+                50% {
+                    transform: translate(500px, 500px) rotate(360deg) scale(2);
+                }
+                75% {
+                    transform: translate(0, 500px);
+                }
+                100% {
+                    transform: translate(0, 0);
+                }
+            }
+
+            .box {
+                width: 100px;
+                height: 100px;
+                background-color: blueviolet;
+                animation: hojun 2s;
+                /* animation-iteration-count: 3; */
+                animation-iteration-count: infinite;
+                /* animation-direction: reverse; */
+                /* animation-direction: alternate; */
+                /* animation-direction: alternate-reverse; */
+                /* animation-delay: 3s; */
+            }
+        </style>
+    </head>
+    <body>
+        <div class="box">hello</div>
+    </body>
+</html>

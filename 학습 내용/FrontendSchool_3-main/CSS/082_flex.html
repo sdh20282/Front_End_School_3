@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <style>
+            .container {
+                display: flex;
+                width: 100%;
+            }
+            .item {
+                height: 50px;
+                background-color: aqua;
+                border: 1px solid #000;
+            }
+            .item:nth-child(1) {
+                /* 넓이가 아니라 여백이 늘어나거나 줄어들 때 2배로 늘어나거나 줄어드는 것 */
+                /* 여백이 다 사라지면 같아진다! */
+                flex-grow: 3;
+            }
+            .item:nth-child(2) {
+                flex-grow: 1;
+            }
+            .item:nth-child(3) {
+                flex-grow: 1;
+            }
+            .item:nth-child(4) {
+                flex-grow: 1;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="item">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Consectetur, iure. Quidem harum inventore est vero dolore
+                veritatis minima incidunt, dignissimos esse quasi explicabo
+                assumenda, sint fuga iste atque voluptatibus? Et.
+            </div>
+            <div class="item">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Consectetur, iure. Quidem harum inventore est vero dolore
+                veritatis minima incidunt, dignissimos esse quasi explicabo
+                assumenda, sint fuga iste atque voluptatibus? Et.
+            </div>
+            <div class="item">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Consectetur, iure. Quidem harum inventore est vero dolore
+                veritatis minima incidunt, dignissimos esse quasi explicabo
+                assumenda, sint fuga iste atque voluptatibus? Et.
+            </div>
+            <div class="item">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Consectetur, iure. Quidem harum inventore est vero dolore
+                veritatis minima incidunt, dignissimos esse quasi explicabo
+                assumenda, sint fuga iste atque voluptatibus? Et.
+            </div>
+        </div>
+    </body>
+</html>

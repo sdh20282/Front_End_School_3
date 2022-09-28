@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>template areas</title>
+        <style>
+            body {
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+                /* 
+                    3. 간격은 맞춰 주는 것이 좋습니다. 
+                    4. main 넓이를 많이 주어야 할 때에는 아래처럼 구성할 수 있습니다.
+                */
+                grid-template-areas:
+                    ".       .       .       time"
+                    "header  header  header  header"
+                    "aside-a main    main    aside-b"
+                    "footer  footer  footer  footer";
+            }
+
+            header {
+                grid-area: header;
+                background-color: pink;
+            }
+
+            main {
+                grid-area: main;
+                background-color: royalblue;
+            }
+
+            .aside-a {
+                grid-area: aside-a;
+                background-color: lightgreen;
+            }
+
+            .aside-b {
+                grid-area: aside-b;
+                background-color: lightgreen;
+            }
+
+            footer {
+                grid-area: footer;
+                background-color: aquamarine;
+            }
+
+            p {
+                grid-area: time;
+                background-color: blueviolet;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- 
+            1. 위치 상으로 맨 위로 올라가는 것이 맞지 않을까요? 
+            2. time 태그가 있습니다.
+        -->
+        <p>현재시간 :<time>22-09-19</time></p>
+        <header>header</header>
+        <main>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error
+            repellat earum iure id natus, consectetur, aut a adipisci, suscipit
+            dolore in quam commodi recusandae magni excepturi sapiente quasi
+            optio accusantium?
+        </main>
+        <aside class="aside-a">aside</aside>
+        <aside class="aside-b">aside</aside>
+        <footer>footer</footer>
+    </body>
+</html>

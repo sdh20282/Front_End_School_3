@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+            .foo:first-child {
+                background-color: blue;
+            }
+            .foo:last-child {
+                background-color: red;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- 
+            가상 클래스 선택자 : 클래스가 없는데 있는 것처럼 처리(콜론이 1개입니다.)
+            가상 요소 선택자 : 요소가 없는데 있는 것처럼 처리(콜론이 2개입니다.)
+        -->
+        <ul>
+            <!-- 주의사항, 첫번째 선택자가 foo가 아닌 경우 선택이 안됩니다. -->
+            <!-- <div>hello</div> -->
+            <li class="foo">1</li>
+            <li class="foo">2</li>
+            <li class="foo">3</li>
+            <li class="foo">4</li>
+            <li class="foo">5</li>
+        </ul>
+    </body>
+</html>

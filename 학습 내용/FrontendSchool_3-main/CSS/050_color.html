@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+            /* 
+            #000000 ~ #FFFFFF
+
+            bin - 2진수
+            01 10
+            oct - 8진수
+            01234567 10
+            hex - 16진수
+            0123456789abcdef 10
+
+            R  G  B
+            00 00 00
+
+            FF 00 00 - Red
+
+            F00 
+            */
+
+            :root {
+                --main-bg-color: brown;
+                --sub-bg-color: #0000ff;
+            }
+            div {
+                width: 100px;
+                height: 100px;
+            }
+            div:nth-child(1) {
+                background-color: #red;
+            }
+            div:nth-child(2) {
+                background-color: var(--main-bg-color);
+            }
+            div:nth-child(3) {
+                background-color: #ff0000;
+            }
+            div:nth-child(4) {
+                background-color: #111;
+            }
+            div:nth-child(5) {
+                background-color: #999;
+            }
+            div:nth-child(6) {
+                background-color: RGB(255, 87, 51);
+            }
+            div:nth-child(7) {
+                background-color: rgba(144, 144, 162, 1);
+            }
+            div:nth-child(8) {
+                background-color: hsl(0, 100%, 50%);
+            }
+            div:nth-child(9) {
+                background-color: hsla(0, 100%, 50%, 0.5);
+            }
+        </style>
+    </head>
+    <body>
+        <div>hello world 1</div>
+        <div>hello world 2</div>
+        <div>hello world 3</div>
+        <div>hello world 4</div>
+        <div>hello world 5</div>
+        <div>hello world 6</div>
+        <div>hello world 7</div>
+        <div>hello world 8</div>
+        <div>hello world 9</div>
+    </body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Transition Test</title>
+        <style>
+            .box {
+                width: 100px;
+                height: 200px;
+                background-color: dodgerblue;
+                border: 1px solid black;
+                transition: all 1s;
+                /* transform-origin: left; */
+                /* transform-origin: top center; */
+                transform-origin: bottom center;
+            }
+
+            .box:hover {
+                /* transform: scale(2); */
+                /* transform: rotate(360deg) scale(2); */
+                /* transform: rotate(1turn) scale(2); */
+                /* transform: translate(100px, 100px); */
+                /* transform: translateX(100px); */
+                /* transform: translateY(100px); */
+                /* transform: skew(40deg); */
+                transform: rotate(180deg);
+            }
+        </style>
+    </head>
+    <body>
+        <div class="box">hello world</div>
+    </body>
+</html>

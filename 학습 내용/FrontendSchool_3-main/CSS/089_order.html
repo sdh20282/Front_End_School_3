@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>align-self</title>
+        <style>
+            .container {
+                display: flex;
+            }
+            .item {
+                border: 1px solid black;
+            }
+            /* 숫자는 크기에 따라서만 정렬입니다. 순서가 아닙니다. */
+            .item:nth-child(1) {
+                order: 1;
+            }
+            .item:nth-child(2) {
+                order: 1;
+            }
+            /* 크기가 큰 것만 뒤로가는 것입니다. */
+            .item:nth-child(3) {
+                order: 3;
+            }
+            .item:nth-child(4) {
+                order: 1;
+            }
+            .item:nth-child(5) {
+                order: 1;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="item">1</div>
+            <div class="item">2</div>
+            <div class="item">3</div>
+            <div class="item">4</div>
+            <div class="item">5</div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>line-height</title>
+        <style>
+            .container {
+                width: 300px;
+                height: 300px;
+                font-size: 16px;
+                border: solid 1px black;
+                /* 1. 고정 값으로 주었을 경우 : two, three 확인 */
+                /* line-height: 10px; */
+
+                /* 2. em으로 주었을 경우 : 역시나 two, three 확인, 더 큰 font를 자식 요소에서 사용했을 경우 UI가 깨짐 */
+                /* line-height: 1em; */
+
+                /* 3. 1값을 사용했을 경우 개발자 도구 열어서 확인해보면 contents 높이가 32px 그러나 만약 line-height가 없다면 42.86! leading 영역이 폰트의 위 아래로 존재하기 때문, line-height 1은 이 leading 영역을 없앰(폰트 높이에 딱 붙게됨), leading 영역까지 포함하여 nomal */
+                /* line-height: 1; */
+            }
+            .one {
+                font-size: 10px;
+                border: solid 1px black;
+            }
+            .two {
+                font-size: 20px;
+                border: solid 1px black;
+            }
+            .three {
+                font-size: 30px;
+                line-height: 3;
+                border: solid 1px black;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>hello world</h1>
+        <div class="container">
+            <div class="one">hello world</div>
+            <div class="two">hello world</div>
+            <div class="three">hello world</div>
+        </div>
+    </body>
+</html>

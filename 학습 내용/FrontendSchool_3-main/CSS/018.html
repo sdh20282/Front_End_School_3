@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+            /*
+                아래 내용을 정리하는 것은 중요합니다!
+                display: block;
+                display: inline;
+                display: inline-block;
+                display: flex;
+                display: grid; 
+            */
+            div:nth-child(1) {
+                width: 100px;
+                height: 100px;
+                background-color: red;
+                display: block;
+            }
+            div:nth-child(2) {
+                width: 100px;
+                height: 100px;
+                background-color: red;
+                display: block;
+            }
+            div:nth-child(3) {
+                width: 100px;
+                height: 100px;
+                background-color: blue;
+                display: inline;
+            }
+            div:nth-child(4) {
+                width: 100px;
+                height: 100px;
+                background-color: blue;
+                display: inline;
+            }
+            div:nth-child(5) {
+                width: 100px;
+                height: 100px;
+                background-color: green;
+                display: inline-block;
+            }
+            div:nth-child(6) {
+                width: 100px;
+                height: 100px;
+                background-color: green;
+                display: inline-block;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- block -->
+        <!-- block은 width와 height로 컨트롤 할 수 있습니다. -->
+        <!-- 패딩과 마진, 보더 속성을 사용하여 스타일을 컨트롤 할 수 있으며 해당 속성들이 다른 요소들을 밀어냅니다. -->
+        <div>hello</div>
+        <div>hello</div>
+
+        <!-- inline -->
+        <!-- width와 height 속성을 사용할 수 없습니다. -->
+        <!-- 패딩과 , 보더 속성을 사용할 수 있지만 마진 속성은 좌우만 조절할 수 있습니다. 해당 속성들의 상하 값(top, bottom)들은 다른 요소들을 밀어내지 않습니다. -->
+        <div>hello</div>
+        <div>hello</div>
+
+        <!-- inline-block -->
+        <!-- inline 처럼 한 줄에 여러 요소가 존재할수 있습니다. block 처럼 width, height, margin, padding 등 모든 값을 지정할 수 있습니다. inline 속성의 특징과 block 속성의 특징이 함께 존재하는 박스 -->
+        <div>hello</div>
+        <div>hello</div>
+    </body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <div>
+            <label id="label" for="check">오늘 아침은 삼겹살입니다.</label>
+            <input id="check" type="checkbox" onclick="is_checked()" />
+        </div>
+        <script>
+            function is_checked() {
+                const checkbox = document.getElementById("check");
+                const checked = checkbox.checked;
+                if (checked) {
+                    document.getElementById("label").innerHTML =
+                        '<span style="background-color:lightgreen">오늘 아침은 삼겹살입니다!</span>';
+                } else {
+                    document.getElementById("label").innerHTML =
+                        "<span>오늘 아침은 삼겹살입니다!</span>";
+                }
+            }
+        </script>
+    </body>
+</html>

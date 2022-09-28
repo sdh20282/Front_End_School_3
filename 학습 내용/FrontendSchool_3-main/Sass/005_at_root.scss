@@ -1,0 +1,13 @@
+.one {
+    background: yellow;
+    .two {
+        font-size: 20px;
+        @at-root .three {
+            display: flex;
+        }
+    }
+}
+
+.four {
+    display: flex;
+}

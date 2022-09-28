@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>align-self</title>
+        <style>
+            .container {
+                display: flex;
+                /* 1. 부모에게 주어 중앙정렬, 정말 많이 사용합니다. */
+                /* 주축 */
+                /* justify-content: center; */
+                /* 교차축 */
+                /* align-items: center; */
+
+                /* 2. 부모에게 주어 전체를 이동 */
+                /* align-items: center;
+                align-items: flex-start;
+                align-items: flex-end; */
+                height: 600px;
+            }
+            .item {
+                border: 1px solid black;
+            }
+            .item:nth-child(2) {
+                align-self: center;
+                align-self: flex-start;
+                align-self: flex-end;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="item">1</div>
+            <div class="item">2</div>
+            <div class="item">3</div>
+            <div class="item">4</div>
+            <div class="item">5</div>
+        </div>
+    </body>
+</html>

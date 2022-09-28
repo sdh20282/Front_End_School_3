@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <form action="013.html" method="get">
+            <!-- 회원 가입 할 때, 주민등록 번호 입력 받으면 성별이 들어가는 경우 -->
+            <input type="text" name="성별" value="남" readonly /><br />
+            <input type="text" name="아이디" /><br />
+            <input type="text" name="test" maxlength="10" /><br />
+            <input type="text" name="test" minlength="10" /><br />
+            개인정보 동의해?
+            <input type="checkbox" name="test" required /><br />
+            <input
+                type="text"
+                placeholder="통장잔고"
+                name="test"
+                required
+            /><br />
+            <input
+                type="tel"
+                name="tlno"
+                id="tlno"
+                title="전화번호를 입력하세요."
+                placeholder="00*-000*-0000"
+                pattern="[0-9]{2,3}-[0-9]{3,4}-[0-9]{3,4}"
+                maxlength="13"
+            />
+            <button type="submit">회원가입</button>
+        </form>
+    </body>
+</html>

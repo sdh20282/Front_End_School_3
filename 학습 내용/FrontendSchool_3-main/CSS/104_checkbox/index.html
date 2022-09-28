@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .txt-hide {
+            position: absolute;
+            clip: rect(0 0 0 0);
+            width: 1px;
+            height: 1px;
+            margin: -1px;
+            overflow: hidden;
+        }
+
+        .labl-hold::before {
+            display: inline-block;
+            content: '';
+            width: 22px;
+            height: 22px;
+            vertical-align: -5px;
+            background-image: url("images/css_sprites_retina.png");
+            background-position: -52px -10px;
+            background-size: 84px 42px;
+        }
+
+        /* .labl-hold2::before {
+            display: inline-block;
+            content: '';
+            width: 22px;
+            height: 22px;
+            vertical-align: -5px;
+            background-image: url("images/icon_check.png");
+        } */
+
+        .inp-hold:checked+.labl-hold::before {
+            background-image: url("images/css_sprites_retina.png");
+            background-position: -10px -10px;
+            background-size: 84px 42px;
+        }
+
+        .inp-hold:focus+.labl-hold::before {
+            outline: 2px solid #000;
+            outline-offset: 5px;
+            border-radius: 50%;
+            /* border: 2px solid #000; */
+            box-sizing: border-box;
+        }
+
+        div {
+            width: 10px;
+            height: 10px;
+            background-image: url('');
+        }
+    </style>
+</head>
+
+<body>
+    <div></div>
+    <!-- <a href="">링크</a>
+    <button>버튼</button>
+    <input type="checkbox"> -->
+    <input type="checkbox" id="inpHold" class="inp-hold txt-hide">
+    <label for="inpHold" class="labl-hold">선택해주세요</label>
+    <!-- 
+    <input type="checkbox" id="inpHold" class="inp-hold txt-hide">
+    <label for="inpHold" class="labl-hold2">선택해주세요</label> -->
+</body>
+
+</html>

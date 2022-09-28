@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script
+            type="text/javascript"
+            src="http://code.jquery.com/jquery-3.2.0.min.js"
+        ></script>
+        <script type="text/javascript">
+            $(function () {
+                $(".play").click(function () {
+                    $("div").css("animation-play-state", "running");
+                });
+                $(".stop").click(function () {
+                    $("div").css("animation-play-state", "paused");
+                });
+            });
+        </script>
+        <style>
+            @keyframes yoon {
+                from {
+                    transform: translate(100px, 0);
+                }
+                to {
+                    transform: translate(300px, 0);
+                }
+            }
+
+            div {
+                position: absolute;
+                margin: 50px;
+                width: 100px;
+                height: 100px;
+                background-color: #ff0000;
+
+                /* 애니메이션 속성 */
+                animation-name: yoon;
+                animation-duration: 2s;
+                animation-iteration-count: infinite;
+            }
+        </style>
+    </head>
+    <body>
+        <button class="play">running</button>
+        <button class="stop">paused</button>
+        <div>box</div>
+    </body>
+</html>

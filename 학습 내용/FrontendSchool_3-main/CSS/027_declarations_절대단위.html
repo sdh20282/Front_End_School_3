@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+            /* 
+            절대적인 것은 아니고 주로입니다.
+            
+            고정 단위로 주면 좋은 것 : 패딩, 마진, 모니터 크기에 따라 상관없이 보일 것들, 이미지, 반응형을 고려하지 않아도 될 때, 글씨와 관련 없는 것들, 계산하기 쉬워야 하는 것들
+
+            가변 단위로 주면 좋은 것 : 이미지,폰트 (병원에 홈페이지 납품, 병원장님이 켄슬 -> 폰트가 너무 작아서->만약에 이것을 가변으로 주었다면 body 폰트 하나만 수정했으면 되는거죠.)
+            */
+            .one {
+                font-size: 32px;
+            }
+            .two {
+                font-size: 16px;
+            }
+            .three {
+                font-size: 2rem;
+            }
+        </style>
+    </head>
+    <body>
+        <h1 class="one">hello world</h1>
+        <h1>hello world</h1>
+        <p class="two">hello world</p>
+        <p>hello world</p>
+        hello world
+        <h1>hello world</h1>
+        <h1 class="three">hello world</h1>
+    </body>
+</html>

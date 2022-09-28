@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+            /* 
+                * : 전체
+                ^ : 시작, 반대
+                $ : 끝
+            */
+            a[href^="https"] {
+                color: red;
+            }
+            a[href$="kr"] {
+                color: green;
+            }
+
+            a[href$=".png"] {
+                color: blue;
+            }
+        </style>
+    </head>
+    <body>
+        <a href="http://www.paul.co.kr">위니브</a>
+        <a href="https://www.paullab.com">유튜브</a>
+        <a href="https://www.paullab.co.kr/a.png">사진</a>
+    </body>
+</html>

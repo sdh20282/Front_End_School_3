@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="reset.css">
+    <style>
+        .cont-select {
+            position: relative;
+            width: 200px;
+            margin: 100px auto 0;
+        }
+
+        .btn-select {
+            width: 100%;
+            padding: 11px 20px 11px 13px;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 16px;
+            text-align: left;
+            border: 1px solid #9B51E0;
+            border-radius: 10px;
+            cursor: pointer;
+            background: url("images/icon-Triangle-down.png") right 12px center no-repeat;
+
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+        }
+
+        .btn-select:focus {
+            outline: 3px solid #F8E4FF;
+        }
+
+        .btn-select.on {
+            background: url("images/icon-Triangle-up.png") right 12px center no-repeat;
+        }
+
+        .btn-select.on+.list-member {
+            display: block;
+        }
+
+        .list-member {
+            display: none;
+            position: absolute;
+            top: 49px;
+            left: 0;
+            border: 1px solid #C4C4C4;
+            box-shadow: 4px 4px 14px rgba(0, 0, 0, 0.15);
+            border-radius: 10px;
+        }
+
+        .list-member li {
+            padding: 5px 7px;
+        }
+
+        .list-member li button {
+            width: 100%;
+            padding: 7px 10px;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 16px;
+            background-color: inherit;
+            border: none;
+            cursor: pointer;
+            border-radius: 8px;
+            text-align: left;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+        }
+
+        .list-member li button:focus,
+        .list-member li button:hover {
+            background-color: #F8E4FF;
+        }
+    </style>
+</head>
+
+<body>
+    <article class="cont-select">
+        <h2 class="txt-hide">최애 프로그래밍 언어를 선택해주세요</h2>
+        <button type="button" class="btn-select">최애 프로그래밍 언어</button>
+        <ul class="list-member">
+            <li><button type="button">Python</button></li>
+            <li><button type="button">Java</button></li>
+            <li><button type="button">JavaScript</button></li>
+            <li><button type="button">C#</button></li>
+            <li><button type="button">C/C++</button></li>
+        </ul>
+    </article>
+    <button>버튼</button>
+</body>
+
+</html>

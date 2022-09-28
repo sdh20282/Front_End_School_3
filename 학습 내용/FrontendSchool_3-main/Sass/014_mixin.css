@@ -1,0 +1,20 @@
+.profile {
+  background-image: url("./assets/user.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+
+.profile-1 {
+  background-image: url("./assets/user.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 30% 50%;
+}
+
+.profile-2 {
+  background-image: url("./assets/user.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 30% 30%;
+}/*# sourceMappingURL=014_mixin.css.map */

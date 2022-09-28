@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+            /* 구체성, 명시도의 원칙 */
+            * {
+                color: red;
+            }
+            h1 {
+                color: blue;
+            }
+            p.color-red {
+                color: red;
+                font-size: 20px;
+            }
+
+            p {
+                color: green;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>hello world</h1>
+        <p class="color-red">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+            Praesentium, dolor repudiandae tempora consequatur maxime animi ad!
+            Quibusdam beatae laudantium itaque eos, cupiditate vero reiciendis
+            assumenda natus reprehenderit eveniet at enim?
+        </p>
+    </body>
+</html>
