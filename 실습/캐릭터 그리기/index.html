@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>아기오구</title>
+    <style>
+        @keyframes movetail {
+            50% {
+                transform: rotate(30deg);
+            }
+        }
+
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+        }
+
+        body {
+            background: rgb(129, 139, 156);
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 600px;
+            margin: 0 auto;
+            transform: rotate(-10deg);
+        }
+
+        .platypus {
+            position: relative;
+            top: 100px;
+            margin: 50px auto;
+            width: 300px;
+            height: 300px;
+        }
+
+        /* .platypus:hover .face {
+            animation: hide 2s;
+        } */
+
+        .platypus:hover .face .mouth::before {
+            display: none;
+        }
+
+        .platypus:hover .face .mouth::after {
+            display: inline;
+        }
+
+        .platypus:hover .face .eye.left::after {
+            display: inline;
+        }
+
+        .platypus:hover .face .eye.right::after {
+            display: inline;
+        }
+
+        /* .platypus:hover .body {
+            animation: hide 2s;
+        }
+
+        .platypus:hover .hand.left {
+            animation: hide 2s;
+        }
+
+        .platypus:hover .hand.right {
+            animation: hide 2s;
+        } */
+
+        .platypus:hover .tail {
+            animation-play-state: paused;
+        }
+
+        .face {
+            position: absolute;
+            top: 150px;
+            left: 50px;
+            width: 200px;
+            height: 200px;
+            background: white;
+            border-radius: 80% 80% 0 0;
+            border: 1px solid black;
+            z-index: 30;
+        }
+
+        .face .eye {
+            position: absolute;
+            width: 5px;
+            height: 5px;
+            background: black;
+            border-radius: 60%;
+        }
+
+        .face .eye.left {
+            left: 55px;
+            top: 50px;
+        }
+
+        .face .eye.left::after {
+            content: ' ';
+            display: none;
+            position: absolute;
+            width: 2px;
+            height: 8px;
+            top: -24px;
+            left: 43px;
+            background: #444;
+            border-radius: 30%;
+            transform: rotate(-12deg);
+        }
+
+        .face .eye.right {
+            right: 55px;
+            top: 50px;
+        }
+
+        .face .eye.right::after {
+            content: ' ';
+            display: none;
+            position: absolute;
+            width: 2px;
+            height: 8px;
+            top: -24px;
+            left: -30px;
+            background: #444;
+            border-radius: 30%;
+            transform: rotate(12deg);
+        }
+
+        .face .mouth {
+            position: absolute;
+            width: 50px;
+            height: 30px;
+            top: 40px;
+            left: 75px;
+            background: rgb(255, 255, 100);
+            border-radius: 50%;
+            border: 1px solid black;
+        }
+
+        .mouth::before {
+            content: ' ';
+            position: absolute;
+            width: 30px;
+            height: 15px;
+            top: 4px;
+            left: 10px;
+            border-radius: 50%;
+            border-bottom: 3px solid black;
+        }
+
+        .mouth::after {
+            display: none;
+            content: ' ';
+            position: absolute;
+            width: 30px;
+            height: 15px;
+            top: 10px;
+            left: 10px;
+            border-radius: 50%;
+            border-top: 3px solid black;
+        }
+
+        .body {
+            position: absolute;
+            top: 240px;
+            left: 47px;
+            width: 100px;
+            height: 50px;
+            background: white;
+            border-left: 1px solid black;
+            transform: rotate(10deg);
+            z-index: 40;
+
+        }
+
+        .hand {
+            position: absolute;
+            width: 40px;
+            height: 35px;
+            background-color: white;
+            border: 1px solid black;
+            border-left: 1px solid white;
+            border-radius: 0 70% 70% 0 / 0 50% 50% 0;
+            z-index: 60;
+        }
+
+        .hand.left {
+            top: 242px;
+            left: 75px;
+            transform: rotate(40deg);
+        }
+
+        .hand.right {
+            top: 245px;
+            left: 227px;
+            transform: rotate(50deg);
+        }
+
+        .tail {
+            position: absolute;
+            width: 150px;
+            height: 80px;
+            top: 220px;
+            left: -30px;
+            background-color: white;
+            border: 1px solid black;
+            border-radius: 30% 0 0 30% / 50% 0 0 50%;
+            transform: rotate(60deg);
+            z-index: 10;
+            animation: movetail infinite 2s alternate;
+        }
+
+        .line {
+            position: relative;
+            margin: 0 auto;
+            width: 600px;
+            height: 300px;
+            top: 10px;
+            background: rgb(129, 139, 156);
+            border-top: 6px solid black;
+            z-index: 50;
+        }
+    
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="platypus">
+            <div class="face">
+                <div class="eye left"></div>
+                <div class="eye right"></div>
+                <div class="mouth"></div>
+            </div>
+            <div class="body"></div>
+            <div class="hand left"></div>
+            <div class="hand right"></div>
+            <div class="tail"></div>
+        </div>
+        <div class="line"></div>
+    </div>
+</body>
+
+</html>
