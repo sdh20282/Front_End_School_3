@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title></title>
+    </head>
+    <body>
+        <script>
+            console.log("hello");
+
+            let data = {
+                a: 10,
+                one: 1,
+                two: 2,
+                three: 3,
+                c: 100,
+                b: 3,
+            };
+            // 그냥 출력했을 때에는 알파벳순
+            console.dir(data);
+
+            // 순회를 돌았을 때에는 순서보장
+            // for (const d in data) {
+            //     console.log(d);
+            // }
+
+            let data2 = [10, 20, 30];
+            console.dir(data2);
+
+            // 초록색이었던 것으로 기억하는데
+            // 검은색 맞고, 저희 개발자들은 info를 안쓴다고 합니다.
+            // console.info("hello world");
+
+            console.group("one");
+            console.log("호준/팀원");
+            console.log("유정/팀원");
+            console.log("혜연/팀원");
+            console.group("two");
+            console.log("태수/팀장");
+            console.log("슬기/팀장");
+            console.groupEnd();
+            console.log("end");
+            console.groupEnd();
+            console.log("end");
+
+            console.table(data);
+
+            console.error("error");
+            console.error("정신차렷!");
+
+            console.warn("hello");
+            console.warn("실행은 해줄게, 다만 경고문구는 읽어봐");
+
+            // 잊으셔도 괜찮습니다.
+            console.log("%chello world", "color:red;font-size:32px");
+            console.log(
+                "%chello world%chello",
+                "color:red;font-size:32px",
+                "color:blue;font-size:16px"
+            );
+            // https://patorjk.com/software/taag/#p=display&f=Graffiti&t=Type%20Something%20
+        </script>
+    </body>
+</html>

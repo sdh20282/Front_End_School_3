@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>String</title>
+    </head>
+    <body>
+        <script>
+            //string, 문자열
+            let txt = "ABCDEFGHIJK";
+            let txt2 = "mom said 'hello world'";
+            let txt3 = "mom said \"hello 'hello world' world\"";
+            let txt4 = "a\nb\ncde";
+            let txt5 = "a\tbcde";
+            let txt6 = "10abc"; // "10.1", "100.1abc" (parseFloat)
+            let txt7 = "10.1abc";
+            console.log(txt + txt);
+            console.log(txt[0]);
+            console.log(txt[-1]); // undefined
+            console.log(txt[4] + txt[5] + txt[6]);
+            console.log(txt2);
+            console.log(txt3);
+            console.log(txt4);
+            console.log(txt5);
+            console.log(txt5[2]); // /t를 1개의 문자열로 처리합니다.
+            console.log(txt6 + txt6);
+            console.log(parseInt(txt6) + parseInt(txt6));
+            // console.log(Number(txt6) + Number(txt6));
+
+            console.log(parseFloat(txt7) + parseFloat(txt7));
+
+            console.log(typeof txt);
+            // console.dir(txt2);
+
+            // 스트링에 메서드
+            console.log(txt.length); // 11개의 글자지만, index는 length - 1
+
+            // indexOf는 정규표현식을 허용하지 않습니다.
+            console.log(txt.indexOf("E"));
+            console.log(txt.search("E"));
+
+            console.log(txt.indexOf("Z"));
+            console.log(txt.search("Z"));
+
+            let regExp = /CD/;
+            console.log(txt.search(regExp));
+        </script>
+    </body>
+</html>
