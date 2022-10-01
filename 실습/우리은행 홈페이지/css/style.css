@@ -1,0 +1,166 @@
+.wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.blind {
+    position: absolute;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+}
+
+/* articles */
+
+.article_size {
+    /* display: inline-block; */
+    display: flex;
+}
+
+.article_size p {
+    /* display: inline-block; */
+    /* display: flex; */
+}
+
+.article_sns {
+    /* display: inline-block; */
+    display: flex;
+}
+
+.article_sns li {
+    /* display: inline-block; */
+}
+
+/* header */
+
+.page_header {
+    background-color: cornflowerblue;
+}
+
+/* header-title */
+
+.page_header .header {
+    display: flex;
+
+    background-color: aquamarine;
+}
+
+.header .header_article {
+    /* display: inline-block; */
+    display: flex;
+    margin-left: auto;
+}
+
+/* header-menu */
+
+.header_menu {
+    display: flex;
+}
+
+.header_menu .header_menu_nav {
+    /* display: inline-block; */
+    /* display: flex; */
+}
+
+.header_menu .header_menu_nav .header_menu_nav_list {
+    display: flex;
+}
+
+.header_menu .header_menu_nav li {
+    /* display: inline-block; */
+}
+
+.header_menu .header_menu_article {
+    /* display: inline-block; */
+    display: flex;
+    margin-left: auto;
+}
+
+/* main */
+
+.page_main {
+    background-color: aqua;
+}
+
+.page_main .page_main_image {
+    height: 520px;
+    display: block;
+    text-align: center;
+}
+
+.page_main .section {
+    padding: 100px 0;
+    text-align: center;
+}
+
+.section .section_header{
+    margin-bottom: 30px;
+}
+
+.section .section_wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+/* main-section1 */
+
+.page_main .section.section1 {
+    background-color: blanchedalmond;
+}
+
+section.section1 .section_wrapper .section1_content {
+    display: flex;
+}
+
+section.section1 .section_wrapper .section1_content span {
+    display: block;
+}
+
+/* main-section2 */
+
+.page_main .section.section2 {
+    background-color: darkgray;
+}
+
+section.section2 .section_wrapper .interested_category_list {
+    display: flex;
+    margin-bottom: 30px;
+}
+
+section.section2 .section_wrapper .interested_info {
+    display: flex;
+}
+
+section.section2 .section_wrapper .interested_info {
+    display: flex;
+}
+
+/* main-section3 */
+
+.page_main .section.section3 {
+    background-color: darkseagreen;
+}
+
+
+
+/* main-section4 */
+
+.page_main .section.section4 {
+    background-color: honeydew;
+}
+
+.section.section4 .section4_warpper .section4_content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* footer */
+
+.page_footer {
+    background-color: lightgreen;
+}
