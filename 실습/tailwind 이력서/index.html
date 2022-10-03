@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="ko" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tailwind Resume</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tw-elements/dist/css/index.min.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <header class="w-1/5 h-screen fixed bg-[#242424]">
+        <h1>
+            <img class="w-full h-[40vh] object-cover"
+                src="https://images.unsplash.com/photo-1529665253569-6d01c0eaf7b6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1085&q=80"
+                alt="개발자 서동현 이력서 웹사이트">
+        </h1>
+        <nav>
+            <ol>
+                <li>
+                    <a href="#carouselExampleCaptions"
+                        class="text-white text-[13px] font-bold block w-full p-4 border-b-[2px] border-[#555]">
+                        <i class="fa-solid fa-house ml-4 mr-3"></i>
+                        <p class="inline-block">INTRODUCE</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#ABOUTME"
+                        class="text-white text-[13px] font-bold block w-full p-4 border-b-[2px] border-[#555]">
+                        <i class="fa-solid fa-user ml-4 mr-3"></i>
+                        <p class="inline-block">ABOUT ME</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#CAREER"
+                        class="text-white text-[13px] font-bold block w-full p-4 border-b-[2px] border-[#555]">
+                        <i class="fa-solid fa-briefcase ml-4 mr-3"></i>
+                        <p class="inline-block">CAREER</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#PROJECTS"
+                        class="text-white text-[13px] font-bold block w-full p-4 border-b-[2px] border-[#555]">
+                        <i class="fa-solid fa-star ml-4 mr-3"></i>
+                        <p class="inline-block">PROJECTS</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#CONTACT"
+                        class="text-white text-[13px] font-bold block w-full p-4 border-b-[2px] border-[#555]">
+                        <i class="fa-solid fa-phone ml-4 mr-3"></i>
+                        <p class="inline-block">CONTACT</p>
+                    </a>
+                </li>
+            </ol>
+        </nav>
+        <nav class="absolute bottom-0 w-full text-white mb-4">
+            <ul class="flex w-full justify-center gap-x-5">
+                <li>
+                    <a href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+                </li>
+                <li>
+                    <a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                </li>
+                <li>
+                    <a href="https://twitter.com/" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+                </li>
+                <li>
+                    <a href="https://www.linkedin.com/" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main class="w-4/5 float-right">
+        <section id="carouselExampleCaptions" class="carousel slide relative bg-[#242424]" data-bs-ride="carousel">
+            <header class="sr-only">
+                <h2>introduce myself</h2>
+            </header>
+            <ul class="carousel-indicators absolute right-0 bottom-0 left-0 flex justify-center p-0 mb-4">
+                <li>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                        aria-current="true" aria-label="Slide 1"></button>
+                </li>
+                <li>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                        aria-label="Slide 2"></button>
+                </li>
+                <li>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                        aria-label="Slide 3"></button>
+                </li>
+            </ul>
+            <ul class="carousel-inner relative w-full h-screen overflow-hidden">
+                <li class="carousel-item active relative float-left w-full h-screen">
+                    <section>
+                        <figure>
+                            <img src="https://images.unsplash.com/photo-1522252234503-e356532cafd5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=725&q=80"
+                                class="block w-full h-screen object-cover opacity-20" alt="..." />
+                            <figcaption
+                                class="carousel-caption block absolute top-0 bottom-0 flex justify-center items-center">
+                                <h3 class="text-3xl">Hi! I'm <strong class="text-5xl">Dong-Hyeon Seo</strong>, <span
+                                        class="text-[#e65650]">Developer</span></h3>
+                            </figcaption>
+                        </figure>
+                    </section>
+                </li>
+                <li class="carousel-item relative float-left w-full h-screen">
+                    <section>
+                        <figure>
+                            <img src="https://images.unsplash.com/photo-1587440871875-191322ee64b0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80"
+                                class="block w-full h-screen object-cover opacity-20" alt="..." />
+                            <figcaption
+                                class="carousel-caption block absolute top-0 bottom-0 flex justify-center items-center">
+                                <h3 class="text-3xl">Hi! I'm <strong class="text-5xl">Dong-Hyeon Seo</strong>, <span
+                                        class="text-[#e65650]">Designer</span></h3>
+                            </figcaption>
+                        </figure>
+                    </section>
+                </li>
+                <li class="carousel-item relative float-left w-full h-screen">
+                    <section>
+                        <figure>
+                            <img src="https://images.unsplash.com/photo-1627244714766-94dab62ed964?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8Y3JlYXRvcnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"
+                                class="block w-full h-screen object-cover opacity-20" alt="..." />
+                            <figcaption
+                                class="carousel-caption block absolute top-0 bottom-0 flex justify-center items-center">
+                                <h3 class="text-3xl">Hi! I'm <strong class="text-5xl">Dong-Hyeon Seo</strong>, <span
+                                        class="text-[#e65650]">Creator</span></h3>
+                            </figcaption>
+                        </figure>
+                    </section>
+                </li>
+            </ul>
+            <button
+                class="carousel-control-prev absolute top-0 bottom-0 flex items-center justify-center p-0 text-center border-0 hover:outline-none hover:no-underline focus:outline-none focus:no-underline left-0"
+                type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon inline-block bg-no-repeat" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button
+                class="carousel-control-next absolute top-0 bottom-0 flex items-center justify-center p-0 text-center border-0 hover:outline-none hover:no-underline focus:outline-none focus:no-underline right-0"
+                type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                <span class="carousel-control-next-icon inline-block bg-no-repeat" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </section>
+        <section id="ABOUTME" class="pt-[150px]">
+            <header class="text-center mb-[50px] max-w-[80%] m-auto">
+                <h2 class="text-4xl after:content-[''] after:block after:m-auto after:mt-[12px] after:mb-[18px] after:w-[150px]  after:border-b-[3px] after:border-[#e65650]">ABOUT ME</h2>
+                <p class="text-xl">Front-End Developer</p>
+            </header>
+            <p class="max-w-[80%] m-auto mb-[100px]">Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, nobis? Molestiae hic impedit repellendus illum quisquam explicabo, deserunt aut fugit dolores consequatur maxime, possimus modi, ab accusamus praesentium? Odit, corrupti! Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam, tenetur? Exercitationem, nesciunt placeat et laboriosam at ut nemo illo cupiditate dolore, perferendis velit enim, nostrum itaque inventore quaerat voluptate error.</p>
+            <section class="pt-[100px] pb-[100px] bg-no-repeat bg-center bg-cover bg-fixed" style="background-image:  linear-gradient(rgba(48, 48, 48, 0.8), rgba(48, 48, 48, 0.8)), url(https://images.unsplash.com/photo-1468322638156-074863f9362e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80)">
+                <header class="text-center max-w-[80%] m-auto text-[white]">
+                    <h3 class="text-4xl after:content-[''] after:block after:m-auto after:mt-[12px] after:w-[90px]  after:border-b-[3px] after:border-[#e65650]">SKILLS</h3>
+                </header>
+                
+                <section class="mt-[80px]">
+                    <header class="text-center text-3xl text-white mb-[30px]">
+                        <h4>FRONT-END</h4>
+                    </header>
+                    <ul class="flex flex-wrap justify-center pl-10 pr-10">
+                        <li>
+                            <img src="./images/html.png" class="w-[250px] object-cover ml-[-10px] mr-[-10px]" alt="HTML5">
+                        </li>
+                        <li class="p-[21px]">
+                            <img src="./images/css.png" class="w-[208px] object-cover ml-[-10px] mr-[-10px]" alt="CSS3">
+                        </li>
+                        <li class="p-[32px]">
+                            <img src="./images/sass.png" class="w-[186px] object-cover ml-[-10px] mr-[-10px]" alt="CSS3">
+                        </li>
+                        <li class="p-[21px]">
+                            <img src="./images/tailwind.png" class="w-[208px] object-cover ml-[-10px] mr-[-10px]" alt="CSS3">
+                        </li>
+                        <li class="p-[31px]">
+                            <img src="./images/js.png" class="w-[188px] object-cover ml-[-10px] mr-[-10px]" alt="CSS3">
+                        </li>
+                        <li class="p-[30px]">
+                            <img src="./images/ts.png" class="w-[190px] object-cover ml-[-10px] mr-[-10px]" alt="CSS3">
+                        </li>
+                        <li class="p-[25px]">
+                            <img src="./images/react.png" class="w-[200px] object-cover ml-[-10px] mr-[-10px]" alt="CSS3">
+                        </li>
+                    </ul>
+                </section>
+                <section class="mt-[80px]">
+                    <header class="text-center text-3xl text-white mb-[30px]">
+                        <h4>COLLABORATION</h4>
+                    </header>
+                    <ul class="flex flex-wrap justify-center pl-10 pr-10">
+                        <li class="p-[15px]">
+                            <img src="./images/figma.png" class="w-[220px] object-cover ml-[-10px] mr-[-10px]" alt="HTML5">
+                        </li>
+                        <li class="p-[26px]">
+                            <img src="./images/github.png" class="w-[198px] object-cover ml-[-10px] mr-[-10px]" alt="CSS3">
+                        </li>
+                    </ul>
+                </section>
+            </section>
+            <section class="pt-[100px] pb-[100px]">
+                <header class="text-center mb-[50px] max-w-[80%] m-auto">
+                    <h3 class="text-4xl after:content-[''] after:block after:m-auto after:mt-[12px] after:w-[180px]  after:border-b-[3px] after:border-[#e65650]">EDUCATION</h3>
+                </header>
+                <ul class="text-left max-w-[80%] m-auto">
+                    <li class="mb-[30px]">
+                        <p class="text-xl mb-[10px] inline-block">education 01</p>
+                        <time class="text-[#e65650] float-right">2010-03-01 ~ 2013-02-21</time>
+                        <ul class="pl-[30px]">
+                            <li class="before:content-[''] before:bg-[#000] before:inline-block before:w-[10px] before:h-[2px] before:mb-[5px] before:ml-[-30px] before:mr-[20px] mb-[5px]">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam dignissimos ea cum temporibus omnis sint reprehenderit fuga. Repellendus, saepe unde?</li>
+                            <li class="before:content-[''] before:bg-[#000] before:inline-block before:w-[10px] before:h-[2px] before:mb-[5px] before:ml-[-30px] before:mr-[20px]">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestias, ipsa.</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <p class="text-xl mb-[10px] inline-block">education 02</p>
+                        <time class="text-[#e65650] float-right">2013-03-01 ~ 2018-02-21</time>
+                        <ul class="pl-[30px]">
+                            <li class="before:content-[''] before:bg-[#000] before:inline-block before:w-[10px] before:h-[2px] before:mb-[5px] before:ml-[-30px] before:mr-[20px] mb-[5px]">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam dignissimos ea cum temporibus omnis sint reprehenderit fuga. Repellendus, saepe unde?</li>
+                            <li class="before:content-[''] before:bg-[#000] before:inline-block before:w-[10px] before:h-[2px] before:mb-[5px] before:ml-[-30px] before:mr-[20px]">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestias, ipsa.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </section>
+        </section>
+        <section id="CAREER" class="pt-[100px] pb-[100px] bg-no-repeat bg-[#242424]">
+            <header class="text-center mb-[60px] max-w-[80%] m-auto text-[white]">
+                <h2 class="text-4xl after:content-[''] after:block after:m-auto after:mt-[12px] after:w-[110px]  after:border-b-[3px] after:border-[#e65650]">CAREER</h2>
+            </header>
+            <ul class="flex flex-col gap-y-[80px]">
+                <li>
+                    <section class="bg-no-repeat bg-center bg-cover bg-fixed w-[90%] m-auto p-12" style="background-image:  linear-gradient(rgba(48, 48, 48, 0.8), rgba(48, 48, 48, 0.8)), url(https://images.unsplash.com/photo-1507679799987-c73779587ccf?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80)">
+                        <header class="m-auto text-[white] mb-[50px]">
+                            <h3 class="text-3xl mb-[15px]">CAREER 01</h3>
+                            <time class="text-[#e65650]">2010-01-01 ~ 2015-01-01</time>
+                        </header>
+                        <ul class="text-white">
+                            <li class="mb-[30px]">
+                                <p class="text-xl mb-[10px]">project 01</p>
+                                <ul class="pl-[30px]">
+                                    <li class="before:content-[''] before:bg-[#fff] before:inline-block before:w-[10px] before:h-[10px] before:rounded-full before:ml-[-30px] before:mr-[20px] mb-[5px]">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam dignissimos ea cum temporibus omnis sint reprehenderit fuga. Repellendus, saepe unde?</li>
+                                    <li class="before:content-[''] before:bg-[#fff] before:inline-block before:w-[10px] before:h-[10px] before:rounded-full before:ml-[-30px] before:mr-[20px]">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestias, ipsa.</li>
+                                </ul>
+                            </li>
+                            <li>
+                                <p class="text-xl mb-[10px]">project 02</p>
+                                <ul class="pl-[30px]">
+                                    <li class="before:content-[''] before:bg-[#fff] before:inline-block before:w-[10px] before:h-[10px] before:rounded-full before:ml-[-30px] before:mr-[20px] mb-[5px]">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam dignissimos ea cum temporibus omnis sint reprehenderit fuga. Repellendus, saepe unde?</li>
+                                    <li class="before:content-[''] before:bg-[#fff] before:inline-block before:w-[10px] before:h-[10px] before:rounded-full before:ml-[-30px] before:mr-[20px]">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestias, ipsa.</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </section>
+                </li>
+                <li>
+                    <section class="bg-no-repeat bg-center bg-cover bg-fixed w-[90%] m-auto p-12" style="background-image:  linear-gradient(rgba(48, 48, 48, 0.8), rgba(48, 48, 48, 0.8)), url(https://images.unsplash.com/photo-1521791136064-7986c2920216?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1169&q=80)">
+                        <header class="m-auto text-[white] mb-[50px]">
+                            <h3 class="text-3xl mb-[15px]">CAREER 01</h3>
+                            <time class="text-[#e65650]">2010-01-01 ~ 2015-01-01</time>
+                        </header>
+                        <ul class="text-white">
+                            <li class="mb-[30px]">
+                                <p class="text-xl mb-[10px]">project 01</p>
+                                <ul class="pl-[30px]">
+                                    <li class="before:content-[''] before:bg-[#fff] before:inline-block before:w-[10px] before:h-[10px] before:rounded-full before:ml-[-30px] before:mr-[20px] mb-[5px]">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam dignissimos ea cum temporibus omnis sint reprehenderit fuga. Repellendus, saepe unde?</li>
+                                    <li class="before:content-[''] before:bg-[#fff] before:inline-block before:w-[10px] before:h-[10px] before:rounded-full before:ml-[-30px] before:mr-[20px]">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestias, ipsa.</li>
+                                </ul>
+                            </li>
+                            <li>
+                                <p class="text-xl mb-[10px]">project 02</p>
+                                <ul class="pl-[30px]">
+                                    <li class="before:content-[''] before:bg-[#fff] before:inline-block before:w-[10px] before:h-[10px] before:rounded-full before:ml-[-30px] before:mr-[20px] mb-[5px]">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam dignissimos ea cum temporibus omnis sint reprehenderit fuga. Repellendus, saepe unde?</li>
+                                    <li class="before:content-[''] before:bg-[#fff] before:inline-block before:w-[10px] before:h-[10px] before:rounded-full before:ml-[-30px] before:mr-[20px]">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestias, ipsa.</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </section>
+                </li>
+            </ul>
+        </section>
+        <section id="PROJECTS" class="pt-[100px] pb-[100px]">
+            <header class="text-center mb-[50px] max-w-[80%] m-auto">
+                <h2 class="text-4xl after:content-[''] after:block after:m-auto after:mt-[12px] after:w-[160px]  after:border-b-[3px] after:border-[#e65650]">PROJECTS</h2>
+            </header>
+            <ul class="flex flex-col gap-y-[80px]">
+                <li>
+                    <section class="bg-no-repeat bg-center bg-cover bg-fixed w-[90%] m-auto p-12" style="background-image:  linear-gradient(rgba(48, 48, 48, 0.8), rgba(48, 48, 48, 0.8)), url(https://images.unsplash.com/photo-1608303588026-884930af2559?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=403&q=80)">
+                        <header class="m-auto text-[white] mb-[50px]">
+                            <h3 class="text-3xl mb-[15px]">PROJECT 01</h3>
+                            <time class="text-[#e65650]">2020-06-01 ~ 2021-01-01</time>
+                        </header>
+                        <ul class="text-white">
+                            <li class="mb-[50px]">
+                                <p class="text-xl mb-[20px]">task 01</p>
+                                <ul class="pl-[30px]">
+                                    <li class="before:content-[''] before:bg-[#fff] before:inline-block before:w-[10px] before:h-[10px] before:rounded-full before:ml-[-30px] before:mr-[20px] mb-[5px]">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam dignissimos ea cum temporibus omnis sint reprehenderit fuga. Repellendus, saepe unde?</li>
+                                    <li class="before:content-[''] before:bg-[#fff] before:inline-block before:w-[10px] before:h-[10px] before:rounded-full before:ml-[-30px] before:mr-[20px]">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestias, ipsa.</li>
+                                </ul>
+                            </li>
+                            <li>
+                                <p class="text-xl mb-[20px]">task 02</p>
+                                <ul class="pl-[30px]">
+                                    <li class="before:content-[''] before:bg-[#fff] before:inline-block before:w-[10px] before:h-[10px] before:rounded-full before:ml-[-30px] before:mr-[20px] mb-[5px]">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam dignissimos ea cum temporibus omnis sint reprehenderit fuga. Repellendus, saepe unde?</li>
+                                    <li class="before:content-[''] before:bg-[#fff] before:inline-block before:w-[10px] before:h-[10px] before:rounded-full before:ml-[-30px] before:mr-[20px]">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestias, ipsa.</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </section>
+                </li>
+                <li>
+                    <section class="bg-no-repeat bg-center bg-cover bg-fixed w-[90%] m-auto p-12" style="background-image:  linear-gradient(rgba(48, 48, 48, 0.8), rgba(48, 48, 48, 0.8)), url(https://images.unsplash.com/photo-1620325867502-221cfb5faa5f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1157&q=80)">
+                        <header class="m-auto text-[white] mb-[50px]">
+                            <h3 class="text-3xl mb-[15px]">PROJECT 02</h3>
+                            <time class="text-[#e65650]">2021-03-01 ~ 2021-09-01</time>
+                        </header>
+                        <ul class="text-white">
+                            <li class="mb-[50px]">
+                                <p class="text-xl mb-[20px]">task 01</p>
+                                <ul class="pl-[30px]">
+                                    <li class="before:content-[''] before:bg-[#fff] before:inline-block before:w-[10px] before:h-[10px] before:rounded-full before:ml-[-30px] before:mr-[20px] mb-[5px]">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam dignissimos ea cum temporibus omnis sint reprehenderit fuga. Repellendus, saepe unde?</li>
+                                    <li class="before:content-[''] before:bg-[#fff] before:inline-block before:w-[10px] before:h-[10px] before:rounded-full before:ml-[-30px] before:mr-[20px]">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestias, ipsa.</li>
+                                </ul>
+                            </li>
+                            <li>
+                                <p class="text-xl mb-[20px]">task 02</p>
+                                <ul class="pl-[30px]">
+                                    <li class="before:content-[''] before:bg-[#fff] before:inline-block before:w-[10px] before:h-[10px] before:rounded-full before:ml-[-30px] before:mr-[20px] mb-[5px]">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam dignissimos ea cum temporibus omnis sint reprehenderit fuga. Repellendus, saepe unde?</li>
+                                    <li class="before:content-[''] before:bg-[#fff] before:inline-block before:w-[10px] before:h-[10px] before:rounded-full before:ml-[-30px] before:mr-[20px]">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestias, ipsa.</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </section>
+                </li>
+                <li>
+                    <section class="bg-no-repeat bg-center bg-cover bg-fixed w-[90%] m-auto p-12" style="background-image:  linear-gradient(rgba(48, 48, 48, 0.8), rgba(48, 48, 48, 0.8)), url(https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80)">
+                        <header class="m-auto text-[white] mb-[50px]">
+                            <h3 class="text-3xl mb-[15px]">PROJECT 03</h3>
+                            <time class="text-[#e65650]">2022-01-01 ~ 2021-04-01</time>
+                        </header>
+                        <ul class="text-white">
+                            <li class="mb-[50px]">
+                                <p class="text-xl mb-[20px]">task 01</p>
+                                <ul class="pl-[30px]">
+                                    <li class="before:content-[''] before:bg-[#fff] before:inline-block before:w-[10px] before:h-[10px] before:rounded-full before:ml-[-30px] before:mr-[20px] mb-[5px]">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam dignissimos ea cum temporibus omnis sint reprehenderit fuga. Repellendus, saepe unde?</li>
+                                    <li class="before:content-[''] before:bg-[#fff] before:inline-block before:w-[10px] before:h-[10px] before:rounded-full before:ml-[-30px] before:mr-[20px]">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestias, ipsa.</li>
+                                </ul>
+                            </li>
+                            <li>
+                                <p class="text-xl mb-[20px]">task 02</p>
+                                <ul class="pl-[30px]">
+                                    <li class="before:content-[''] before:bg-[#fff] before:inline-block before:w-[10px] before:h-[10px] before:rounded-full before:ml-[-30px] before:mr-[20px] mb-[5px]">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam dignissimos ea cum temporibus omnis sint reprehenderit fuga. Repellendus, saepe unde?</li>
+                                    <li class="before:content-[''] before:bg-[#fff] before:inline-block before:w-[10px] before:h-[10px] before:rounded-full before:ml-[-30px] before:mr-[20px]">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestias, ipsa.</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </section>
+                </li>
+            </ul>
+        </section>
+        <section id="CONTACT" class="pt-[100px] pb-[150px] bg-no-repeat bg-[#242424]">
+            <header class="text-center mb-[80px] max-w-[80%] m-auto text-[white]">
+                <h3 class="text-4xl after:content-[''] after:block after:m-auto after:mt-[12px] after:w-[140px]  after:border-b-[3px] after:border-[#e65650]">CONTACT</h3>
+            </header>
+            <ul class="flex justify-center text-white gap-x-10">
+                <li>
+                    <dl class="flex justify-center">
+                        <dt class="mr-2">
+                            Phone :
+                        </dt>
+                        <dd>
+                            010-0000-0000
+                        </dd>
+                    </dl>
+                </li>
+                <li>
+                    <dl class="flex justify-center">
+                        <dt class="mr-2">
+                            Email :
+                        </dt>
+                        <dd>
+                            abc1234@gmail.com
+                        </dd>
+                    </dl>
+                </li>
+                <li>
+                    <dl class="flex justify-center">
+                        <dt class="mr-2">
+                            GitHub :
+                        </dt>
+                        <dd>
+                            abc1234.github.com
+                        </dd>
+                    </dl>
+                </li>
+            </ul>
+        </section>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/index.min.js"></script>
+</body>
+
+</html>
