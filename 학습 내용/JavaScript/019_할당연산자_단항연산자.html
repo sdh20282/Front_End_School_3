@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>할당연산자</title>
+    </head>
+    <body>
+        <script>
+            // https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Operators/Operator_Precedence
+            let a = 10;
+            a = a + 10;
+            console.log(a);
+
+            let b = 10;
+            b += 10; // b = b + 10를 줄여쓴 문법
+            console.log(b);
+
+            let c = 10;
+            ++c;
+            --c;
+            c++;
+            c--;
+            console.log(c);
+
+            let d = 10;
+            console.log(d++); // 10 (선할당 후증가)
+            console.log(d); // 11
+
+            let e = 10;
+            console.log(++e); // 11 (선증가 후할당)
+            console.log(e); // 11
+        </script>
+    </body>
+</html>

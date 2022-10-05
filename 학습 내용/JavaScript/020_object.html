@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title></title>
+    </head>
+    <body>
+        <script>
+            // Object
+
+            // 1. 기본 형태
+            let newuser = {
+                //key : value
+                id: "licat",
+                pw: "1234", // 81DC9BDB52D04DC20036DBD8313ED055 이렇게 저장합니다. ("MD5는 사용하지 않습니다.")
+                name: "leehojun",
+                email: "paul@weniv.com",
+                active: true,
+            };
+
+            console.log(newuser["id"]);
+            // console.log(newuser[id]); // error
+            console.log(newuser.id);
+            // console.log(newuser."id"); // error
+
+            // 2. 아래와 같은 형태로 많이 사용됩니다.
+            let user = [
+                {
+                    //key : value
+                    id: "licat",
+                    pw: "1234", // 81DC9BDB52D04DC20036DBD8313ED055 이렇게 저장합니다. ("MD5는 사용하지 않습니다.")
+                    name: "leehojun",
+                    email: "paul@weniv.com",
+                    active: true,
+                },
+                {
+                    //key : value
+                    id: "lion",
+                    pw: "2345", // 81DC9BDB52D04DC20036DBD8313ED055 이렇게 저장합니다. ("MD5는 사용하지 않습니다.")
+                    name: "leehojin",
+                    email: "pa@weniv.com",
+                    active: true,
+                },
+            ];
+
+            console.log(user[0]["id"]);
+
+            // 3. 아래와 같이 선언이 가능합니다.
+            let a = 10;
+            let b = 20;
+            let c = 30;
+            let e = { a, b, c };
+            console.log(e);
+
+            // let test = {'one', 'two', 'three'}
+            // console.log(test);
+
+            // 4. 값을 변경할 수 있습니다.
+            e["a"] = 50;
+            console.log(e);
+
+            // 5. key 값으로 문자열 외에 다른 값을 넣었을 경우
+            let txt = "hello";
+            let txt2 = {
+                0: "h",
+                1: "e",
+                2: "l",
+                3: "l",
+                4: "o",
+            };
+
+            console.log(txt[1]);
+            console.log(txt2[1]); // 유사 배열 객체
+
+            // 아래 2개 코드가 실행되게 해주는 것이 map
+            // console.log(txt2.1); // map
+            // console.log(txt2.{'one' : 1}) // map
+
+            // 6. value의 값으로 문자열 외에 다른 값을 넣었을 경우
+            let test = {
+                one: sum,
+                two: console.log,
+                three: window.innerWidth,
+                four: [10, 20, 30],
+                five: "10",
+                six: 100,
+            };
+            console.log(test);
+            test.two("호준!!");
+
+            // 7. key와 value만 뽑아낼 수 없을까?
+            console.log(Object.keys(newuser));
+            console.log(Object.values(newuser));
+            console.log(Object.entries(newuser));
+
+            // map에서 사용할 수 있습니다.
+            // newuser.keys();
+            // newuser.values();
+            // newuser.entries();
+
+            // 8. object spread 용법
+            // let newuser = {
+            //     id: "licat",
+            //     pw: "1234",
+            //     name: "leehojun",
+            //     email: "paul@weniv.com",
+            //     active: true,
+            // };
+            let 회원정보업데이트 = {
+                name: "cat",
+                email: "jun@naver.com",
+            };
+
+            // newuser["name"] = 회원정보업데이트["name"];
+            // newuser["email"] = 회원정보업데이트["email"];
+            // console.log(newuser);
+
+            newuser = { ...newuser, ...회원정보업데이트 };
+            console.log(newuser);
+
+            // 이렇게 바꾸시면 2개 다 바뀝니다.
+            // let newuser2 = newuser;
+            // newuser2["id"] = "helloworld";
+            // console.log(newuser);
+            // console.log(newuser2);
+
+            // spread 기법을 사용하시면 원본을 만지지 않고 사용할 수 있습니다.
+            let newuser2 = { ...newuser };
+            newuser2["id"] = "helloworld";
+            console.log(newuser);
+            console.log(newuser2);
+
+            // 함수는 후에 자세히 다룹니다.
+            function sum(x, y) {
+                return x + y;
+            }
+
+            // TMI입니다. 뒤에서 다룰 내용이에요.
+            // console.log(typeof sum);
+            // sum.value = 'hojun';
+            // console.log(console.dir(sum));
+            // console.log(sum.value);
+            // console.log(typeof sum);
+        </script>
+    </body>
+</html>

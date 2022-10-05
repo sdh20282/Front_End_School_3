@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>논리연산자</title>
+    </head>
+    <body>
+        <script>
+            let couponlist = ["9b5fcc71", "9b5fcc72", "9b5fcc73"];
+
+            user = [
+                {
+                    userid: 1,
+                    username: "hojun",
+                    쿠폰사용가능여부: !!couponlist[0],
+                    coupon: couponlist[0],
+                },
+            ];
+
+            // true : 1
+            // false : 0
+            // and(&&) : 곱
+            // or(||) : 합
+            // not(!) : 부정
+
+            // console.log(Boolean(''))
+
+            console.log(true || false);
+            console.log(true || true);
+            console.log(true && false);
+            console.log(!false);
+            console.log(!!false); // 실무에서도 정말 많이 사용합니다.
+            console.log(!!"");
+
+            // 우리를 여전히 힘들게 하는 JS
+            console.log(Boolean([])); // 다른 언어에서는 false로 나오는데 JS에서는 true로 나옵니다.
+            console.log(!![]); // JS에서만 true가 맞습니다.
+
+            console.log("-----------");
+            console.log("confuse_1");
+            console.log("false" == false);
+            console.log(!"false");
+            console.log(!"0");
+            console.log("abc" / 1);
+            console.log(!!NaN);
+            console.log(!!null);
+            console.log(!!undefined);
+
+            console.log("-----------");
+            // 단락평가(간단한 코드에서 권고합니다.)
+            // 이런 프로세스이지 동일한 코드를 사용하는 것은 아닙니다.
+            username = "";
+            username = username || "이름을 입력하지 않으신 분";
+            console.log(username);
+
+            username = "abc";
+            username = username || "이름을 입력하지 않으신 분";
+            console.log(username);
+
+            // 문제입니다.
+            // username도 입력하고 pw도 입력해야만 회원가입 성공여부가 true, false 나오게 해주세요.
+            // 둘 중에 1개라도 입력이 안되면 false가 나와야 합니다.
+            username = "";
+            pw = "";
+            회원가입성공여부 = username || "이름을 입력하지 않으신 분";
+            console.log(username);
+
+            // 정답 리스트
+            회원가입성공여부 = username && pw ? true : false; // 3항 연산자 사용
+            회원가입성공여부 = !!(username && pw);
+            회원가입성공여부 = !(!username || !pw); // 이렇게 짜신분?
+            회원가입성공여부 = !!pw && !!username;
+
+            username = "abc";
+            username = username || "이름을 입력하지 않으신 분";
+            console.log(username);
+
+            // 참고삼아서만 알아주세요.
+            username = "";
+            username = username || false;
+            console.log(username);
+
+            username = "";
+            username = username || 0;
+            console.log(username);
+
+            console.log("-----------");
+            console.log("드모르간 법칙");
+            // or : ||
+            // and : &&
+            const x = 0;
+            const y = 1;
+            console.log(!(x || y) === (!x && !y));
+            console.log(!(x && y) === (!x || !y));
+
+            // 알고리즘 문제
+            // for (let i = 0; i < 100; i++) {
+            //     // console.log(i);
+            //     if (i % 3 == 0) {
+            //         console.log(i);
+            //     }
+            //     if (i % 5 == 0) {
+            //         console.log(i);
+            //     }
+            // }
+
+            // for (let i = 0; i < 100; i++) {
+            //     // console.log(i);
+            //     if (i % 3 == 0 && i % 5 == 0) {
+            //         console.log(i);
+            //     }
+            // }
+
+            let s = 0;
+            for (let i = 0; i < 100; i++) {
+                // console.log(i);
+                if (i % 3 == 0 || i % 5 == 0) {
+                    console.log(i);
+                    s += i;
+                }
+            }
+            console.log(s);
+        </script>
+    </body>
+</html>
