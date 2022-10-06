@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vending Machine</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+
+<body>
+    <!-- 현재 웹 사이트의 핵심 내용 즉, 헤더는 무엇일까? -->
+    <!-- 콜라? 음료? 자판기? -->
+    <!-- 현재 주어진 페이지에서는 콜라가 핵심 내용처럼 보여짐. 하지만 확장성 같은 부분들을 고려하면 자판기나 다른 포괄적인 의미를 갖는 내용으로 하는 것이 옳아보임. -->
+    <header>
+        <!-- 보다 넓은 범위의 'store'라는 의미를 현재 페이지의 핵심 내용으로 설정. -->
+        <h1 class="blind">Store</h1>
+    </header>
+    <main>
+        <!-- 위에서 웹페이지의 전체 헤더를 'store'로 지정했기 때문에 자판기를 하나의 섹션으로 보는 것이 옳을 것 같음. -->
+        <section class="section block_center">
+            <!-- 현제 섹션의 헤더는 로고. -->
+            <!-- 하지만 로고 자체에 설명이 부족하므로 따로 h2태그 추가하고 가리는 것이 옳을 것 같음. -->
+            <header class="vending_machine_title text_center">
+                <h2 class="blind">cola vending machine</h2>
+                <!-- NOTE:: heading 태그들을 꼼꼼히 적어주신 것 너무 좋지만 한글로 적어주는 것이 더 좋을 것 같다는 생각입니다. 사실 문서를 작성하는 사람 취향이지만 지금 html 2번째 줄을
+                보시면 lang="ko"로 한국어 설정이 되어있어서 현재 파일의 언어는 한국어로 되어있다 인식하기 때문에 한글로 적어주는 것이 더 친절한 문서이지 않을까 합니다 ㅎㅎ
+                추가로 이 언어 설정에 따라 리더기가 읽는 방식이 달라지기도 합니다. -->
+                <img class="title_logo" src="./images/logo.png" alt="">
+            </header>
+            <!-- 현재 페이지에서 보이는 큰 덩어리인 왼쪽 부분과 오른쪽 부분의 연관성이 크지만 한쪽은 구매, 한쪽은 결과를 나타내는 섹션으로 나누어도 무방할 것 같음.  -->
+            <!-- 하나의 섹션으로 취급한다면 전체를 section 태그로 묶은 뒤, 각각의 부분을 꾸며주기 위해 div 태그를 사용하면 될 것 같음. -->
+            <!-- 개인적인 판단으로 나누는 것도 괜찮아 보여 각각의 파트들을 섹션으로 나눔. -->
+            <!-- 두 섹션을 하나로 묶어주고, 꾸며주기 위해 div 태그 사용. -->
+            <div class="vending_machine">
+                <!-- 왼쪽 섹션, 구매에 관련된 파트. -->
+                <section class="vending_machine_components left_side">
+                    <!-- 현재 페이지 상에 왼쪽 섹션을 대표할 수 있는 컨텐츠가 보이지 않음. 해당 섹션이 구매에 관한 부분이므로 이를 h3 태그로 표현. -->
+                    <header>
+                        <h3 class="blind">Purchase</h3>
+                    </header>
+                    <!-- 현재 판배중인 상품의 목록을 나타내기 위해 ul 사용, 순서는 상관 없다고 생각됨. -->
+                    <ul class="product_list">
+                        <li>
+                            <figure class="product location_1 button_shadow light_gray_normal_border border_10px">
+                                <img src="./images/red_cola.png" alt="">
+                                <figcaption class="product_desc">
+                                    <p class="product_name">Original_Cola</p>
+                                    <button class="product_select">1000원</button>
+                                </figcaption>
+                            </figure>
+                        </li>
+                        <li>
+                            <!-- NOTE:: 개인적으로는 클릭 범위가 이미지, 텍스트, 가격 모두 포함한다 생각되어서 해당 부분을 button 태그로 전체를 감싸는 것은 어떨까 생각이 듭니다~
+                            + button 태그로 감싼 뒤 .sold_out 에는 disabled 속성을 넣어준다면 클릭도 되지 않고 문서상 비활성화되었다는 정보 전달도 가능합니다. -->
+                            <figure
+                                class="product sold_out location_2 button_shadow light_gray_normal_border border_10px">
+                                <img src="./images/violet_cola.png" alt="">
+                                <figcaption class="product_desc">
+                                    <p class="product_name">Violet_Cola</p>
+                                    <button class="product_select">1000원</button>
+                                </figcaption>
+                            </figure>
+                        </li>
+                        <li>
+                            <figure class="product location_3 button_shadow light_gray_normal_border border_10px">
+                                <img src="./images/yellow_cola.png" alt="">
+                                <figcaption class="product_desc">
+                                    <p class="product_name">Yellow_Cola</p>
+                                    <button class="product_select">1000원</button>
+                                </figcaption>
+                            </figure>
+                        </li>
+                        <li>
+                            <figure class="product location_4 button_shadow light_gray_normal_border border_10px">
+                                <img src="./images/cool_cola.png" alt="">
+                                <figcaption class="product_desc">
+                                    <p class="product_name">Cool_Cola</p>
+                                    <button class="product_select">1000원</button>
+                                </figcaption>
+                            </figure>
+                        </li>
+                        <li>
+                            <figure class="product location_5 button_shadow light_gray_normal_border border_10px">
+                                <img src="./images/green_cola.png" alt="">
+                                <figcaption class="product_desc">
+                                    <p class="product_name">Green_Cola</p>
+                                    <button class="product_select">1000원</button>
+                                </figcaption>
+                            </figure>
+                        </li>
+                        <li>
+                            <figure class="product location_6 button_shadow light_gray_normal_border border_10px">
+                                <img src="./images/orange_cola.png" alt="">
+                                <figcaption class="product_desc">
+                                    <p class="product_name">Orange_Cola</p>
+                                    <button class="product_select">1000원</button>
+                                </figcaption>
+                            </figure>
+                        </li>
+                    </ul>
+
+                    <!-- 입력을 위해 form 태그 사용 -->
+                    <form class="purchase">
+                        <!-- 잔액에 관련된 부분을 묶어주고, 꾸며주기 위해 div 태그 사용 -->
+                        <div class="money_info border_5px">
+                            <p>잔액 :</p>
+                            <p class="money_now">1,000</p>
+                        </div>
+                        <!-- 추후 form 형태로 변경, 화면에 표시되지 않는 input 태그를 통해 잔액 관리, 옆의 p태그와 연결 -->
+                        <!-- 옆의 잔액을 나타내는 텍스트와 직접 연결할 경우 사용자가 수정할 수 있는 가능성이 존재? -->
+                        <!-- <form class="change"> -->
+                        <!-- form 태그는 서버로 데이터 전달 -> 현재 서버로 데이터 전달이 필요할까...? 모르겠음. -->
+                        <!-- 추후 데이터베이스 부분이 추가될 때 form 태그를 사용하면 될 것으로 보임 -->
+                        <input id="money" type="hidden" value="0">
+                        <button class="change_button light_gray_normal_border border_5px button_shadow">거스름돈 반환</button>
+                        <!-- </form> -->
+
+                        <!-- 사용자로부터 입력 받는 것이므로 form 태그 사용 -->
+                        <!-- <form class="input_money" action="get"> -->
+                        <input class="input light_gray_normal_border border_5px" type="text" placeholder="입금액 입력">
+                        <button class="input_button light_gray_normal_border border_5px button_shadow">
+                            입금
+                        </button>
+                        <!-- </form> -->
+
+                        <!-- 현재 장바구니에 담은 목록을 나타내기 위해 ul 사용, 순서는 크게 상관 없다고 생각됨 -->
+                        <ul class="shopping_cart light_gray_normal_border border_5px">
+                            <li class="selected_product border_5px">
+                                <figure class="selected_product_image">
+                                    <img src="./images/red_cola.png" alt="">
+                                    <figcaption>
+                                        <p class="product_name">Original_Cola</p>
+                                    </figcaption>
+                                </figure>
+                                <p class="selected_product_count light_gray_normal_border border_5px">1</p>
+                            </li>
+                            <li class="selected_product border_5px">
+                                <figure class="selected_product_image">
+                                    <img src="./images/green_cola.png" alt="">
+                                    <figcaption>
+                                        <p class="product_name">Green_Cola</p>
+                                    </figcaption>
+                                </figure>
+                                <p class="selected_product_count light_gray_normal_border border_5px">2</p>
+                            </li>
+                            <li class="selected_product border_5px">
+                                <figure class="selected_product_image">
+                                    <img src="./images/green_cola.png" alt="">
+                                    <figcaption>
+                                        <p class="product_name">Green_Cola</p>
+                                    </figcaption>
+                                </figure>
+                                <p class="selected_product_count light_gray_normal_border border_5px">2</p>
+                            </li>
+                            <li class="selected_product border_5px">
+                                <figure class="selected_product_image">
+                                    <img src="./images/green_cola.png" alt="">
+                                    <figcaption>
+                                        <p class="product_name">Green_Cola</p>
+                                    </figcaption>
+                                </figure>
+                                <p class="selected_product_count light_gray_normal_border border_5px">2</p>
+                            </li>
+                        </ul>
+                        <!-- 추후 form 형태로 화면에 표시되지 않는 여러 개의 input 태그를 통해 리스트 관리, 옆의 리스트와 연결 -->
+                        <!-- <form class="buy_product"> -->
+                        <input id="original_cola" type="hidden" value="1">
+                        <input id="green_cola" type="hidden" value="2">
+                        <button class="buy_product_button button_shadow border_5px">획득</button>
+                        <!-- </form> -->
+                    </form>
+                    <!-- NOTE:: 데이터 처리를 form으로 처리하는 방법도 있지만 실제로 서버 설정이 어떻게 되어있느냐에 따라서 다양하게 나눠집니다. 이런 원페이지의 경우에는 form을 사용하지 않고
+                    단순 JS로도 페이지 내 데이터를 저장한다음에 최종 서버로 넘겨야 할 값만 요청할 수도 있구요!
+                    만약 지금처럼 하나의 form에 button이 3개라면 각 button별로 역할 정리가 필요할 것 같습니다. (submit 버튼은 무엇일지 단순 동작 button은 무엇일지) -->
+                </section>
+                <!-- 오른쪽 섹션, 구매 내역과 관련된 파트 -->
+                <section class="vending_machine_components right_side">
+                    <!-- 마찬가지로 현재 섹션을 대표하는 컨텐츠가 없으므로 구매 내역이라는 내용을 h3 태그에 담음. -->
+                    <h3 class="blind">Purchase List</h3>
+                    <!-- 소지금에 관련된 태그들을 묶어주고, 꾸며주기 위해 div 사용 -->
+                    <div class="money_total border_10px">
+                        <div class="money_info border_5px">
+                            <p>소지금 :</p>
+                            <p class="money_now">25,000</p>
+                        </div>
+                    </div>
+                    <!-- 구매 내역에 관련된 부분들을 꾸며주기 위해 div 태그 사용 -->
+                    <div class="purchased_products border_10px">
+                        <p class="purchased_products_title">획득한 음료</p>
+                        <!-- 구매 목록을 나타내기 위해 ul 사용. -->
+                        <!-- 어떤 것이 목록에 먼저 나타나도 상관 없다고 판단하여 ul 태그 사용 -->
+                        <ul class="shopping_cart light_gray_normal_border border_5px">
+                            <li class="selected_product border_5px">
+                                <figure class="selected_product_image">
+                                    <!-- NOTE:: alt 속성을 선언하는 것으로도 접근성이 높아지지만 '음료수 이미지입니다.' 정도로의 텍스트가 들어가면 조금 더 친절한 페이지가 되지 않을까 합니다 :)-->
+                                    <img src="./images/red_cola.png" alt="">
+                                    <figcaption>
+                                        <p class="product_name">Original_Cola</p>
+                                    </figcaption>
+                                </figure>
+                                <p class="selected_product_count light_gray_normal_border border_5px">1</p>
+                            </li>
+                            <li class="selected_product border_5px">
+                                <figure class="selected_product_image">
+                                    <img src="./images/green_cola.png" alt="">
+                                    <figcaption>
+                                        <p class="product_name">Green_Cola</p>
+                                    </figcaption>
+                                </figure>
+                                <p class="selected_product_count light_gray_normal_border border_5px">2</p>
+                            </li>
+                            <li class="selected_product border_5px">
+                                <figure class="selected_product_image">
+                                    <img src="./images/orange_cola.png" alt="">
+                                    <figcaption>
+                                        <p class="product_name">Orange_Cola</p>
+                                    </figcaption>
+                                </figure>
+                                <p class="selected_product_count light_gray_normal_border border_5px">1</p>
+                            </li>
+                            <li class="selected_product border_5px">
+                                <figure class="selected_product_image">
+                                    <img src="./images/violet_cola.png" alt="">
+                                    <figcaption>
+                                        <p class="product_name">Violet_Cola</p>
+                                    </figcaption>
+                                </figure>
+                                <p class="selected_product_count light_gray_normal_border border_5px">5</p>
+                            </li>
+                            <li class="selected_product border_5px">
+                                <figure class="selected_product_image">
+                                    <img src="./images/violet_cola.png" alt="">
+                                    <figcaption>
+                                        <p class="product_name">Violet_Cola</p>
+                                    </figcaption>
+                                </figure>
+                                <p class="selected_product_count light_gray_normal_border border_5px">5</p>
+                            </li>
+                            <li class="selected_product border_5px">
+                                <figure class="selected_product_image">
+                                    <img src="./images/violet_cola.png" alt="">
+                                    <figcaption>
+                                        <p class="product_name">Violet_Cola</p>
+                                    </figcaption>
+                                </figure>
+                                <p class="selected_product_count light_gray_normal_border border_5px">5</p>
+                            </li>
+                            <li class="selected_product border_5px">
+                                <figure class="selected_product_image">
+                                    <img src="./images/violet_cola.png" alt="">
+                                    <figcaption>
+                                        <p class="product_name">Violet_Cola</p>
+                                    </figcaption>
+                                </figure>
+                                <p class="selected_product_count light_gray_normal_border border_5px">5</p>
+                            </li>
+                            <li class="selected_product border_5px">
+                                <figure class="selected_product_image">
+                                    <img src="./images/violet_cola.png" alt="">
+                                    <figcaption>
+                                        <p class="product_name">Violet_Cola</p>
+                                    </figcaption>
+                                </figure>
+                                <p class="selected_product_count light_gray_normal_border border_5px">11</p>
+                            </li>
+                            <li class="selected_product border_5px">
+                                <figure class="selected_product_image">
+                                    <img src="./images/violet_cola.png" alt="">
+                                    <figcaption>
+                                        <p class="product_name">Violet_Cola</p>
+                                    </figcaption>
+                                </figure>
+                                <p class="selected_product_count light_gray_normal_border border_5px">5</p>
+                            </li>
+                            <li class="selected_product border_5px">
+                                <figure class="selected_product_image">
+                                    <img src="./images/violet_cola.png" alt="">
+                                    <figcaption>
+                                        <p class="product_name">Violet_Cola</p>
+                                    </figcaption>
+                                </figure>
+                                <p class="selected_product_count light_gray_normal_border border_5px">5</p>
+                            </li>
+                            <li class="selected_product border_5px">
+                                <figure class="selected_product_image">
+                                    <img src="./images/violet_cola.png" alt="">
+                                    <figcaption>
+                                        <p class="product_name">Violet_Cola</p>
+                                    </figcaption>
+                                </figure>
+                                <p class="selected_product_count light_gray_normal_border border_5px">5</p>
+                            </li>
+                        </ul>
+                        <p class="total_price">총금액 : 9,000 원</p>
+                    </div>
+                </section>
+            </div>
+        </section>
+    </main>
+    <footer>test</footer>
+
+</body>
+
+</html>
