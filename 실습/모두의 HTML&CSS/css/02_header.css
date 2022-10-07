@@ -1,0 +1,42 @@
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(1rem);
+}
+
+header .max_width {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    height: 80px;
+}
+
+header .logo {
+    position: absolute;
+    left: 0;
+}
+
+header .gnb ul {
+    display: flex;
+    gap: 20px;
+}
+
+header .gnb ul li a {
+    display: block;
+    padding: 10px;
+}
+
+header .btn_allmenu {
+    position: absolute;
+    right: 0;
+}
+
+@media (max-width : 1024px) {
+    header .gnb {
+        display: none;
+    }
+}

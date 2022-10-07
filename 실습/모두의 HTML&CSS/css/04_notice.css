@@ -1,0 +1,36 @@
+.notice_list {
+    border-top: 2px solid #ffcf5c;
+}
+
+.notice_list li {
+}
+
+.notice_list li a {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    height: 72px;
+}
+
+.notice_list .title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.notice_list .title .category {
+    flex-shrink: 0;
+}
+
+.ellipse {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-break: break-all;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+}
+
+.notice_list .date {
+    margin: auto 0 auto auto;
+}

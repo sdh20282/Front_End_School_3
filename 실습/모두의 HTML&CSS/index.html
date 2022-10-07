@@ -1,198 +1,158 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="ko-KR" class="smooth">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>모두의 HTML&CSS</title>
-    <link rel="stylesheet" href="style.css">
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title></title>
+	<link rel="stylesheet"
+		href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.5/dist/web/static/pretendard.css">
+	<link rel="stylesheet" href="./css/00_reset.css">
+	<link rel="stylesheet" href="./css/01_layout.css">
+	<link rel="stylesheet" href="./css/02_header.css">
+	<link rel="stylesheet" href="./css/03_friends.css">
+	<link rel="stylesheet" href="./css/04_notice.css">
 </head>
 
 <body>
-    <!-- https://www.figma.com/file/O7jGY82SoyN16A9SpDA6z0/HTML_CSS-%EC%8B%A4%EC%8A%B5 -->
-
-    <header>
-        <h1>모두의 HTML/CSS</h1>
-        <nav>
-            <a href="">HOME</a>
-            <a href="">HTML</a>
-            <a href="">CSS</a>
-            <a href="">JavaScript</a>
-        </nav>
-        <article>
-            <h2 class="hidden">위젯</h2>
-            <form action="submit" method="">
-                <label for="" class="hidden">사이트 내 검색</label>
-                <button>
-                    <img src="" alt="">
-                </button>
-            </form>
-        </article>
-    </header>
-
-    <main>
-        <section>
-            <img src="" alt="">
-            <h2>모두의 HTML/CSS</h2>
-            <strong>HELLO WORLD! :)</strong>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laboriosam neque ducimus, reprehenderit earum
-                dicta cumque!</p>
-            <button>회원가입</button>
-            <button>BUTTON</button>
-            <aside>
-                <a href=""><img src="" alt=""></a>
-                <a href=""><img src="" alt=""></a>
-            </aside>
-        </section>
-        <section>
-            <h2 class="hidden">프론트엔드 스택</h2>
-            <dl>
-                <dt>HTML</dt>
-                <dd>Hypertext Markup Language 하이퍼텍스트 마크업 언어</dd>
-                <dd>웹을 이루는 가장 기초적인 구성 요소로, 웹 콘텐츠의 의미와 구조를 정의할 때 사용</dd>
-                <dt>CSS</dt>
-                <dd>Cascading Style Sheets</dd>
-                <dd>HTML이나 XML(XML의 방언인 SVG, XHTML 포함)로 작성된 문서의 표시 방법을 기술하기 위한 스타일 시트 언어</dd>
-                <dt>JavaScript</dt>
-                <dd>일급 함수를 사용하는 가벼운 객체 지향 인터프리터 언어</dd>
-                <dd>웹페이지의 스크립트 언어로 잘 알려져 있지만, 브라우저가 아닌 환경에서도 많이 사용됨</dd>
-            </dl>
-        </section>
-        <section>
-            <h2 class="hidden">하루 일과</h2>
-            <figure>
-                <figcaption>
-                    <time datetime="05:00">오전 5:00</time>
-                    <strong>헛둘셋넷 열심히 운동하기</strong>
-                    <p>Lorem ipsum dolor sit.</p>
-                </figcaption>
-                <img src="" alt="">
-            </figure>
-            <figure>
-                <figcaption>
-                    <time datetime="09:00">오전 9:00</time>
-                    <strong>지친몸 이끌고 출근하기</strong>
-                    <p>Lorem ipsum dolor sit.</p>
-                </figcaption>
-                <img src="" alt="">
-            </figure>
-            <figure>
-                <figcaption>
-                    <time datetime="18:00">오후 6:00</time>
-                    <strong>치킨과 함께하는 씐나는 퇴근</strong>
-                    <p>Lorem ipsum dolor sit.</p>
-                </figcaption>
-                <img src="" alt="">
-            </figure>
-        </section>
-        <section>
-            <h2>Lorem ipsum dolor sit.</h2>
-            <ol>
-                <li><button>Tab1</button></li>
-                <li><button>Tab2</button></li>
-                <li><button>Tab3</button></li>
-            </ol>
-            <section>
-                <h3 class="hidden">탭의 목록</h3>
-                <ol reversed start="10">
-                    <li>
-                        <a href="">
-                            <span>10</span>
-                            <p>Lorem ipsum dolor sit amet.</p>
-                            <time datetime="2022-01-01">2022.01.01</time>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="">
-                            <span>9</span>
-                            <p>Lorem ipsum dolor sit amet.</p>
-                            <time datetime="2022-01-01">2022.01.01</time>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="">
-                            <span>8</span>
-                            <p>Lorem ipsum dolor sit amet.</p>
-                            <time datetime="2022-01-01">2022.01.01</time>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="">
-                            <span>7</span>
-                            <p>Lorem ipsum dolor sit amet.</p>
-                            <time datetime="2022-01-01">2022.01.01</time>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="">
-                            <span>6</span>
-                            <p>Lorem ipsum dolor sit amet.</p>
-                            <time datetime="2022-01-01">2022.01.01</time>
-                        </a>
-                    </li>
-                </ol>
-            </section>
-        </section>
-        <section>
-            <h2>Amet consectetur adipisicing.</h2>
-            <section>
-                <h3 class="hidden">일상 생활 첫번째 탭</h3>
-                <ul>
-                    <li>
-                        <figure>
-                            <img src="" alt="">
-                            <figcaption>
-                                <em>Lorem ipsum dolor sit amet.</em>
-                            </figcaption>
-                        </figure>
-                        <figure>
-                            <img src="" alt="">
-                            <figcaption>
-                                <em>Lorem ipsum dolor sit amet.</em>
-                            </figcaption>
-                        </figure>
-                        <figure>
-                            <img src="" alt="">
-                            <figcaption>
-                                <em>Lorem ipsum dolor sit amet.</em>
-                            </figcaption>
-                        </figure>
-                    </li>
-                </ul>
-            </section>
-            <button>
-                <img src="" alt="이전 슬라이드 보기">
-            </button>
-            <button>
-                <img src="" alt="다음 슬라이드 보기">
-            </button>
-            <ol>
-                <li>
-                    <button type="button">1~3</button>
-                </li>
-                <li>
-                    <button type="button">4~6</button>
-                </li>
-                <li>
-                    <button type="button">7~9</button>
-                </li>
-            </ol>
-        </section>
-    </main>
-    <footer>
-        <h2>모두의 HTML/CSS</h2>
-        <address>
-            <dl>
-                <dt>주소</dt>
-                <dd>서울특별시 사랑시 고백구 행복동 123-45 1층</dd>
-                <dt>전화번호&이메일</dt>
-                <dd>02-987-6543 / abc@gmail.com</dd>
-            </dl>
-        </address>
-        <small>©Weniv all rights reserved</small>
-    </footer>
-
+	<div class="wrap">
+		<header>
+			<div class="max_width">
+				<h1 class="logo">
+					<a href="./index.html"><img src="./images/logo.svg" alt=""></a>
+				</h1>
+				<nav class="gnb">
+					<ul>
+						<li><a href="#">About</a></li>
+						<li><a href="#">Character</a></li>
+						<li><a href="#">Curriculum</a></li>
+						<li><a href="#">Recruitment</a></li>
+						<li><a href="#">Store</a></li>
+					</ul>
+				</nav>
+				<button class="btn_allmenu"><img src="./images/menu.svg" alt=""></button>
+			</div>
+		</header>
+		<main>
+			<section class="notice">
+				<div class="common_section max_width">
+					<div class="first">
+						<h2>게시판</h2>
+						<ul>
+							<li><button href="#">공지사항</button></li>
+							<li><button href="#">자유게시판</button></li>
+							<li><button href="#">주간소식</button></li>
+						</ul>
+					</div>
+					<div class="second">
+						<h3>공지사항</h3>
+						<ul class="notice_list">
+							<li>
+								<a href="#">
+									<p class="num"><span class="sr-only">게시글 번호</span> 10</p>
+									<p class="title">
+										<span class="category">공지</span>
+										<span class="ellipse">공지사항입니다.</span>
+										<img src="./images/new.svg" alt="새글">
+									</p>
+									<p class="date">
+										<span class="sr-only">작성일</span> 2022.10.07
+									</p>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<p class="num"><span class="sr-only">게시글 번호</span> 10</p>
+									<p class="title">
+										<span class="category">공지</span>
+										<span class="ellipse">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Expedita minus, quisquam amet reprehenderit fuga non aperiam iste in! Laborum quas facere quae aperiam esse repellendus veritatis consequatur non officiis nisi?</span>
+										<img src="./images/new.svg" alt="새글">
+									</p>
+									<p class="date">
+										<span class="sr-only">작성일</span> 2022.10.07
+									</p>
+								</a>
+							</li>
+						</ul>
+						<a href="#">더보기</a>
+					</div>
+				</div>
+			</section>
+			<section class="friends">
+				<div class="common_section max_width">
+					<div class="first">
+						<h2>Weniv Friends</h2>
+						<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quis ipsum non doloremque
+							voluptates labore nobis, itaque dolorum iure? Quasi numquam, maiores rem corporis dolore
+							repudiandae laudantium eum soluta animi nisi!</p>
+					</div>
+					<div class="second">
+						<ul class="card_list">
+							<li>
+								<a href="#">
+									<div class="thumbnail">
+										<img src="./images/Character_Suri.png" alt="">
+									</div>
+									<p class="title">Suri</p>
+									<p class="content">Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+										Repellat placeat vel
+										voluptate, laborum omnis, quibusdam error deleniti iusto sit illum debitis
+										tenetur. Culpa laudantium deserunt expedita explicabo fugiat accusantium
+										molestias.</p>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<div class="thumbnail">
+										<img src="./images/Character_chili.png" alt="">
+									</div>
+									<p class="title">Chill</p>
+									<p class="content">Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+										Repellat placeat vel
+										voluptate, laborum omnis, quibusdam error deleniti iusto sit illum debitis
+										tenetur. Culpa laudantium deserunt expedita explicabo fugiat accusantium
+										molestias.</p>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<div class="thumbnail">
+										<img src="./images/Character_Mura.png" alt="">
+									</div>
+									<p class="title">Mura</p>
+									<p class="content">Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+										Repellat placeat vel
+										voluptate, laborum omnis, quibusdam error deleniti iusto sit illum debitis
+										tenetur. Culpa laudantium deserunt expedita explicabo fugiat accusantium
+										molestias.</p>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</section>
+			<section class="lecture">
+				<div class="common_section max_width">
+					<div class="first">
+						<h2>30분 요약강좌</h2>
+						<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quis ipsum non doloremque
+							voluptates labore nobis, itaque dolorum iure? Quasi numquam, maiores rem corporis dolore
+							repudiandae laudantium eum soluta animi nisi!</p>
+					</div>
+					<div class="second">
+						Lorem ipsum, dolor sit amet consectetur adipisicing elit. Distinctio ipsa in excepturi facilis
+						aspernatur, inventore saepe commodi eaque, voluptas error repudiandae voluptatibus porro
+						corrupti enim placeat delectus tempore suscipit ex?
+					</div>
+				</div>
+			</section>
+		</main>
+		<aside>aside</aside>
+		<footer>
+			<div class="max_width">footer</div>
+		</footer>
+	</div>
 </body>
 
 </html>
