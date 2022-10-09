@@ -1,0 +1,56 @@
+/* hello */
+.hello {
+	padding-top: 12.8rem;
+	height: 60rem;
+	box-sizing: border-box;
+	background: rgb(var(--main-color));
+}
+.hello .max-width {
+	display: flex;
+	align-items: center;
+	gap: 2.4rem;
+}
+
+.hello .hello-txt strong {
+	background: rgb(255, 255, 255, 0.95);
+	padding: 0.4em 0.8em;
+	border-radius: 2em;
+}
+.hello .hello-txt h2 {
+	margin-top: 2rem;
+	line-height: 1;
+	font-weight: bold;
+	font-size: max(min(100vw / var(--font-vw), 10rem), 3.2rem);
+}
+.hello .hello-txt h2 span {
+	display: inline-block;
+}
+
+.hello .hello-txt p {
+	margin: 1.6rem;
+	opacity: 0.8;
+}
+
+.hello img {
+	flex-grow: 0;
+	max-width: 53.6rem;
+}
+
+@media (max-width: 1024px) {
+	.hello {
+		height: auto;
+	}
+	.hello .max-width {
+		flex-direction: column-reverse;
+	}
+	.hello .hello-txt {
+		text-align: center;
+	}
+	.hello .hello-txt p {
+		max-width: 80%;
+		margin: 1.6rem auto 0;
+	}
+	.hello img {
+		width: 50%;
+	}
+}

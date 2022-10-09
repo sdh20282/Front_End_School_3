@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="ko-KR" class="smooth">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Weniv</title>
+
+	<link rel="shortcut icon" href="./favicon.ico">
+	<meta property="og:type" content="website">
+	<meta property="og:image" content="./images/meta.png">
+	<meta property="og:url" content="">
+	<meta property="og:title" content="Weniv">
+	<meta property="og:site_name" content="Weniv">
+	<meta property="og:description" content="Hello World">
+	<meta name="description" lang="ko" content="Hello World">
+	<meta name="author" content="주식회사 위니브">
+
+	<link rel="stylesheet"
+		href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.5/dist/web/static/pretendard.css">
+	<link rel="stylesheet" href="./css/00_reset.css">
+	<link rel="stylesheet" href="./css/01_common.css">
+	<link rel="stylesheet" href="./css/02_header.css">
+	<link rel="stylesheet" href="./css/03_footer.css">
+	<link rel="stylesheet" href="./css/04_aside.css">
+	<link rel="stylesheet" href="./css/05_section.css">
+	<link rel="stylesheet" href="./css/06_hello.css">
+	<link rel="stylesheet" href="./css/07_mainlink.css">
+	<link rel="stylesheet" href="./css/08_notice.css">
+	<link rel="stylesheet" href="./css/09_friends.css">
+	<link rel="stylesheet" href="./css/10_minute.css">
+
+</head>
+
+<body>
+	<div class="wrap" id="top">
+		<!-- javascript : 'active' toggle -->
+		<header id="header">
+			<div class="max-width">
+				<h1 class="logo">
+					<a href="#"><img src="./images/logo.svg" alt="Weniv"></a>
+				</h1>
+				<nav class="gnb">
+					<ul>
+						<li>
+							<a href="#">About</a>
+							<ul class="depth2">
+								<li><a href="#">About 1</a></li>
+								<li><a href="#">About 2</a></li>
+								<li>
+									<a href="#">About 3</a>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<a href="#">Character</a>
+							<ul class="depth2">
+								<li><a href="#">Character 1</a></li>
+								<li><a href="#">Character 2</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="#">Curriculum</a>
+							<ul class="depth2">
+								<li><a href="#">Curriculum 1</a></li>
+								<li><a href="#">Curriculum 2</a></li>
+								<li><a href="#">Curriculum 3</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="#">Recruitment</a>
+							<ul class="depth2">
+								<li><a href="#">Recruitment 1</a></li>
+								<li><a href="#">Recruitment 2</a></li>
+								<li><a href="#">Recruitment 3</a></li>
+								<li><a href="#">Recruitment 4</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="#">Store</a>
+							<ul class="depth2">
+								<li><a href="#">Store 1</a></li>
+							</ul>
+						</li>
+					</ul>
+					<div class="dim"></div>
+				</nav>
+				<button class="btn-allmenu" type="button">
+					<span class="sr-only">전체 메뉴 열기</span>
+					<!-- javascript toggle
+						text 변환 토글 처리 : 전체 메뉴 열기, 닫기 -->
+					<span class="line">
+						<span></span>
+						<span></span>
+						<span></span>
+					</span>
+				</button>
+			</div>
+		</header>
+
+		<main>
+			<section class="hello" id="hello">
+				<div class="max-width">
+					<img src="./images/Licat.jpg" alt="손을 들고 인사하는 위니브 고양이 캐릭터, 라이캣">
+					<div class="hello-txt">
+						<strong>WENIV</strong>
+						<h2><span>HELLO</span> <span>WORLD! :)</span></h2>
+						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae ex laborum totam atque repudiandae soluta
+							provident minus dicta et.</p>
+					</div>
+				</div>
+			</section>
+
+			<section class="main-link" id="link">
+				<div class="max-width">
+					<h2 class="sr-only">위니브 주요 링크</h2>
+					<ul>
+						<li>
+							<a href="#" class="link-hello"><span>Hello</span> <span>위니브 회사소개</span></a>
+						</li>
+						<li>
+							<a href="#" class="link-curriculum"><span>Curriculum</span> <span>제코베 학습 커리큘럼</span></a>
+						</li>
+						<li>
+							<a href="#" class="link-news"><span>IT News</span> <span>IT 관련 주간 소식</span></a>
+						</li>
+						<li>
+							<a href="#" class="link-store"><span>Store</span> <span>라이캣의 실험실</span></a>
+						</li>
+					</ul>
+				</div>
+			</section>
+
+			<section class="section-style notice" id="notice">
+				<div class="max-width">
+					<div class="sect-title">
+						<h2>게시판</h2>
+						<ul class="tab">
+							<li><button type="button" class="active">공지사항</button></li>
+							<li><button type="button">자유게시판</button></li>
+							<li><button type="button">취업게시판</button></li>
+						</ul>
+					</div>
+					<div class="sect-contents">
+						<h3>공지사항</h3>
+						<ol class="notice-list">
+							<li>
+								<a href="#">
+									<p class="num"><span class="sr-only">글번호</span>10</p>
+									<p class="tit">
+										<span class="category">공지</span>
+										<span class="title ellipsis">주식회사 위니브주식회사 위니브주식회사 위니브주식회사 위니브주식회사 위니브주식회사 위니브주식회사 위니브주식회사 위니브</span>
+										<img class="new" src="./images/new.svg" alt="새글">
+									</p>
+									<p class="date"><span class="sr-only">작성일</span> 2022.09.27</p>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<p class="num"><span class="sr-only">글번호</span>9</p>
+									<p class="tit">
+										<span class="category">공지</span>
+										<span class="title ellipsis">주식회사 위니브주식회사</span>
+										<img class="new" src="./images/new.svg" alt="새글">
+									</p>
+									<p class="date"><span class="sr-only">작성일</span> 2022.09.27</p>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<p class="num"><span class="sr-only">글번호</span>8</p>
+									<p class="tit">
+										<span class="title ellipsis">2022년 10월 1주차 IT 관련 소식입니다</span>
+									</p>
+									<p class="date"><span class="sr-only">작성일</span> 2022.09.27</p>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<p class="num"><span class="sr-only">글번호</span>7</p>
+									<p class="tit">
+										<span class="title ellipsis">주식회사 위니브주식회사 위니브주식회사 위니브주식회사 위니브주식회사 위니브주식회사 위니브주식회사 위니브주식회사 위니브</span>
+									</p>
+									<p class="date"><span class="sr-only">작성일</span> 2022.09.27</p>
+								</a>
+							</li>
+						</ol>
+						<a href="#" class="btn-more">더보기</a>
+					</div>
+				</div>
+			</section>
+
+			<section class="section-style friends">
+				<div class="max-width">
+					<div class="sect-title">
+						<h2>Weniv Friends!</h2>
+						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, quam maxime reprehenderit</p>
+					</div>
+					<div class="sect-contents">
+						<ul class="card-list">
+							<li>
+								<a href="#" class="card-item">
+									<div class="thumbnail"><img src="./images/Character_Suri.png" alt=""></div>
+									<p class="title ellipsis">Suri 수리 : 수달</p>
+									<p class="content">
+										Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto neque perferendis deserunt vero
+										blanditiis amet quos pariatur in, debitis reiciendis iste doloremque, magni
+										itaque recusandae quia atque quidem eaque corporis!
+									</p>
+								</a>
+							</li>
+							<li>
+								<a href="#" class="card-item">
+									<div class="thumbnail"><img src="./images/Character_Mura.png" alt=""></div>
+									<p class="title ellipsis">Mura 뮤라 : 미어캣 Mura 뮤라 : 미어캣 Mura 뮤라 : 미어캣 Mura 뮤라 : 미어캣</p>
+									<p class="content">
+										Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto neque perferendis deserunt vero
+										blanditiis amet quos pariatur in, debitis reiciendis iste doloremque, magni
+										itaque recusandae quia atque quidem eaque corporis!
+									</p>
+								</a>
+							</li>
+							<li>
+								<a href="#" class="card-item">
+									<div class="thumbnail"><img src="./images/Character_SoulGom.png" alt=""></div>
+									<p class="title ellipsis">SouiGom 소울곰 : 곰</p>
+									<p class="content">
+										Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto neque perferendis deserunt vero
+										blanditiis amet quos pariatur in, debitis reiciendis iste doloremque, magni
+										itaque recusandae quia atque quidem eaque corporis!
+									</p>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</section>
+
+			<section class="section-style minute">
+				<div class="max-width">
+					<div class="sect-title">
+						<h2>30분 요약 강좌</h2>
+						<p>버스, 지하철, 비행기 안 어디에서든 쉽게 복습할 수 있도록 한편 한편이 끊어지도록 구성한, 오직 여러분들을 위해 만든 요약 강의예요!</p>
+					</div>
+					<div class="sect-contents">
+						<div class="ratio_box">
+							<div class="ratio">
+								<iframe src="https://www.youtube.com/embed/PQymWXKehlk" title="YouTube video player"
+									allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+									allowfullscreen></iframe>
+							</div>
+						</div>
+						<div class="ratio_box">
+							<div class="ratio">
+								<iframe src="https://www.youtube.com/embed/_PeEALPPauk" title="YouTube video player"
+									allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+									allowfullscreen></iframe>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+
+		<aside>
+			<h2 class="sr-only">위니브 추천 강의</h2>
+			<a href="#"><img src="./images/aside_banner1.jpg" alt="30분 요약강좌 보러가기"></a>
+			<a href="#"><img src="./images/aside_banner2.jpg" alt="M.B.I.T 강좌 보러가기"></a>
+		</aside>
+
+		<footer>
+			<h2 class="sr-only">회사 정보</h2>
+			<div class="max-width">
+				<dl>
+					<div>
+						<dt>회사명</dt>
+						<dd>위니브</dd>
+					</div>
+					<div>
+						<dt>대표</dt>
+						<dd>라이캣</dd>
+					</div>
+					<div>
+						<dt>주소</dt>
+						<dd>제주특별자치도 제주시</dd>
+					</div>
+					<div>
+						<dt>Email</dt>
+						<dd><a href="mailto:064-000-0000">abcd123@google.co.kr</a></dd>
+					</div>
+					<div>
+						<dt>Tel</dt>
+						<dd><a href="tel:064-000-0000">064-000-0000</a></dd>
+					</div>
+					<div>
+						<dt>Fax</dt>
+						<dd>064-000-000</dd>
+					</div>
+				</dl>
+				<hr>
+				<p>Copyright © WENIV. All rights reserved.</p>
+				<a href="#top" class="btn-top">TOP</a>
+			</div>
+		</footer>
+	</div>
+</body>
+
+</html>

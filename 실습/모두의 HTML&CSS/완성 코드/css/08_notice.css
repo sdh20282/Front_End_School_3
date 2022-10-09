@@ -1,0 +1,146 @@
+.tab {
+	display: flex;
+	flex-direction: column;
+	gap: 0.8rem;
+}
+
+.tab li button {
+	padding: 0.6em 2.4rem;
+	width: 100%;
+	text-align: left;
+	border-radius: var(--border-radius);
+	color: var(--text-light-color);
+}
+.tab li button.active {
+	background: rgb(var(--main-color));
+	font-weight: bold;
+	color: rgb(var(--text-color));
+}
+
+.notice .sect-contents {
+	position: relative;
+}
+.notice h3 {
+	font-weight: bold;
+	font-size: max(min(24vw / var(--font-vw), 2.4rem), 2rem);
+}
+.notice-list {
+	margin-top: 2.4rem;
+	border-top: 2px solid rgb(var(--main-color));
+}
+.notice-list li {
+	border-bottom: 1px solid #ddd;
+}
+
+.notice-list a {
+	display: flex;
+	align-items: center;
+	gap: 2rem;
+	height: 6.4rem;
+	box-sizing: border-box;
+	padding: 0 2rem;
+	overflow: hidden;
+}
+
+.notice-list a .num {
+	flex: 0 0 5rem;
+	text-align: center;
+	font-weight: bold;
+}
+.notice-list a .tit {
+	display: flex;
+	gap: 1rem;
+	align-items: center;
+	overflow: hidden;
+}
+
+.ellipsis {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.notice-list a .tit .category {
+	white-space: nowrap;
+}
+
+.notice-list a .date {
+	margin: auto 0 auto auto;
+	color: var(--text-light-color);
+}
+.category {
+	background: #ddf3ff;
+	font-size: 1.4rem;
+	padding: 0.2em 1em;
+	border-radius: 2em;
+}
+
+.btn-more {
+	position: absolute;
+	top: 0;
+	right: 0;
+	display: block;
+	padding: 0.5em 1.5em 0.5em 1em;
+	font-size: 1.4rem;
+	color: var(--text-light-color);
+}
+.btn-more::before,
+.btn-more::after {
+	position: absolute;
+	right: 0.6em;
+	top: 50%;
+	display: block;
+	content: "";
+	width: 0.1em;
+	height: 0.5em;
+	transform: translateY(-50%);
+	background: #02a9ee;
+	font-size: 1.4em;
+}
+.btn-more::after {
+	right: 0.4em;
+	height: 0.1em;
+	width: 0.5em;
+}
+
+@media (max-width: 1024px) {
+	.notice h3 {
+		overflow: hidden;
+		position: absolute;
+		clip: rect(0, 0, 0, 0);
+		width: 1px;
+		height: 1px;
+		margin: -1px;
+		border: 0;
+		padding: 0;
+	}
+	.tab {
+		flex-direction: row;
+	}
+	.tab li {
+		flex-grow: 1;
+	}
+	.tab li button {
+		text-align: center;
+	}
+	.notice-list a {
+		gap: 1rem;
+		padding: 0;
+	}
+	.notice-list a .num {
+		overflow: hidden;
+		position: absolute;
+		clip: rect(0, 0, 0, 0);
+		width: 1px;
+		height: 1px;
+		margin: -1px;
+		border: 0;
+		padding: 0;
+	}
+
+	.btn-more {
+		position: relative;
+		width: 8rem;
+		margin: 2rem auto 0 auto;
+	}
+}

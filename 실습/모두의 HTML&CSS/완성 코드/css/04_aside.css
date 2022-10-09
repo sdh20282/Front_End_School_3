@@ -1,0 +1,36 @@
+aside {
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
+}
+aside a {
+	display: block;
+	border-radius: var(--border-radius);
+	overflow: hidden;
+	box-shadow: 0.5rem 0.5rem 2rem rgba(0, 0, 0, 0.08);
+}
+aside a img {
+	display: block;
+	max-width: 100%;
+}
+
+@media (min-width: 1617px) {
+	aside {
+		position: fixed;
+		top: 12.8rem;
+		left: calc(50% + var(--max-width) / 2 + 2.4rem);
+		width: 12.4rem;
+	}
+}
+
+@media (max-width: 1616px) {
+	aside {
+		background: #eee;
+		flex-direction: row;
+		padding: 4rem 0;
+		justify-content: center;
+	}
+	aside a img {
+		height: 14rem;
+	}
+}

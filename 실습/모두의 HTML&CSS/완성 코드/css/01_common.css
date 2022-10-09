@@ -1,0 +1,56 @@
+:root {
+	--max-width: 132rem;
+	--font-vw: 13.2;
+	--margin-width: 4rem;
+	--header-height: 8rem;
+	--border-radius: 0.4em;
+	--text-color: 46, 37, 37;
+	--text-light-color: #666;
+	--main-color: 255, 207, 92;
+}
+
+/* 접근성을 고려한 화면감춤 */
+.sr-only {
+	overflow: hidden;
+	position: absolute;
+	clip: rect(0, 0, 0, 0);
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	border: 0;
+	padding: 0;
+}
+
+.smooth {
+	scroll-behavior: smooth;
+}
+
+/* 폰트 */
+html {
+	font-size: 62.5%;
+}
+
+body {
+	font-family: "Pretendard";
+	font-size: clamp(1.4rem, 16vw / var(--font-vw), 1.6rem);
+	color: rgb(var(--text-color));
+	line-height: 1.4;
+}
+
+/* layout */
+.wrap {
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+}
+
+main {
+	flex-grow: 1;
+}
+
+.max-width {
+	/* width: var(--max-width);
+	max-width: calc(100% - var(--margin-width)); */
+	width: min(var(--max-width), calc(100% - var(--margin-width)));
+	margin: 0 auto;
+}
