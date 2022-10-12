@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+        table,
+        thead,
+        tbody,
+        tr,
+        th,
+        td {
+            border: 1px solid royalblue;
+            border-collapse: collapse;
+        }
+    </style>
+</head>
+
+<body>
+    <button onclick="render_table(userData)">load</button>
+    <button onclick="get_avg_age(userData)">avg</button>
+    <table style="width: 100%;" id="infoTable">
+        <thead>
+            <th style="width: 15%;">id</th>
+            <th style="width: 15%;">age</th>
+            <th style="width: 15%;">eyeColor</th>
+            <th style="width: 15%;">name</th>
+            <th style="width: 15%;">gender</th>
+            <th style="width: 15%;">email</th>
+            <th style="width: 15%;">phone</th>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+
+    <script>
+        // 1
+        let arr1 = [10, 20, 30, 10, 20, 30, 40, 10];
+        let arr1_avg = arr1.reduce((a, b) => a + b, 0) / arr1.length;
+        let variance = arr1.map((x) => (x - arr1_avg) ** 2).reduce((a, b) => a + b, 0) / arr1.length;
+        let sample_variance = variance ** 0.5;
+
+
+        // 2
+        let str1 = '5, 4, 10, 2, 5';
+        let str1_avg = str1.split(', ').map((x) => parseInt(x)).reduce((a, b) => a + b, 0) / str1.split(', ').length;
+
+
+        // 3
+        let arr2 = [11, 22, 33, 111, 2];
+        let avg_digits = arr2.join('').split('').map((x) => parseInt(x)).reduce((a, b) => a + b, 0);
+
+
+        // 4
+        let num1 = 10000000;
+        let res1 = num1.toString().split('').reverse().map((value, index) => index % 3 === 0 && index !== 0 ? value + ',' : value).reverse().join('');
+
+        let str2 = '1,000,000';
+        let res2 = parseInt(str2.split(',').join(''));
+
+        let str3 = 'hello world';
+        let res3 = str3.split('').reverse().join('');
+
+
+        // 5
+        let res4 = [];
+
+        for (let i = 0; i < 6; i++) {
+            let rand = Math.floor(Math.random() * 45) + 1;
+
+            if (!res4.includes(rand)) {
+                res4.push(rand);
+                continue;
+            }
+
+            i--;
+        }
+
+
+        // 6
+        var userData = [
+            {
+                "_id": "5e80777f673acf89c007ff91",
+                "age": 27,
+                "eyeColor": "green",
+                "name": "Angelina Chang",
+                "gender": "female",
+                "email": "angelinachang@kangle.com",
+                "phone": "+1 (938) 477-2821"
+            },
+            {
+                "_id": "5e80777feee717674b817fd2",
+                "age": 25,
+                "eyeColor": "green",
+                "name": "Deidre Cobb",
+                "gender": "female",
+                "email": "deidrecobb@kangle.com",
+                "phone": "+1 (938) 477-2824"
+            },
+            {
+                "_id": "5e80777fac368a4578dda85d",
+                "age": 25,
+                "eyeColor": "blue",
+                "name": "Jolene Franks",
+                "gender": "female",
+                "email": "jolenefranks@kangle.com",
+                "phone": "+1 (985) 536-3981"
+            },
+            {
+                "_id": "5e80777ff3717874cbc78e44",
+                "age": 31,
+                "eyeColor": "brown",
+                "name": "Waters Hardin",
+                "gender": "male",
+                "email": "watershardin@kangle.com",
+                "phone": "+1 (938) 559-2224"
+            },
+            {
+                "_id": "5e80777fe36842ea9e024fcd",
+                "age": 34,
+                "eyeColor": "green",
+                "name": "Jody Chaney",
+                "gender": "female",
+                "email": "jodychaney@kangle.com",
+                "phone": "+1 (878) 587-2602"
+            },
+            {
+                "_id": "5e80777fafd591f57344eb33",
+                "age": 31,
+                "eyeColor": "green",
+                "name": "Ortiz Maldonado",
+                "gender": "male",
+                "email": "ortizmaldonado@kangle.com",
+                "phone": "+1 (986) 509-2753"
+            },
+            {
+                "_id": "5e80777f20e48e9ada226862",
+                "age": 25,
+                "eyeColor": "brown",
+                "name": "Stacy Burris",
+                "gender": "female",
+                "email": "stacyburris@kangle.com",
+                "phone": "+1 (864) 577-3500"
+            },
+            {
+                "_id": "5e80777faf334f84a2c90595",
+                "age": 33,
+                "eyeColor": "brown",
+                "name": "Davenport Levy",
+                "gender": "male",
+                "email": "davenportlevy@kangle.com",
+                "phone": "+1 (990) 600-2700"
+            }
+        ]
+
+        function get_avg_age(userData) {
+            console.log(userData.map(x => x.age).reduce((a, b) => a + b, 0)/userData.length);
+        }
+
+        function render_table(userData) {
+            let userDataTable = [];
+
+            for (const user of userData) {
+                userDataTable.push(`
+                    <tr>
+                        <td>${user._id}</td>
+                        <td>${user.age}</td>
+                        <td>${user.eyeColor}</td>
+                        <td>${user.name}</td>
+                        <td>${user.gender}</td>
+                        <td>${user.email}</td>
+                        <td>${user.phone}</td>
+                    </tr>
+                `);
+            }
+
+            document.querySelector('#infoTable > tbody').innerHTML = userDataTable.join('');
+        }
+    </script>
+</body>
+
+</html>
