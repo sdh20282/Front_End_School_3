@@ -1,4 +1,6 @@
 @charset 'utf-8';
+/* css 파일의 캐릭터 포맷 설정 */
+/* 레거시 브라우저 용 */
 
 #app {
     width: 100vw;
@@ -12,10 +14,9 @@
     height: 400px;
     top: 50%;
     left: 50%;
-    /* margin: -200px 0 0 -170px; */
-    transform: translate(-50%, -50%) rotateY(100deg);
+    transform: translate(-50%, -50%) rotateY(0deg) rotateX(0deg);
     transform-style: preserve-3d;
-    transition: .3s;
+    transition: 0.5s;
 }
 
 .list-item li {
@@ -34,29 +35,29 @@
 }
 
 .list-item li:nth-child(1) {
-    transform: rotateY(0) translateZ(calc(340px*7/3.14/2));
+    transform: rotateY(0) translateZ(calc(340px*7/2/3.14));
 }
 
 .list-item li:nth-child(2) {
-    transform: rotateY(calc(360deg/7)) translateZ(calc(340px*7/3.14/2));
+    transform: rotateY(calc(360deg/7)) translateZ(calc(340px*7/2/3.14));
 }
 
 .list-item li:nth-child(3) {
-    transform: rotateY(calc(360deg/7*2)) translateZ(calc(340px*7/3.14/2));
+    transform: rotateY(calc(360deg/7*2)) translateZ(calc(340px*7/2/3.14));
 }
 
 .list-item li:nth-child(4) {
-    transform: rotateY(calc(360deg/7*3)) translateZ(calc(340px*7/3.14/2));
+    transform: rotateY(calc(360deg/7*3)) translateZ(calc(340px*7/2/3.14));
 }
 
 .list-item li:nth-child(5) {
-    transform: rotateY(calc(360deg/7*4)) translateZ(calc(340px*7/3.14/2));
+    transform: rotateY(calc(360deg/7*4)) translateZ(calc(340px*7/2/3.14));
 }
 
 .list-item li:nth-child(6) {
-    transform: rotateY(calc(360deg/7*5)) translateZ(calc(340px*7/3.14/2));
+    transform: rotateY(calc(360deg/7*5)) translateZ(calc(340px*7/2/3.14));
 }
 
 .list-item li:nth-child(7) {
-    transform: rotateY(calc(360deg/7*6)) translateZ(calc(340px*7/3.14/2));
+    transform: rotateY(calc(360deg/7*6)) translateZ(calc(340px*7/2/3.14));
 }
