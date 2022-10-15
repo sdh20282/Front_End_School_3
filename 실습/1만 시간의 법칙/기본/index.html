@@ -2,95 +2,76 @@
 <html lang="ko">
 
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>1만 시간의 법칙</title>
-  <link rel="stylesheet" href="./css/reset.css">
-  <link rel="stylesheet" href="./css/10000hours.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1만 시간의 법칙</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/10000hours.css">
 </head>
 <!-- https://www.figma.com/file/YIoHn24LhFrCBEedo96rx6/1%EB%A7%8C-%EC%8B%9C%EA%B0%84%EC%9D%98-%EB%B2%95%EC%B9%99?node-id=0%3A1 -->
 
 <body>
-  <header class="title_loto wrapper">
-    <h1 class="blind">1만 시간의 법칙 메인 페이지</h1>
-    <img class="title_logo_img" src="./img/title.png" alt="">
-  </header>
+    <div class="wrapper">
+        <header class="title_loto">
+            <h1 class="blind">1만 시간의 법칙 메인 페이지</h1>
+            <img class="title_logo_img" src="./img/title.png" alt="">
+        </header>
+    
+        <main class="main_content">
+            <section class="about_10000hour">
+                <header>
+                    <h2 class="blind">1만 시간이란?</h2>
+                </header>
+                <p class="about_10000hour_subtitle">“연습은 어제의 당신보다 당신을 더 낫게 만든다.”</p>
+                <p class="about_10000hour_description"><strong>1만 시간의 법칙</strong>은<span></span>어떤 분야의 전문가가 되기 위해서는<span></span>최소한 1만 시간의 훈련이 필요하다는 법칙이다.</p>
+            </section>
+    
+            <section class="become_specialist">
+                <header>
+                    <h2 class="blind">전문가가 되기 위해서는..</h2>
+                </header>
+                <form action="index.html" onsubmit="return false;">
+                    <p class="description_text">나는<input id="user_input_job" type="text" placeholder="예) 프로그래밍" required>전문가가 될 것이다.</p>
+                    <p class="description_text">그래서 앞으로 매일 하루에<span></span><input id="user_input_time" type="number" placeholder="예) 5시간" required>시간씩 훈련할 것이다.</p>
+                    <div class="decorate_button">
+                        <button id="calc_start" class="yellow_button">나는 며칠 동안 훈련을 해야 <span></span> 1만 시간이 될까?</button>
+                    </div>
+                </form>
+            </section>
+    
+            <img class="loading" src="./img/loading.png" alt="">
+    
+            <section class="specialist_result">
+                <header>
+                    <h2 class="blind">결과 확인</h2>
+                </header>
+                <p class="description_text">당신은<strong id="user_output_job">프로그래밍</strong>전문가가 되기 위해서</p>
+                <p class="description_text">대략<strong id="user_output_time">5110</strong>일 이상 훈련하셔야 합니다! :)</p>
+                <div class="button_list">
+                    <button class="yellow_button">훈련하러 가기 GO!GO!</button>
+                    <button class="yellow_button white_button">공유하기</button>
+                </div>
+            </section>
+        </main>
+    
+        <footer class="extra_info">
+            <img src="./img/logo.png" alt="위니브">
+            <small class="copyright">※ 본 서비스 내 이미지 및 콘텐츠의 저작권은 주식회사 WeNiv에 있습니다.<span></span>수정 및 재배포, 무단 도용 시 법적인 문제가 발생할 수 있습니다.</small>
+        </footer>
+    </div>
 
-  <main class="main_content wrapper">
-    <section class="about_10000hour">
-      <header>
-        <h2 class="blind">1만 시간이란?</h2>
-      </header>
-      <p class="about_10000hour_subtitle">
-        “연습은 어제의 당신보다 당신을 더 낫게 만든다.”
-      </p>
-      <p class="about_10000hour_description">
-        <strong>1만 시간의 법칙</strong>은
-        <span></span>
-        어떤 분야의 전문가가 되기 위해서는
-        <span></span>
-        최소한 1만 시간의 훈련이 필요하다는 법칙이다.
-      </p>
+    <section class="modal wrapper">
+        <header>
+            <h2 class="blind">응원 메시지!</h2>
+        </header>
+        <p class="modal_title">화이팅!!<span>♥♥♥</span></p>
+        <p class="modal_desc">당신의 꿈을 응원합니다!</p>
+        <img src="./img/licat.png" alt="">
+        <button class="yellow_button">종료하고 진짜 <span></span> 훈련하러 가기 GO!GO!</button>
     </section>
 
-    <section class="become_specialist">
-      <h2 class="blind">전문가가 되기 위해서는..</h2>
-      <form action="">
-        <p class="description_text">
-          나는
-          <input type="text" placeholder="예) 프로그래밍" required>
-          전문가가 될 것이다.
-        </p>
-        <p class="description_text">
-          그래서 앞으로 매일 하루에
-          <span></span>
-          <input type="number" placeholder="예) 5시간" required>
-          시간씩 훈련할 것이다.
-        </p>
-        <div class="decorate_button">
-          <button class="btn_start">나는 며칠 동안 훈련을 해야 <span></span> 1만 시간이 될까?</button>
-        </div>
-      </form>
-    </section>
-
-    <section class="specialist_result">
-      <h2 class="blind">결과 확인</h2>
-      <p class="description_text">
-        당신은
-        <strong>프로그래밍</strong>
-        전문가가 되기 위해서
-      </p>
-      <p class="description_text">
-        대략
-        <strong>5110</strong>
-        일 이상 훈련하셔야 합니다! :)
-      </p>
-      <div class="button_list">
-        <button class="btn_start">훈련하러 가기 GO!GO!</button>
-        <button class="bth_share">공유하기</button>
-      </div>
-    </section>
-
-  </main>
-
-  <footer class="extra_info wrapper">
-    <img src="./img/logo.png" alt="위니브">
-    <small class="copyright">
-      ※ 본 서비스 내 이미지 및 콘텐츠의 저작권은 주식회사 WeNiv에 있습니다.
-      <span></span>
-      수정 및 재배포, 무단 도용 시 법적인 문제가 발생할 수 있습니다.
-    </small>
-  </footer>
-
-  <section class="modal wrapper">
-    <h2 class="blind">응원 메시지!</h2>
-    <p class="modal_title">화이팅!!<span>♥♥♥</span></p>
-    <p class="modal_desc">당신의 꿈을 응원합니다!</p>
-    <img src="./img/licat.png" alt="">
-    <button class="btn_start">종료하고 진짜 <span></span> 훈련하러 가기 GO!GO!</button>
-  </section>
-
+    <script src="./js/10000hours.js"></script>
 </body>
 
 </html>

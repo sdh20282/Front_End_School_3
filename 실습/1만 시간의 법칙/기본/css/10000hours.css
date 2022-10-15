@@ -28,8 +28,13 @@
         url("https://fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.otf") format('opentype');
 }
 
-/* ########## Reset ########## */
+@keyframes now_loading {
+    100% {
+        transform: rotate(360deg);
+    }
+}
 
+/* ########## Reset ########## */
 body {
     background-color: #5B2386;
     line-height: 1;
@@ -84,7 +89,7 @@ button {
     color: white;
 }
 
-.btn_start {
+.yellow_button {
     font-family: 'GmarketSansBold';
     font-size: 24px;
     color: #5B2386;
@@ -144,6 +149,7 @@ button {
     margin: 0 8px;
     padding-top: 5px;
     border-radius: 10px;
+    text-align: center; 
 }
 
 .become_specialist .description_text input::placeholder {
@@ -170,15 +176,23 @@ button {
     position: absolute;
 }
 
-.become_specialist .decorate_button .btn_start {
+.become_specialist .decorate_button .yellow_button {
     padding: 5px 49px;
     border-radius: 32px;
+}
+
+
+
+.loading {
+    display: none;
+    margin: 0 auto;
+    animation: now_loading 1s infinite linear;
 }
 
 /* #### third section #### */
 
 .specialist_result {
-    margin: 0;
+    display: none;
 }
 
 .specialist_result .description_text {
@@ -197,22 +211,15 @@ button {
     margin-top: 113px;
 }
 
-.specialist_result .button_list .btn_start {
+.specialist_result .button_list .yellow_button {
     /* NOTE:: 저는 button의 경우 요소 크기를 직접 지정하기도 합니다. width는 버튼의 텍스트 길이에 따라 가변적이지만 height는 보통 동일해서 px단위로 고정적인 경우가 많이 있어서요. padding으로 주어도 나쁜 것은 아니지만 이렇게 각각의 값을 다르게 넣게된다면 height를 px단위로 고정, width를 padding으로 설정하는 방법도 있습니다. */
     padding: 5px 50px;
     border-radius: 32px;
     margin-right: 10px;
 }
 
-.specialist_result .button_list .bth_share {
-    font-family: 'GmarketSansBold';
-    font-size: 24px;
-    color: #5B2386;
-    padding: 5px 50px;
-    height: 66px;
-    line-height: 66px;
-    border-radius: 32px;
-    box-shadow: 0 0 1em 0 #666;
+.specialist_result .button_list .white_button {
+    background-color: white;
 }
 
 /* ###### footer ###### */
@@ -223,6 +230,7 @@ button {
 
 .extra_info img {
     width: 125px;
+    height: 25px;
     display: block;
     margin: 0 auto 20px;
 }
@@ -241,13 +249,16 @@ button {
 /* ###### modal ###### */
 
 .modal {
+    display: none;
+    inset: 0;
     width: 800px;
     height: 800px;
     background-color: white;
     border-radius: 30px;
     box-sizing: border-box;
-    margin: 0 auto 100px;
+    margin: 0 auto;
     padding: 76px 0 68px;
+    position: fixed;
 }
 
 .modal p {
@@ -271,9 +282,9 @@ button {
     margin-bottom: 74px;
 }
 
-.modal .btn_start {
+.modal .yellow_button {
     font-size: 26px;
-    padding: 24px 49px 16px;
+    padding: 0 49px;
     border-radius: 32px;
 }
 
