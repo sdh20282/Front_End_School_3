@@ -83,20 +83,22 @@ button {
     margin-bottom: 130px;
 }
 
-.description_text {
+.text {
     font-family: 'GmarketSansMedium';
     font-size: 24px;
     color: white;
 }
 
-.yellow_button {
+.button {
+    height: 66px;
     font-family: 'GmarketSansBold';
     font-size: 24px;
     color: #5B2386;
     background-color: #FCEE21;
     box-shadow: 0 0 1em 0 #666;
-    height: 66px;
     line-height: 66px;
+    border-radius: 33px;
+    padding: 5px 50px;
 }
 
 /* #### first section #### */
@@ -139,11 +141,11 @@ button {
     margin-bottom: 147px;
 }
 
-.become_specialist .description_text {
+.become_specialist .text {
     line-height: 3.8;
 }
 
-.become_specialist .description_text input {
+.become_specialist .text input {
     width: 228px;
     height: 57px;
     margin: 0 15px;
@@ -152,7 +154,7 @@ button {
     text-align: center; 
 }
 
-.become_specialist .description_text input::placeholder {
+.become_specialist .text input::placeholder {
     text-align: center;
     opacity: 50%;
 }
@@ -176,13 +178,6 @@ button {
     position: absolute;
 }
 
-.become_specialist .decorate_button .yellow_button {
-    padding: 5px 49px;
-    border-radius: 32px;
-}
-
-
-
 .loading {
     display: none;
     margin: 0 auto;
@@ -195,11 +190,11 @@ button {
     display: none;
 }
 
-.specialist_result .description_text {
+.specialist_result .text {
     line-height: 1.25;
 }
 
-.specialist_result .description_text strong {
+.specialist_result .text strong {
     font-family: 'GmarketSansBold';
     font-weight: bold;
     font-size: 72px;
@@ -207,19 +202,17 @@ button {
     vertical-align: -15%;
 }
 
-.specialist_result .button_list {
+.specialist_result .list_button {
     margin-top: 113px;
 }
 
-.specialist_result .button_list .yellow_button {
+.specialist_result .list_button .button {
     /* NOTE:: 저는 button의 경우 요소 크기를 직접 지정하기도 합니다. width는 버튼의 텍스트 길이에 따라 가변적이지만 height는 보통 동일해서 px단위로 고정적인 경우가 많이 있어서요. padding으로 주어도 나쁜 것은 아니지만 이렇게 각각의 값을 다르게 넣게된다면 height를 px단위로 고정, width를 padding으로 설정하는 방법도 있습니다. */
-    padding: 5px 50px;
-    border-radius: 32px;
-    margin-right: 10px;
 }
 
-.specialist_result .button_list .white_button {
+.specialist_result .list_button .white_button {
     background-color: white;
+    margin-left: 10px;
 }
 
 /* ###### footer ###### */
