@@ -35,7 +35,7 @@
                     <p class="description_text">나는<input id="user_input_job" type="text" placeholder="예) 프로그래밍" required>전문가가 될 것이다.</p>
                     <p class="description_text">그래서 앞으로 매일 하루에<span></span><input id="user_input_time" type="number" placeholder="예) 5시간" required>시간씩 훈련할 것이다.</p>
                     <div class="decorate_button">
-                        <button id="calc_start" class="yellow_button">나는 며칠 동안 훈련을 해야 <span></span> 1만 시간이 될까?</button>
+                        <button id="btn_calc" class="yellow_button">나는 며칠 동안 훈련을 해야 <span></span> 1만 시간이 될까?</button>
                     </div>
                 </form>
             </section>
@@ -49,8 +49,8 @@
                 <p class="description_text">당신은<strong id="user_output_job">프로그래밍</strong>전문가가 되기 위해서</p>
                 <p class="description_text">대략<strong id="user_output_time">5110</strong>일 이상 훈련하셔야 합니다! :)</p>
                 <div class="button_list">
-                    <button class="yellow_button">훈련하러 가기 GO!GO!</button>
-                    <button class="yellow_button white_button">공유하기</button>
+                    <button id="btn_train" class="yellow_button">훈련하러 가기 GO!GO!</button>
+                    <button id="btn_share" class="yellow_button white_button">공유하기</button>
                 </div>
             </section>
         </main>
@@ -61,14 +61,16 @@
         </footer>
     </div>
 
-    <section class="modal wrapper">
-        <header>
-            <h2 class="blind">응원 메시지!</h2>
-        </header>
-        <p class="modal_title">화이팅!!<span>♥♥♥</span></p>
-        <p class="modal_desc">당신의 꿈을 응원합니다!</p>
-        <img src="./img/licat.png" alt="">
-        <button class="yellow_button">종료하고 진짜 <span></span> 훈련하러 가기 GO!GO!</button>
+    <section id="modal" class="modal wrapper">
+        <div class="modal_content">
+            <header>
+                <h2 class="blind">응원 메시지!</h2>
+            </header>
+            <p class="modal_title">화이팅!!<span>♥♥♥</span></p>
+            <p class="modal_desc">당신의 꿈을 응원합니다!</p>
+            <img src="./img/licat.png" alt="">
+            <button id="btn_close" class="yellow_button">종료하고 진짜 <span></span> 훈련하러 가기 GO!GO!</button>
+        </div>
     </section>
 
     <script src="./js/10000hours.js"></script>
