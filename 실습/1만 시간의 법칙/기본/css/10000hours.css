@@ -59,6 +59,9 @@ button {
     width: 780px;
     margin: 0 auto;
     text-align: center;
+    /* display: flex;
+    flex-direction: column;
+    align-items: center; */
 }
 
 /* ###### header ###### */
@@ -96,9 +99,11 @@ button {
     color: #5B2386;
     background-color: #FCEE21;
     box-shadow: 0 0 1em 0 #666;
-    line-height: 66px;
     border-radius: 33px;
-    padding: 5px 50px;
+    padding: 0 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 /* #### first section #### */
@@ -204,6 +209,8 @@ button {
 
 .specialist_result .list_button {
     margin-top: 113px;
+    display: flex;
+    justify-content: center;
 }
 
 .specialist_result .list_button .button {
@@ -280,10 +287,8 @@ button {
     margin-bottom: 74px;
 }
 
-.modal .yellow_button {
-    font-size: 26px;
-    padding: 0 49px;
-    border-radius: 32px;
+.modal .button {
+    margin: 0 auto;
 }
 
 @media (max-width: 825px) {
