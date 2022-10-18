@@ -35,7 +35,9 @@
 }
 
 /* ########## Reset ########## */
-*, *::before, *::after {
+*,
+*::before,
+*::after {
     box-sizing: border-box;
 }
 
@@ -104,6 +106,7 @@ button {
     font-size: 24px;
     color: #5B2386;
     background-color: #FCEE21;
+    gap: 5px;
 }
 
 /* #### first section #### */
@@ -142,17 +145,13 @@ button {
 
 /* #### second section #### */
 
-.become_specialist .text {
-    font-size: 22px;
-}
-
 .become_specialist .text input {
     width: 220px;
     height: 55px;
     margin: 0 15px 25px;
     padding-top: 5px;
     border-radius: 10px;
-    text-align: center; 
+    text-align: center;
 }
 
 .become_specialist .text input::placeholder {
@@ -257,33 +256,36 @@ button {
     border-radius: 30px;
     margin: auto;
     padding: 50px 0;
+    text-align: center;
 }
 
-.modal p {
+.modal_content p {
     font-family: 'OTEnjoystoriesBA';
     color: #5B2386;
 }
 
-.modal .modal_title {
+.modal_content .modal_title {
     font-size: 72px;
 }
 
-.modal .modal_desc {
+.modal_content .modal_desc {
     font-size: 28px;
     margin-bottom: 20px;
 }
 
-.modal img {
+.modal_content img {
     width: 320px;
     height: 260px;
     margin-bottom: 40px;
 }
 
-.modal .button {
+.modal_content .button {
     margin: 0 auto;
 }
 
 @media (max-width: 825px) {
+    /* ########## Components ########## */
+
     .wrapper {
         width: 320px;
     }
@@ -293,189 +295,153 @@ button {
     .title_loto {
         background-size: 125px;
         height: 126px;
-        margin-top: 40px;
+        margin-top: 50px;
     }
-    
+
     .title_loto .title_logo_img {
-        width: 267px;
-        height: 53px;
+        width: 265px;
+        height: 52px;
         top: 35px;
     }
-    
+
     /* ###### main ###### */
-    
+
     .main_content {
-        margin-top: 31px;
-        margin-bottom: 83px;
-    }
-    
-    .description_text {
-        font-size: 14px;
-    }
-    
-    .btn_start {
-        font-size: 14px;
+        padding-top: 30px;
+        padding-bottom: 80px;
     }
     
     /* #### first section #### */
-    
+
     .about_10000hour {
-        margin-bottom: 60px;
+        margin-bottom: 45px;
     }
-    
+
     .about_10000hour .about_10000hour_subtitle {
         font-size: 22px;
-        margin-bottom: 56px;
-    }
-    
-    .about_10000hour .about_10000hour_description {
-        background-size: 312px;
-        padding-top: 6px;
-        font-size: 14px;
-        line-height: 1.7;
-    }
-    
-    .about_10000hour .about_10000hour_description strong {
-        font-size: 16px;
-    }
-    
-    /* #### second section #### */
-    
-    .become_specialist {
-        margin-bottom: 64px;
+        letter-spacing: -0.2px;
+        margin-bottom: 50px;
     }
 
-    .become_specialist .description_text {
-        line-height: 3.1;
+    .about_10000hour .about_10000hour_description {
+        background-size: 300px;
+        font-size: 14px;
+        padding-top: 14px;
+        letter-spacing: -0.5px;
     }
-    
-    .become_specialist .description_text span {
-        display: block;
+
+    .about_10000hour .about_10000hour_description span {
+        margin-bottom: 12px;
     }
-    
-    .become_specialist .description_text input {
-        width: 156px;
-        height: 34px;
-        padding-top: 3px;
+
+    .about_10000hour .about_10000hour_description strong {
+        font-size: 14px;
+    }
+
+    /* share */
+
+    .text {
+        font-size: 14px;
+    }
+
+    .button {
+        height: 68px;
+        border-radius: 13px;
+        flex-direction: column;
+        padding: 5px 50px 0;
+        font-size: 14px;
+        gap: 2px;
+    }
+
+    /* #### second section #### */
+
+    .become_specialist .text input {
+        width: 150px;
+        height: 35px;
+        margin: 15px 5px;
         border-radius: 7px;
     }
-    
-    .become_specialist .description_text input::placeholder {
-        text-align: center;
-        opacity: 50%;
-    }
-    
+
     .become_specialist .decorate_button {
-        margin: 49px auto 0 auto;
-        position: relative;
-    }
-    
-    .become_specialist .decorate_button::after {
-        background-size: 43px;
-        top: 22px;
-        right: -50px;
-        position: absolute;
-    }
-    
-    .become_specialist .decorate_button .btn_start {
-        padding: 18px 37px;
-        border-radius: 12px;
-        line-height: 1.3;
+        margin-top: 35px;
     }
 
-    .become_specialist .decorate_button .btn_start span {
-        display: block;
+    .become_specialist .decorate_button::after {
+        background-size: 48px;
+        width: 48px;
+        height: 48px;
+        top: 28px;
+        right: -50px;
     }
-    
+
+    .loading {
+        width: 100px;
+        height: 100px;
+        margin-top: 64px;
+    }
+
     /* #### third section #### */
-    
+
     .specialist_result {
-        margin: 0;
+        margin-top: 64px;
     }
-    
-    .specialist_result .description_text {
-        line-height: 1.6;
-    }
-    
-    .specialist_result .description_text strong {
+
+    .specialist_result .text strong {
         font-size: 24px;
-        padding: 0 5px;
-        vertical-align: -10%;
+        vertical-align: -8%;
+        margin-bottom: 16px;
     }
-    
-    .specialist_result .button_list {
-        margin-top: 40px;
+
+    .specialist_result .list_button {
+        margin-top: 39px;
     }
-    
-    .specialist_result .button_list .btn_start {
+
+    .specialist_result .list_button .button {
+        width: auto;
         height: 40px;
-        line-height: 40px;
-        font-size: 14px;
-        padding: 0 20px;
-        border-radius: 32px;
-        margin-right: 13px;
+        border-radius: 20px;
+        padding: 5px 18px 0;
     }
-    
-    .specialist_result .button_list .bth_share {
-        height: 40px;
-        line-height: 40px;
-        font-size: 14px;
-        padding: 0 20px;
-        border-radius: 32px;
-    }
-    
+
     /* ###### footer ###### */
-    
+
     .extra_info {
-        margin-bottom: 32px;
+        margin-bottom: 40px;
     }
-    
+
     .extra_info img {
-        width: 91px;
-        margin: 0 auto 17px;
+        width: 90px;
+        height: 20px;
     }
-    
+
     .extra_info .copyright {
         font-size: 8px;
-        color: white;
-        line-height: 1;
-        opacity: 60%;
     }
-    
+
     /* ###### modal ###### */
     
-    .modal {
-        width: 330px;
-        height: 500px;
-        border-radius: 20px;
-        padding: 40px 0 45px;
-    }
-    
-    .modal .modal_title {
-        font-size: 64px;
-        margin-bottom: 0px;
+    .modal_content {
+        width: 400px;
+        height: 400px;
+        padding: 25px;
     }
 
-    .modal .modal_title span{
+    .modal p span {
         display: none;
     }
-    
+
+    .modal .modal_title {
+        font-size: 60px;
+    }
+
     .modal .modal_desc {
         font-size: 36px;
-        margin-bottom: 246px;
-    }
-    
-    .modal img {
-        display: none;
-    }
-    
-    .modal .btn_start {
-        font-size: 15px;
-        padding: 21px 40px 18px;
-        border-radius: 13px;
+        margin-bottom: 0;
     }
 
-    .modal .btn_start span {
-        display: block;
+    .modal img {
+        width: 200px;
+        height: 160px;
+        margin-bottom: 20px;
     }
 }
