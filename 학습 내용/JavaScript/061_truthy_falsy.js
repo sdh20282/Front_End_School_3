@@ -1,3 +1,5 @@
+// https://baeharam.netlify.app/posts/javascript/JS-%EA%B0%95%EC%A0%9C%EB%B3%80%ED%99%98
+
 console.log('0' == 0) // true
 console.log('0' === 0) // false
 
@@ -23,6 +25,9 @@ console.log(false === null) // 주의 : false
 
 console.log(false ==  undefined) // 주의 : false
 console.log(false === undefined) // 주의 : false
+
+console.log(null === undefined) // false
+console.log(null  == undefined) // true
 
 // 아래 내용이 많아서 별도 파일로 분리하여 설명해드리겠습니다.
 console.log(NaN ==  NaN) // 주의 : false

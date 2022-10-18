@@ -21,6 +21,19 @@
             let b = [6, 7, 8];
             let c = [...a, 100, ...b];
             console.log(c);
+
+            test = new Array(10).fill(new Array(3));
+            test2 = new Array(10).fill([1, 2]);
+            test[0][0] = 3;
+            test2[0][0] = 3;
+
+            console.log(test);
+            console.log(test2);
+
+            // 권장
+            test3 = Array.from(Array(10), () => new Array(3));
+            test3[0][0] = 3;
+            test3;
         </script>
     </body>
 </html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <input type="text" name="" id="input" />
+        <button type="submit" id="btn">입력</button>
+        <button id="btn2">삭제</button>
+        <textarea name="" id="area" cols="30" rows="10"></textarea>
+        <script>
+            const input = document.querySelector("#input");
+            const area = document.querySelector("#area");
+            const btn = document.querySelector("#btn");
+            const btn2 = document.querySelector("#btn2");
+            const memo = [];
+
+            function 입력() {
+                let todo = input.value;
+                memo.push(todo);
+                localStorage.setItem("메모", JSON.stringify(memo));
+                area.value = JSON.parse(localStorage.getItem("메모"));
+                input.value = "";
+            }
+            area.value = JSON.parse(localStorage.getItem("메모"));
+
+            function 삭제() {
+                localStorage.removeItem("메모");
+                area.value = JSON.parse(localStorage.getItem("메모"));
+            }
+            btn.addEventListener("click", 입력);
+            btn2.addEventListener("click", 삭제);
+        </script>
+    </body>
+</html>
