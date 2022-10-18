@@ -35,9 +35,13 @@
 }
 
 /* ########## Reset ########## */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
 body {
     background-color: #5B2386;
-    line-height: 1;
+    font-family: 'GmarketSansMedium';
 }
 
 button {
@@ -70,7 +74,7 @@ button {
 }
 
 .title_loto .title_logo_img {
-    width: 564px;
+    width: 545px;
     height: 112px;
     position: relative;
     top: 74px;
@@ -79,39 +83,38 @@ button {
 /* ###### main ###### */
 
 .main_content {
-    margin-top: 46px;
-    margin-bottom: 130px;
+    padding-top: 43px;
+    padding-bottom: 130px;
 }
 
 .text {
-    font-family: 'GmarketSansMedium';
     font-size: 24px;
     color: white;
 }
 
 .button {
     height: 66px;
+    border-radius: 33px;
+    box-shadow: 0 0 1px 0 #666;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 40px;
     font-family: 'GmarketSansBold';
     font-size: 24px;
     color: #5B2386;
     background-color: #FCEE21;
-    box-shadow: 0 0 1em 0 #666;
-    border-radius: 33px;
-    padding: 0 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 /* #### first section #### */
 
 .about_10000hour {
-    margin-bottom: 80px;
+    margin-bottom: 100px;
 }
 
 .about_10000hour .about_10000hour_subtitle {
     font-family: 'OTEnjoystoriesBA';
-    font-size: 36px;
+    font-size: 35px;
     color: #F5DF4D;
     margin-bottom: 50px;
 }
@@ -120,15 +123,16 @@ button {
     background-image: url(../img/quotes.png);
     background-position: center;
     background-repeat: no-repeat;
-    font-family: 'GmarketSansMedium';
+    background-size: 468px;
     font-size: 18px;
     color: white;
-    line-height: 1.6;
     padding-top: 28px;
+    letter-spacing: -1px;
 }
 
 .about_10000hour .about_10000hour_description span {
-    display: block;   
+    display: block;
+    margin-bottom: 11px;
 }
 
 .about_10000hour .about_10000hour_description strong {
@@ -138,18 +142,14 @@ button {
 
 /* #### second section #### */
 
-.become_specialist {
-    margin-bottom: 147px;
-}
-
 .become_specialist .text {
-    line-height: 3.8;
+    font-size: 22px;
 }
 
 .become_specialist .text input {
-    width: 228px;
-    height: 57px;
-    margin: 0 15px;
+    width: 220px;
+    height: 55px;
+    margin: 0 15px 25px;
     padding-top: 5px;
     border-radius: 10px;
     text-align: center; 
@@ -162,7 +162,7 @@ button {
 
 .become_specialist .decorate_button {
     width: fit-content;
-    margin: 90px auto 0;
+    margin: 85px auto 0;
     position: relative;
 }
 
@@ -188,7 +188,7 @@ button {
 /* #### third section #### */
 
 .specialist_result {
-    display: none;
+    /* display: none; */
 }
 
 .specialist_result .text {
@@ -256,8 +256,7 @@ button {
     height: 800px;
     background-color: white;
     border-radius: 30px;
-    box-sizing: border-box;
-    margin: 0 auto;
+    margin: auto;
     padding: 76px 0 68px;
 }
 
