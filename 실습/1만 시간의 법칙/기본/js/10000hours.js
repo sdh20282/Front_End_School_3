@@ -1,3 +1,6 @@
+let a = await fetch('https://jsonplaceholder.typicode.com/users/3%27')
+  .then(response => response.json())
+
 const btn_calc = document.querySelector('#btn_calc');
 const btn_train = document.querySelector('#btn_train');
 const btn_share = document.querySelector('#btn_share');
