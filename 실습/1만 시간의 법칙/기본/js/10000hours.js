@@ -2,13 +2,13 @@ const btn_calc = document.querySelector('#btn_calc');
 const btn_train = document.querySelector('#btn_train');
 const btn_share = document.querySelector('#btn_share');
 const btn_close = document.querySelector('#btn_close');
-const result = document.querySelector('.specialist_result');
+const result = document.querySelector('.section_result');
 const user_input_job = document.querySelector('#user_input_job');
 const user_input_time = document.querySelector('#user_input_time');
 const user_output_job = document.querySelector('#user_output_job');
 const user_output_time = document.querySelector('#user_output_time');
 const loading = document.querySelector('.loading');
-const modal = document.querySelector('#modal');
+const modal = document.querySelector('#section_modal');
 
 function isEmpty(str) {
     return !str.trim().length;

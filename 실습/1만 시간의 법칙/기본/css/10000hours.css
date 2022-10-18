@@ -69,13 +69,13 @@ button {
 
 /* ###### header ###### */
 
-.title_loto {
+#header {
     background: url(../img/clock.png) no-repeat center / 261px;
     height: 265px;
     margin-top: 100px;
 }
 
-.title_loto .title_logo_img {
+#header .header_img {
     width: 545px;
     height: 112px;
     position: relative;
@@ -84,12 +84,12 @@ button {
 
 /* ###### main ###### */
 
-.main_content {
+#main {
     padding-top: 43px;
     padding-bottom: 130px;
 }
 
-.text {
+#main .text {
     font-size: 24px;
     color: white;
 }
@@ -101,28 +101,28 @@ button {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 5px 40px 0;
+    background-color: #FCEE21;
     font-family: 'GmarketSansBold';
     font-size: 24px;
     color: #5B2386;
-    background-color: #FCEE21;
+    padding: 5px 40px 0;
     gap: 5px;
 }
 
 /* #### first section #### */
 
-.about_10000hour {
+#main .section_10000hour {
     margin-bottom: 100px;
 }
 
-.about_10000hour .about_10000hour_subtitle {
+#main .section_10000hour .section_10000hour_subtitle {
     font-family: 'OTEnjoystoriesBA';
     font-size: 35px;
     color: #F5DF4D;
     margin-bottom: 50px;
 }
 
-.about_10000hour .about_10000hour_description {
+#main .section_10000hour .section_10000hour_text {
     background-image: url(../img/quotes.png);
     background-position: center;
     background-repeat: no-repeat;
@@ -133,19 +133,19 @@ button {
     letter-spacing: -1px;
 }
 
-.about_10000hour .about_10000hour_description span {
+#main .section_10000hour .section_10000hour_text span {
     display: block;
     margin-bottom: 11px;
 }
 
-.about_10000hour .about_10000hour_description strong {
+#main .section_10000hour .section_10000hour_text strong {
     font-weight: bold;
     font-size: 24px;
 }
 
 /* #### second section #### */
 
-.become_specialist .text input {
+#main .section_specialist .text input {
     width: 220px;
     height: 55px;
     margin: 0 15px 25px;
@@ -154,18 +154,18 @@ button {
     text-align: center;
 }
 
-.become_specialist .text input::placeholder {
+#main .section_specialist .text input::placeholder {
     text-align: center;
     opacity: 50%;
 }
 
-.become_specialist .decorate_button {
+#main .section_specialist .section_specialist_button {
     width: fit-content;
     margin: 85px auto 0;
     position: relative;
 }
 
-.become_specialist .decorate_button::after {
+#main .section_specialist .section_specialist_button::after {
     content: '';
     background-image: url(../img/click.png);
     background-repeat: no-repeat;
@@ -178,7 +178,9 @@ button {
     position: absolute;
 }
 
-.loading {
+/* loading image */
+
+#main .loading {
     display: none;
     width: 150px;
     height: 150px;
@@ -188,12 +190,12 @@ button {
 
 /* #### third section #### */
 
-.specialist_result {
+#main .section_result {
     display: none;
     margin-top: 150px;
 }
 
-.specialist_result .text strong {
+#main .section_result .text strong {
     display: inline-block;
     font-family: 'GmarketSansBold';
     font-weight: bold;
@@ -203,44 +205,44 @@ button {
     margin-bottom: 16px;
 }
 
-.specialist_result .list_button {
+#main .section_result .section_result_button {
     margin-top: 100px;
     display: flex;
     justify-content: center;
 }
 
-.specialist_result .list_button .white_button {
+#main .section_result .section_result_button .white {
     background-color: white;
     margin-left: 10px;
 }
 
 /* ###### footer ###### */
 
-.extra_info {
+#footer {
     margin-bottom: 70px;
 }
 
-.extra_info img {
+#footer img {
     width: 125px;
     height: 25px;
     display: block;
     margin: 0 auto 20px;
 }
 
-.extra_info .copyright {
+#footer .copyright {
     font-size: 11px;
     color: white;
     line-height: 1.5;
     opacity: 80%;
 }
 
-.extra_info .copyright span {
+#footer .copyright span {
     display: block;
 }
 
 /* ###### modal ###### */
 
-.modal {
+#section_modal {
     display: none;
     position: fixed;
     inset: 0;
@@ -249,7 +251,7 @@ button {
     padding-top: 10vh;
 }
 
-.modal_content {
+#section_modal .modal {
     width: 600px;
     height: 600px;
     background-color: white;
@@ -259,27 +261,27 @@ button {
     text-align: center;
 }
 
-.modal_content p {
+#section_modal .modal p {
     font-family: 'OTEnjoystoriesBA';
     color: #5B2386;
 }
 
-.modal_content .modal_title {
+#section_modal .modal .section_modal_title {
     font-size: 72px;
 }
 
-.modal_content .modal_desc {
+#section_modal .modal .section_modal_text {
     font-size: 28px;
     margin-bottom: 20px;
 }
 
-.modal_content img {
+#section_modal .modal img {
     width: 320px;
     height: 260px;
     margin-bottom: 40px;
 }
 
-.modal_content .button {
+#section_modal .modal .button {
     margin: 0 auto;
 }
 
@@ -292,13 +294,13 @@ button {
 
     /* ###### header ###### */
 
-    .title_loto {
+    #header {
         background-size: 125px;
         height: 126px;
         margin-top: 50px;
     }
 
-    .title_loto .title_logo_img {
+    #header .header_img {
         width: 265px;
         height: 52px;
         top: 35px;
@@ -306,41 +308,41 @@ button {
 
     /* ###### main ###### */
 
-    .main_content {
+    #main {
         padding-top: 30px;
         padding-bottom: 80px;
     }
     
     /* #### first section #### */
 
-    .about_10000hour {
+    #main .section_10000hour {
         margin-bottom: 45px;
     }
 
-    .about_10000hour .about_10000hour_subtitle {
+    #main .section_10000hour .section_10000hour_subtitle {
         font-size: 22px;
         letter-spacing: -0.2px;
         margin-bottom: 50px;
     }
 
-    .about_10000hour .about_10000hour_description {
+    #main .section_10000hour .section_10000hour_text {
         background-size: 300px;
         font-size: 14px;
         padding-top: 14px;
         letter-spacing: -0.5px;
     }
 
-    .about_10000hour .about_10000hour_description span {
+    #main .section_10000hour .section_10000hour_text span {
         margin-bottom: 12px;
     }
 
-    .about_10000hour .about_10000hour_description strong {
+    #main .section_10000hour .section_10000hour_text strong {
         font-size: 14px;
     }
 
     /* share */
 
-    .text {
+    #main .text {
         font-size: 14px;
     }
 
@@ -355,18 +357,18 @@ button {
 
     /* #### second section #### */
 
-    .become_specialist .text input {
+    #main .section_specialist .text input {
         width: 150px;
         height: 35px;
         margin: 15px 5px;
         border-radius: 7px;
     }
 
-    .become_specialist .decorate_button {
+    #main .section_specialist .section_specialist_button {
         margin-top: 35px;
     }
 
-    .become_specialist .decorate_button::after {
+    #main .section_specialist .section_specialist_button::after {
         background-size: 48px;
         width: 48px;
         height: 48px;
@@ -374,7 +376,7 @@ button {
         right: -50px;
     }
 
-    .loading {
+    #main .loading {
         width: 100px;
         height: 100px;
         margin-top: 64px;
@@ -382,21 +384,21 @@ button {
 
     /* #### third section #### */
 
-    .specialist_result {
+    #main .section_result {
         margin-top: 64px;
     }
 
-    .specialist_result .text strong {
+    #main .section_result .text strong {
         font-size: 24px;
         vertical-align: -8%;
         margin-bottom: 16px;
     }
 
-    .specialist_result .list_button {
+    #main .section_result .section_result_button {
         margin-top: 39px;
     }
 
-    .specialist_result .list_button .button {
+    #main .section_result .section_result_button .button {
         width: auto;
         height: 40px;
         border-radius: 20px;
@@ -405,41 +407,41 @@ button {
 
     /* ###### footer ###### */
 
-    .extra_info {
+    #footer {
         margin-bottom: 40px;
     }
 
-    .extra_info img {
+    #footer img {
         width: 90px;
         height: 20px;
     }
 
-    .extra_info .copyright {
+    #footer .copyright {
         font-size: 8px;
     }
 
     /* ###### modal ###### */
     
-    .modal_content {
+    #section_modal .modal {
         width: 400px;
         height: 400px;
         padding: 25px;
     }
 
-    .modal p span {
+    #section_modal .modal p span {
         display: none;
     }
 
-    .modal .modal_title {
+    #section_modal .modal .section_modal_title {
         font-size: 60px;
     }
 
-    .modal .modal_desc {
+    #section_modal .modal .section_modal_text {
         font-size: 36px;
         margin-bottom: 0;
     }
 
-    .modal img {
+    #section_modal .modal img {
         width: 200px;
         height: 160px;
         margin-bottom: 20px;
