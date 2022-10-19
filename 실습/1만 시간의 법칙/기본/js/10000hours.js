@@ -69,3 +69,7 @@ btn_calc.addEventListener('click', calcStart);
 btn_train.addEventListener('click', showModal);
 btn_share.addEventListener('click', copyUrl);
 btn_close.addEventListener('click', closeModal);
+
+document.querySelector('form').addEventListener('click', (event) => {
+    event.preventDefault();
+})
