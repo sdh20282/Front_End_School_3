@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <%- include ('./layout/header') -%>
+  <link rel="stylesheet" href="/stylesheets/post.css" />
+</head>
+
+<body>
+  <%- include ('./layout/navbar') -%>
+  <div style="padding-top: 100px" class="container">
+    <form action="/posts/update/<%= post._id %>" method="POST" id="identifier">
+      <input name="title" value="<%= post.title %>" id="title" />
+      <textarea name="content" id="content"><%= post.content %></textarea>
+      <div stylz="margin-top: 10px">
+        <div class="image_upload">
+          <div style="width: 300px" id="select_image">
+            <div style="position: relative">
+              <% if(post.image) { %>
+                <img
+                  style="object-fit: cover"
+                  for="imgInput"
+                  id="main_image"
+                  src="<%= post.image %>"
+                />
+
+                <%}else { %>
+                <img
+                  style="object-fit: cover"
+                  for="imgInput"
+                  id="main_image"
+                />
+                <i class="image_icon huge images outline icon"></i>
+                <%}%>
+            </div>
+            <input style="display: none" name="image" value="<%= post.image %>" id="imgInput" />
+          </div>
+        </div>
+      </div>
+      <button type="submit" style="width: 100%; margin-top: 10px" class="ui secondary button">
+        글쓰기
+      </button>
+    </form>
+  </div>
+</body>
+
+</html>

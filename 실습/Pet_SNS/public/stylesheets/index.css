@@ -1,0 +1,156 @@
+body {
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00b7ff;
+}
+
+.navbar_menu {
+  display: flex;
+  width: 100%;
+  padding: 0 50px;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  height: 80px;
+  background: white;
+  z-index: 1000;
+  /* background: rgb(211, 209, 205); */
+  border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.auth_wrap {
+  display: flex;
+}
+
+.upload {
+  width: 500px;
+}
+
+.extra {
+  display: flex;
+  justify-content: space-between;
+}
+
+.button_wrap {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.upload_image {
+  width: 100%;
+  height: 200px;
+  background: rgb(233, 233, 233);
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.upload_image_icon {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+}
+
+.upload_image:hover {
+  background: rgb(199, 198, 198);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.card {
+  width: 500px !important;
+}
+
+.upload_text {
+  width: 100%;
+}
+
+.content_wrap {
+  padding-top: 100px;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 30px !important;
+}
+
+.upload_text {
+  resize: none;
+  margin-top: 10px;
+  padding: 10px;
+}
+
+.login_wrap {
+  margin-left: 30px;
+  padding: 20px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+}
+
+.chat_wrap {
+  margin-left: 30px;
+  padding: 20px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  width: 300px;
+}
+
+.chat_content {
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  height: 400px;
+  margin-bottom: 10px;
+  padding: 10px;
+}
+
+.login {
+  width: 300px;
+}
+
+.chat_block {
+  margin-bottom: 5px;
+}
+
+.checked {
+  color: #00b7ff !important;
+}
+
+.heart-count:hover {
+  color: #00b7ff !important;
+}
+
+.heart-count {
+  cursor: pointer;
+}
+
+.input_wrap {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.comment_input {
+  width: 100%;
+  height: 30px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+}
+
+.comment_body_item {
+  margin-top: 1rem;
+}
+
+.comment_wrap {
+  display: none;
+}
+
+.post_image {
+  height: 300px !important;
+  object-fit: cover;
+}

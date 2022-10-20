@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <%- include ('./layout/header') -%>
+  <link rel="stylesheet" href="/stylesheets/detail.css" />
+
+</head>
+
+<body>
+  <%- include ('./layout/navbar') -%>
+  <div style="padding-top:150px;" class=" container">
+    <div class="detail_title"><%= post.title %></div>
+    <div class="detail_info">
+      <div class="detail_info_text">
+        <%= post.user.username %> / <%= post.publishedDate %>
+      </div>
+      <div class="detail_button_wrap">
+        <button onclick="location.href='/posts/update/<%= post._id %>'" style="margin-top:0px;"
+          class="detail_button ui button">
+          수정
+        </button>
+        <form action="/posts/delete/<%= post._id %>" method="POST">
+          <button type="submit" style="margin-top:0px;" class="detail_button ui button">
+            삭제
+          </button>
+        </form>
+      </div>
+    </div>
+    <div><%= post.content %></div>
+    <img style="height: 300px;margin-top:20px;" src="<%= post.image %>">
+    <div style="margin-top:70px;"><%=post.body %></div>
+  </div>
+</body>
+
+</html>

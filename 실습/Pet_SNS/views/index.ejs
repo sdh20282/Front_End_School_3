@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <%- include ('./layout/header') -%>
+    <link rel="stylesheet" href="/stylesheets/index.css" />
+    <script src="/socket.io/socket.io.js"></script>
+  </head>
+  <body>
+    <%- include ('./layout/navbar') -%>
+    <div class="content_wrap">
+      <div class="content_scroll">
+        <% postList.forEach(e => { %>
+        <div class="ui card" key="<%= e._id %>">
+          <div class="image">
+            <img class="post_image" src="<%= e.image %>" />
+          </div>
+          <div class="content">
+            <a href="/posts/<%= e._id %>" class="header"><%= e.title %></a>
+            <div class="meta">
+              <span class="date"
+                >
+                  <%= e.user.username %>
+                / <%= e.publishedDate %></span
+              >
+            </div>
+            <div class="description"><%= e.content %></div>
+          </div>
+          <div class="extra content">
+            <% if (e.likeUser.some((user) => user ===
+            isAuthenticated.username)){ %>
+            <a class="heart-count checked" id="<%= e._id %>" key="<%= e._id %>">
+              <i class="heart icon"></i>
+              <span class="heart-like-count"><%= e.likeCount %></span> likes
+            </a>
+            <% }else{ %>
+            <a class="heart-count" id="<%= e._id %>" key="<%= e._id %>">
+              <i class="heart icon"></i>
+              <span class="heart-like-count"><%= e.likeCount %></span> likes
+            </a>
+            <%} %>
+            <a class="comment_button" id="<%= e._id %>" key="<%= e._id %>">
+              <i class="comment icon"></i>
+              comments
+            </a>
+          </div>
+          <div class="content comment_wrap" id="comment_wrap_<%= e._id %>">
+            <div class="input_wrap">
+              <input key="<%= e._id %>" name="comment" class="comment_input" />
+            </div>
+            <div class="comment_body" id="comment_<%= e._id %>">
+              <% e.comment.reverse().forEach(comment => { %>
+              <div class="comment_body_item">
+                <div style="font-weight: bolder">
+                  <%= comment.user.username %>
+                </div>
+                <div><%= comment.comment %></div>
+              </div>
+              <% }) %>
+            </div>
+          </div>
+        </div>
+        <% }) %>
+      </div>
+      <div>
+        <div class="chat_wrap">
+          <div class="chat_content">
+          </div>
+          <form id="chat_form">
+            <div style="width: 100%" class="ui action input">
+              <input class="chat_input" type="text" />
+              <button class="ui button">보내기</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <script>
+      let name; 
+      
+      $(".heart-count").click(function (e) {
+        const id = $(this).attr("key");
+        $.ajax({
+          url: `/posts/like/${id}`,
+          type: "POST",
+          cache: false,
+          dataType: "json",
+          success: function (data) {
+            $(`#${id} > span`).text(data.post.likeCount);
+            if (!data.check) {
+              $(`#${id}`).addClass("checked");
+            } else {
+              $(`#${id}`).removeClass("checked");
+            }
+          },
+          error: function (request, status, error) {
+            alert(
+              error
+            );
+          },
+        });
+      });
+
+      $(".comment_button").click(function (e) {
+        const id = $(this).attr("key");
+        $(`#comment_wrap_${id}`).slideToggle();
+      });
+
+
+      $(".comment_input").keydown(function (e) {
+        if (e.keyCode === 13) {
+          e.preventDefault();
+          const id = $(this).attr("key");
+          const inputCommnet = $(this).val();
+          $(this).val("");
+          $.ajax({
+            url: `/posts/comment/${id}`,
+            type: "POST",
+            cache: false,
+            dataType: "json",
+            data: {
+              comment: inputCommnet,
+            },
+            success: function (data) {
+              const comment = data.post.comment;
+              let comment_body = "";
+              const arr = comment.reverse();
+              arr.forEach((e) => {
+                console.log("EEE");
+                comment_body += `
+              <div class="comment_body_item">
+                <div style="font-weight: bolder;">
+                  ${e.user.username}
+                </div>
+                <div>
+                  ${e.comment} 
+                </div>
+              </div>
+              `;
+              });
+              $(`#comment_${id}`).html(comment_body);
+            },
+            error: function (request, status, error) {
+              alert(
+                error
+              );
+            },
+          });
+        }
+      });
+
+      $(() => {
+        const socket = io();
+
+        $("#chat_form").submit(() => {
+          socket.emit("chat-msg", name, $(".chat_input").val());
+          $(".chat_input").val("");
+          return false;
+        });
+
+        socket.on("chat-msg", (name, msg) => {
+          let chat = `<div class="chat_block">
+          <span style="font-weight: bolder">${name}</span> :
+            ${msg}
+          </div>`;
+          $(".chat_content").append(chat);
+        });
+      });
+    </script>
+  </body>
+</html>

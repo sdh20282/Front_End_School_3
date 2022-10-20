@@ -1,0 +1,15 @@
+.wrap {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login_wrap {
+  width: 300px;
+}
+
+.ui.input {
+  width: 100% !important;
+}

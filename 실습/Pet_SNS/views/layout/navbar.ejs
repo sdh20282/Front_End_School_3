@@ -1,0 +1,17 @@
+<div class="navbar_menu">
+  <div style="font-weight: bolder;font-size:1.5rem;">
+    <a style="color:#000000;text-decoration: none;" href="/">SNS</a>
+  </div>
+  <div class="auth_wrap">
+    <% if (isAuthenticated.username) { %>
+      <button onclick="location.href='/posts/upload'" style="margin-top: 0; margin-right: 10px;" class="ui button">글쓰기</button>
+      <form action="/auth/logout" method="post">
+        <button type="submit" style="margin-top: 0;" class="ui secondary button">로그아웃</button>
+      </form>
+    <% } else { %>
+    <button onclick="location.href='/auth/login'" style="width: 100%; margin-top: 0" class="ui secondary button">
+      로그인
+    </button>
+    <% } %>
+  </div>
+</div>

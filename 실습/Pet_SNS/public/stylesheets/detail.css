@@ -1,0 +1,26 @@
+.detail_info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.detail_button_wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.detail_title {
+  font-size: 3rem;
+  font-weight: bolder;
+}
+
+.detail_info_text {
+  font-size: 1.2rem;
+  font-weight: 100;
+  color: grey;
+}
+
+.detail_button {
+  padding: 5px 10px !important;
+}
