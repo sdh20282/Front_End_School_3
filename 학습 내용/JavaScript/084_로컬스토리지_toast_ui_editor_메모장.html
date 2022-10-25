@@ -4,6 +4,11 @@
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            rel="stylesheet"
+            href="https://uicdn.toast.com/editor/latest/toastui-editor.min.css"
+        />
+        <script src="https://uicdn.toast.com/editor/latest/toastui-editor-all.min.js"></script>
         <style>
             main {
                 display: flex;
@@ -27,6 +32,7 @@
             }
 
             button {
+                margin-top: 10px;
                 display: block;
                 width: 306px;
                 height: 30px;
@@ -37,7 +43,8 @@
         <main>
             <section>
                 <input type="text" name="" id="title" />
-                <textarea name="" id="content" cols="30" rows="10"></textarea>
+                <div id="editor"></div>
+                <!-- <textarea name="" id="content" cols="30" rows="10"></textarea> -->
                 <button onclick="saveNote()">메모</button>
             </section>
             <section id="display"></section>
@@ -45,11 +52,24 @@
         <script>
             let allMemo = JSON.parse(localStorage.getItem("allMemo"));
             allMemo = allMemo ?? [];
+
+            const Editor = toastui.Editor;
+
+            const editor = new Editor({
+                el: document.querySelector("#editor"),
+                height: "600px",
+                initialEditType: "markdown",
+                previewStyle: "vertical",
+            });
+            // editor.getHTML()
+            // editor.getMarkdown()
+
             render();
 
             function saveNote() {
                 const title = document.getElementById("title").value;
-                const content = document.getElementById("content").value;
+                // const content = document.getElementById("content").value;
+                const content = editor.getHTML();
 
                 allMemo.push({ title, content, len: allMemo.length });
 
@@ -68,12 +88,12 @@
 
                 for (const item of allMemo) {
                     const saveTitle = document.createElement("h2");
-                    const saveContent = document.createElement("p");
+                    const saveContent = document.createElement("div");
                     const saveId = document.createElement("p");
                     const deleteMemoBtn = document.createElement("button");
 
                     saveTitle.textContent = item.title;
-                    saveContent.textContent = item.content;
+                    saveContent.innerHTML = item.content;
                     saveId.textContent = item.len + 1;
                     deleteMemoBtn.textContent = "삭제";
                     deleteMemoBtn.setAttribute("id", item.len);

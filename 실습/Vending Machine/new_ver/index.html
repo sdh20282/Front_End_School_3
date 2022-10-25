@@ -10,7 +10,6 @@
     <link rel="stylesheet" href="./css/style.css">
 </head>
 
-
 <body>
     <header>
         <h1 class="blind">온라인 편의점</h1>
@@ -26,7 +25,6 @@
                     <header>
                         <h3 class="blind">콜라 구매</h3>
                     </header>
-
                     <ul class="product_list">
                         <li>
                             <button class="product selected button_shadow light_gray_normal_border border_10px">
@@ -73,6 +71,7 @@
                     </ul>
                     <form action="index.html">
                         <fieldset class="change">
+                            <legend class="blind">잔액 반환</legend>
                             <div class="money_info border_5px">
                                 <p>잔액 :</p>
                                 <p class="money_now">1,000</p>
@@ -82,10 +81,12 @@
                                 반환</button>
                         </fieldset>
                         <fieldset class="deposit">
+                            <legend class="blind">입금</legend>
                             <input class="input light_gray_normal_border border_5px" type="text" placeholder="입금액 입력">
                             <button class="input_button light_gray_normal_border border_5px button_shadow">입금</button>
                         </fieldset>
                         <fieldset class="">
+                            <legend class="blind">장바구니</legend>
                             <ul class="shopping_cart light_gray_normal_border border_5px">
                                 <li class="selected_product border_5px">
                                     <figure class="selected_product_image">
