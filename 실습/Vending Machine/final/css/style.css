@@ -80,6 +80,7 @@ button {
 
 .section .vending_machine_title {
     margin-bottom: 6.7rem;
+    text-align: center;
 }
 
 .section .vending_machine_title .title_logo {
@@ -127,6 +128,7 @@ button {
     background-color: var(--light_violet);
     overflow-y: scroll;
     padding: 1rem 0.6rem 1rem 1.1rem;
+    text-align: center;
 }
 
 .vending_machine .shopping_cart::-webkit-scrollbar {
@@ -220,13 +222,16 @@ button {
     line-height: 2.2rem;
 }
 
+.left_side .product .product_price::after {
+    content: '원';
+}
+
 /* .product_list .product:hover {
     border: 0.3rem solid var(--blue_violet);
 } */
 
 .left_side .product_list .selected {
     outline: 0.3rem solid var(--blue_violet);
-    border: 0;
 }
 
 .left_side .product_list .sold_out {
