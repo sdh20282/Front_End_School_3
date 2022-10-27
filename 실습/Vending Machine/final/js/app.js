@@ -180,5 +180,4 @@ function getProduct(event) {
 Array.prototype.map.call(productButtons, (item) => {
     item.addEventListener('click', putProduct);
 });
-
 getButton.addEventListener('click', getProduct);
