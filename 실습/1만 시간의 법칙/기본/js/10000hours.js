@@ -60,14 +60,13 @@ function calcStart() {
     }
 }
 
-function copyUrl() {
-    navigator.clipboard.writeText(window.location.href)
-        .then(() => {
-            alert("URL이 복사되었습니다");
-        })
-        .catch(() => {
-            alert("URL이 복사에 실패했습니다");
-        });
+async function copyUrl() {
+    try {
+        await navigator.clipboard.writeText(window.location.href)
+        alert("URL이 복사되었습니다");
+    } catch {
+        alert("URL이 복사에 실패했습니다");
+    }
 }
 
 btn_calc.addEventListener('click', calcStart);
