@@ -10,6 +10,11 @@ body {
     font-weight: inherit;
 }
 
+a {
+    text-decoration: none;
+    color: black;
+}
+
 :root {
     --border: rgb(215, 226, 235);
     --subTitle: rgb(152, 168, 194);
@@ -21,10 +26,6 @@ body {
 html {
     font-size: 10px;
     font-family: 'Noto Sans KR', sans-serif;
-}
-
-body {
-
 }
 
 body::-webkit-scrollbar {
@@ -123,7 +124,7 @@ ul {
     padding: 0 5rem;
 }
 
-.section .problemList .problem {
+.section .problemList .problem a {
     display: flex;
     justify-content: space-between;
     align-items: center;

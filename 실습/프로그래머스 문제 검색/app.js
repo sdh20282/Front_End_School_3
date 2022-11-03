@@ -99,13 +99,18 @@ function displayProblems() {
 
 function createListItem(problem) {
     const liItem = document.createElement('li');
+    const link = document.createElement('a');
     const title = document.createElement('p');
     const partTitle = document.createElement('span');
     const level = document.createElement('p');
 
     liItem.classList.add('problem');
-    liItem.appendChild(title);
-    liItem.appendChild(level);
+    liItem.appendChild(link);
+
+    link.setAttribute('href', `https://school.programmers.co.kr/learn/courses/30/lessons/${problem.id}`)
+    link.setAttribute('target', '_blank');
+    link.appendChild(title);
+    link.appendChild(level);
 
     title.classList.add('title');
     title.textContent = problem.title;
