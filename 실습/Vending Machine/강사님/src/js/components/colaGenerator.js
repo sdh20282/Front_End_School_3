@@ -3,36 +3,6 @@ class ColaGenerator {
         this.itemList = document.querySelector('.list-item');
     }
 
-    setup() {
-        this.loadData(
-            (json) => {
-                this.colaFactory(json);
-            }
-        );
-    }
-
-    async loadData(callback) {
-        // asynchronous javascript and xml
-        // javascript object notation
-        // const requestObj = new XMLHttpRequest(); // 서버와 통신하기 위해 객체를 생성합니다.
-        // requestObj.open('GET', 'src/js/item.json'); // 요청 시작
-        // requestObj.onreadystatechange = () => { // readyState 가 변화하면 트리거
-
-        //     if (requestObj.readyState === 4 && requestObj.status === 200) {
-        //         callback(JSON.parse(requestObj.responseText));
-        //     }
-        // }
-        // requestObj.send(null);
-
-        const response = await fetch('src/js/item.json');
-
-        if (response.ok) { // http 상태코드가 200 ~ 299일 경우 
-            callback(await response.json()); // 응답 본문을 읽으면서 객체형태로 파싱합니다.
-        } else {
-            alert('통신 에러!' + response.status);
-        }
-    }
-
     colaFactory(data) {
         const docFrag = document.createDocumentFragment();
         data.forEach((el) => {
@@ -48,6 +18,25 @@ class ColaGenerator {
             docFrag.appendChild(item);
         });
         this.itemList.appendChild(docFrag);
+    }
+
+    test(data) {
+        console.log(this);
+        this.colaFactory(data);
+    }
+
+    setup() {
+        this.loadData(test);
+    }
+
+    async loadData(callback) {
+        const response = await fetch('src/js/item.json');
+
+        if (response.ok) { // http 상태코드가 200 ~ 299일 경우 
+            callback(await response.json()); // 응답 본문을 읽으면서 객체형태로 파싱합니다.
+        } else {
+            alert('통신 에러!' + response.status);
+        }
     }
 }
 
