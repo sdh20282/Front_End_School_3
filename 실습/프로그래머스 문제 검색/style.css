@@ -24,8 +24,11 @@ html {
 }
 
 body {
-    
-    /* background-color: rgb(249, 250, 251); */
+
+}
+
+body::-webkit-scrollbar {
+    width: 0;
 }
 
 button {
@@ -111,9 +114,12 @@ ul {
     border-radius: 1rem;
 }
 
+.section .difficultyBtnList li button.selected {
+    background-color: var(--hilight);
+}
+
 .section .problemList {
     margin: 2rem 0;
-    /* height: 300px; */
     padding: 0 5rem;
 }
 
