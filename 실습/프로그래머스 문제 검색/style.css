@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap');
+
+body, h1, h2, input, button, ul, li, p {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-size: inherit;
+    font-weight: inherit;
+}
+
+:root {
+    --border: rgb(215, 226, 235);
+    --subTitle: rgb(152, 168, 194);
+    --hilight: rgb(0, 150, 136);
+    --hilight2: rgb(32, 43, 61);
+    --hilight3: rgb(68, 87, 108);
+}
+
+html {
+    font-size: 10px;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+body {
+    
+    /* background-color: rgb(249, 250, 251); */
+}
+
+button {
+    cursor: pointer;
+}
+
+ul {
+    list-style: none;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+.ir {
+	position: absolute;
+	clip: rect(0 0 0 0);
+	width: 0.1rem;
+	height: 0.1rem;
+	margin: -0.1rem;
+	overflow: hidden;
+}
+
+.section {
+    width: 72rem;
+    margin: 5rem auto;
+    text-align: center;
+    border: 0.1rem solid var(--border);
+    border-radius: 2rem;
+    box-shadow: 0 0 1rem 0.1rem #ddd;
+}
+
+.section header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 3rem;
+    border-bottom: 1px solid var(--border);
+}
+
+.section header h2 {
+    font-size: 3rem;
+    color: var(--hilight);
+}
+
+.section header h2 strong {
+    color: var(--hilight2);
+}
+
+.section header form input {
+    font-size: 1.5rem;
+    height: 2.5rem;
+    border: none;
+    border-bottom: 2px solid var(--border);
+}
+
+.section header form input:focus {
+    outline: none;
+    border-bottom: 2px solid var(--hilight);
+}
+
+.section header form button {
+    border: none;
+    background-color: white;
+    font-size: 2rem;
+    vertical-align: middle;
+    margin-left: 1rem;
+}
+
+.section .difficultyBtnList {
+    display: flex;
+    justify-content: center;
+    padding: 1.8rem;
+    gap: 0.8rem;
+}
+
+.section .difficultyBtnList li button {
+    border: none;
+    padding: 0.8rem 1.2rem;
+    font-size: 1.5rem;
+    color: white;
+    background-color: var(--hilight3);
+    border-radius: 1rem;
+}
+
+.section .problemList {
+    margin: 2rem 0;
+    /* height: 300px; */
+    padding: 0 5rem;
+}
+
+.section .problemList .problem {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 2rem;
+    font-size: 1.8rem;
+    border: 2px solid var(--border);
+    border-radius: 2rem;
+    margin-bottom: 1.4rem;
+}
+
+.section .problemList .problem .title {
+    display: flex;
+    flex-direction: column;
+    font-size: 2.4rem;
+    text-align: left;
+}
+
+.section .problemList .problem .title .partTitle {
+    font-size: 1.2rem;
+    color: var(--subTitle);
+}
+
+@media (max-width: 720px) {
+    :root {
+        font-size: 6px;
+    }
+}
