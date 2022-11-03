@@ -76,7 +76,7 @@ const productData = {}
 
 async function getProductData() {
     try {
-        const response = await fetch('../assets/data.json');
+        const response = await fetch('./assets/data.json');
         const result = await response.json();
 
         for (const product of result) {
@@ -110,7 +110,7 @@ function generateProductButtons() {
         productBtn.appendChild(productName);
         productBtn.appendChild(productPrice);
 
-        productImg.setAttribute('src', `/assets/images/${product.path}`);
+        productImg.setAttribute('src', `./assets/images/${product.path}`);
         productImg.setAttribute('alt', '음료 이미지입니다.')
 
         productName.classList.add('product_name');
@@ -168,7 +168,7 @@ function generateListItem(productName, productCount, productImgPath) {
     figure.classList.add('selected_product_image');
     figure.appendChild(img);
     figure.appendChild(figcaption);
-    img.setAttribute('src', `/assets/images/${productImgPath}`);
+    img.setAttribute('src', `./assets/images/${productImgPath}`);
     img.setAttribute('alt', `음료 이미지입니다.`);
     figcaption.appendChild(desc);
     desc.classList.add('product_name');

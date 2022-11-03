@@ -246,7 +246,7 @@ button {
     position: absolute;
     inset: 0;
     background-color: rgba(0, 0, 0, 0.7);
-    background-image: url(/assets/images/Sold_Out.png);
+    background-image: url(./assets/images/Sold_Out.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: 6.2rem;
