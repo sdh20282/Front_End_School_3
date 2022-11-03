@@ -1,19 +1,19 @@
 // 접근성
 const main = document.querySelector('main');
-const left_side = main.querySelector('.left_side');
-const left_side_form = left_side.querySelector('form');
-const right_side = main.querySelector('.right_side');
+const vending_machine = main.querySelector('.vending_machine');
+const vending_machine_form = vending_machine.querySelector('form');
+const user_info = main.querySelector('.user_info');
 
-left_side_form.addEventListener('click', (event) => {
+vending_machine_form.addEventListener('click', (event) => {
     event.preventDefault();
 });
 
 // 입금, 거스름돈 반환
-const total_amount = right_side.querySelector('.total_amount .money_info');
-const deposit = left_side_form.querySelector('.deposit');
-const deposit_button = left_side_form.querySelector('.deposit_button');
-const balance = left_side_form.querySelector('.balance_change .money_info');
-const change_button = left_side_form.querySelector('.change_button');
+const total_amount = user_info.querySelector('.total_amount .money_info');
+const deposit = vending_machine_form.querySelector('.deposit');
+const deposit_button = vending_machine_form.querySelector('.deposit_button');
+const balance = vending_machine_form.querySelector('.balance_change .money_info');
+const change_button = vending_machine_form.querySelector('.change_button');
 
 function addComma(num) {
     return num.toString().split('').reverse().map((value, index) => index % 3 === 0 && index !== 0 ? value + ',' : value).reverse().join('');
@@ -64,16 +64,98 @@ deposit_button.addEventListener('click', insertMoney);
 change_button.addEventListener('click', changeMoney);
 
 // 상품
-const productButtons = left_side.querySelectorAll('.product_list .product');
-const listToPurchase = left_side_form.querySelectorAll('.to_purchase input')
-const shoppingCartToPurchase = left_side_form.querySelector('.shopping_cart');
-const getButton = left_side_form.querySelector('.buy_product_button');
+const productBtnList = vending_machine.querySelector('.product_list');
 
-const shoppingCartPurchased = right_side.querySelector('.purchased_products .shopping_cart');
-const listPurchased = right_side.querySelectorAll('.purchased_products input');
-const total_price = right_side.querySelector('.purchased_products .money_info')
+const shoppingCartPurchased = vending_machine_form.querySelector('.shopping_cart');
+const getButton = vending_machine_form.querySelector('.buy_product_button');
 
-function getListItem(item) {
+const shoppingCartGot = user_info.querySelector('.purchased_products .shopping_cart');
+const total_price = user_info.querySelector('.purchased_products .money_info')
+
+const productData = {}
+
+async function getProductData() {
+    try {
+        const response = await fetch('../assets/data.json');
+        const result = await response.json();
+
+        for (const product of result) {
+            product['purchaseCount'] = 0;
+            product['getCount'] = 0;
+            productData[product.name] = product;
+        }
+    }
+    catch (error) {
+        alert(error);
+    }
+}
+
+function generateProductButtons() {
+    const fragment = new DocumentFragment()
+    productBtnList.innerHTML = '';
+
+    for (const key in productData) {
+        const product = productData[key];
+
+        const listItem = document.createElement('li');
+        const productBtn = document.createElement('button');
+        const productImg = document.createElement('img');
+        const productName = document.createElement('span');
+        const productPrice = document.createElement('span');
+
+        listItem.appendChild(productBtn);
+
+        productBtn.classList.add('product', 'light_gray_normal_border', 'border_10px');
+        productBtn.appendChild(productImg);
+        productBtn.appendChild(productName);
+        productBtn.appendChild(productPrice);
+
+        productImg.setAttribute('src', `../assets/images/${product.path}`);
+        productImg.setAttribute('alt', '음료 이미지입니다.')
+
+        productName.classList.add('product_name');
+        productName.innerText = product.name;
+
+        productPrice.classList.add('product_price');
+        productPrice.innerText = product.price;
+
+        fragment.appendChild(listItem);
+    }
+
+    productBtnList.appendChild(fragment);
+}
+
+function putProduct(event) {
+    const productName = this.querySelector('.product_name').textContent;
+    const product = productData[productName];
+
+    if (product.stock == 0) {
+        alert('품절된 상품은 선택할 수 없습니다!');
+        return;
+    }
+
+    let change = parseInt(deleteComma(balance.textContent));
+
+    if (change < product.price) {
+        alert('잔액이 부족합니다!');
+        return;
+    }
+
+    this.classList.add('selected');
+    product.stock -= 1;
+    product.purchaseCount += 1;
+    balance.textContent = addComma(change - product.price);
+    productData[productName] = product;
+
+
+    if (product.stock == 0) {
+        this.classList.add('sold_out')
+    }
+
+    updatePurchasedProducts()
+}
+
+function generateListItem(productName, productCount, productImgPath) {
     const listItem = document.createElement('li');
     const figure = document.createElement('figure');
     const img = document.createElement('img');
@@ -86,98 +168,76 @@ function getListItem(item) {
     figure.classList.add('selected_product_image');
     figure.appendChild(img);
     figure.appendChild(figcaption);
-    img.setAttribute('src', `./images/${item.dataset.name}.png`);
+    img.setAttribute('src', `../assets/images/${productImgPath}`);
     img.setAttribute('alt', `음료 이미지입니다.`);
     figcaption.appendChild(desc);
     desc.classList.add('product_name');
-    desc.textContent = item.dataset.name;
+    desc.textContent = productName;
     listItem.appendChild(count);
     count.classList.add('selected_product_count', 'light_gray_normal_border', 'border_5px');
-    count.textContent = item.value;
+    count.textContent = productCount;
 
     return listItem;
 }
 
-function updateToPurchase() {
-    const fragment = new DocumentFragment()
-    shoppingCartToPurchase.innerHTML = '';
-
-    for (const item of listToPurchase) {
-        if (parseInt(item.value)) {
-            fragment.appendChild(getListItem(item));
-        }
-    };
-
-    shoppingCartToPurchase.appendChild(fragment);
-}
-
-function putProduct(event) {
-    if (this.dataset.stock === '0') {
-        alert('품절된 상품은 선택할 수 없습니다!');
-        return;
-    }
-
-    const price = parseInt(this.querySelector('.product_price').textContent);
-    let change = parseInt(deleteComma(balance.textContent));
-
-    if (change < price) {
-        alert('잔액이 부족합니다!');
-        return;
-    }
-
-    this.classList.add('selected');
-    this.dataset.stock -= 1;
-    balance.textContent = addComma(change - price);
-
-    const index = Array.prototype.indexOf.call(productButtons, this);
-    listToPurchase[index].value = parseInt(listToPurchase[index].value) + 1;
-
-    if (this.dataset.stock === '0') {
-        this.classList.add('sold_out')
-    }
-
-    updateToPurchase()
-}
-
-function updatePurchased() {
+function updatePurchasedProducts() {
     const fragment = new DocumentFragment()
     shoppingCartPurchased.innerHTML = '';
 
-    for (const item of listPurchased) {
-        if (parseInt(item.value)) {
-            fragment.appendChild(getListItem(item));
+    for (const key in productData) {
+        const product = productData[key];
+
+        if (parseInt(product.purchaseCount)) {
+            fragment.appendChild(generateListItem(product.name, product.purchaseCount, product.path));
         }
     };
 
     shoppingCartPurchased.appendChild(fragment);
 }
 
-function getProduct(event) {
-    for (const item of productButtons) {
-        item.classList.remove('selected');
-    }
+function updateGotProducts() {
+    const fragment = new DocumentFragment()
+    shoppingCartGot.innerHTML = '';
 
-    for (let index = 0; index < listToPurchase.length; index++) {
-        if (!(listToPurchase[index].value === '0')) {
-            listPurchased[index].value = parseInt(listPurchased[index].value) + parseInt(listToPurchase[index].value);
+    for (const key in productData) {
+        const product = productData[key];
+
+        if (parseInt(product.getCount)) {
+            fragment.appendChild(generateListItem(product.name, product.getCount, product.path));
         }
+    };
 
-        listToPurchase[index].value = 0;
+    shoppingCartGot.appendChild(fragment);
+}
+
+function getProduct(event) {
+    for (const button of productBtnList.querySelectorAll('button')) {
+        button.classList.remove('selected');
     }
-
-    updateToPurchase();
-    updatePurchased();
 
     let sum = 0;
 
-    for (const item of listPurchased) {
-        sum += parseInt(item.value) * parseInt(item.dataset.price);
-    }
+    for (const key in productData) {
+        const product = productData[key];
+        product.getCount += product.purchaseCount;
+        product.purchaseCount = 0;
+        productData[key] = product;
+
+        sum += product.getCount * product.price;
+    };
+
+    updatePurchasedProducts();
+    updateGotProducts();
 
     total_price.textContent = addComma(sum);
 }
 
-Array.prototype.map.call(productButtons, (item) => {
-    item.addEventListener('click', putProduct);
-});
+getProductData()
+    .then(() => generateProductButtons())
+    .then(() => {
+        Array.prototype.map.call(productBtnList.querySelectorAll('button'), (item) => {
+            item.addEventListener('click', putProduct);
+        });
+    });
+
 getButton.addEventListener('click', getProduct);

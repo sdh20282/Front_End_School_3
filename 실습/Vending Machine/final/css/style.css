@@ -27,6 +27,8 @@ body {
 button {
     cursor: pointer;
     background-color: white;
+    box-shadow: 0 0 0.1rem 0.1rem var(--light_gray);
+    box-sizing: border-box;
 }
 
 .blind {
@@ -37,18 +39,6 @@ button {
     height: 1px;
     margin: -1px;
     overflow: hidden;
-}
-
-.text_center {
-    text-align: center;
-}
-
-.block_center {
-    margin: 0 auto;
-}
-
-.button_shadow {
-    box-shadow: 0 0 0.3rem 0.1rem var(--light_gray);
 }
 
 .light_gray_normal_border {
@@ -63,16 +53,12 @@ button {
     border-radius: 0.5rem;
 }
 
-.product_name {
-    display: block;
-    font-size: 0.9rem;
-}
-
 
 /* Section */
 
 .section {
     width: 74.8rem;
+    margin: 0 auto;
     margin-bottom: 17.1rem;
 }
 
@@ -85,18 +71,17 @@ button {
 
 .section .vending_machine_title .title_logo {
     width: 38.6rem;
-    height: 18rem;
 }
 
 
 /* Vending Machine */
 
-.vending_machine {
+.wrapper {
     display: flex;
     justify-content: space-between;
 }
 
-.vending_machine .vending_machine_components {
+.wrapper .components {
     width: 36rem;
 }
 
@@ -104,7 +89,12 @@ button {
 
 /* share - balance */
 
-.vending_machine .money_info {
+.product_name {
+    display: block;
+    font-size: 0.9rem;
+}
+
+.money_info {
     grid-area: balance;
     background-color: var(--light_violet);
     padding-right: 1rem;
@@ -112,46 +102,46 @@ button {
     position: relative;
 }
 
-.vending_machine .money_info::before {
+.money_info::before {
     content: ' ';
     position: absolute;
     left: 1rem;
 }
 
-.vending_machine .money_info::after {
+.money_info::after {
     content: ' 원';
 }
 
 /* share - shopping cart */
 
-.vending_machine .shopping_cart {
+.shopping_cart {
     background-color: var(--light_violet);
     overflow-y: scroll;
     padding: 1rem 0.6rem 1rem 1.1rem;
     text-align: center;
 }
 
-.vending_machine .shopping_cart::-webkit-scrollbar {
+.shopping_cart::-webkit-scrollbar {
     width: 1.2rem;
 }
 
-.vending_machine .shopping_cart::-webkit-scrollbar-track {
+.shopping_cart::-webkit-scrollbar-track {
     background-color: transparent;
 }
 
-.vending_machine .shopping_cart::-webkit-scrollbar-thumb {
+.shopping_cart::-webkit-scrollbar-thumb {
     background-color: white;
     border-radius: 10rem;
     background-clip: padding-box;
     border: 0.4rem solid transparent;
 }
 
-.vending_machine .shopping_cart::-webkit-scrollbar-button {
+.shopping_cart::-webkit-scrollbar-button {
     width: 0;
     height: 0;
 }
 
-.vending_machine .shopping_cart .selected_product {
+.shopping_cart .selected_product {
     background-color: white;
     height: 4.6rem;
     display: flex;
@@ -160,18 +150,18 @@ button {
     padding: 0.6rem 0.8rem 0.6rem 1rem;
 }
 
-.vending_machine .shopping_cart .selected_product .selected_product_image {
+.shopping_cart .selected_product .selected_product_image {
     display: flex;
     align-items: center;
 }
 
-.vending_machine .shopping_cart .selected_product .selected_product_image img {
+.shopping_cart .selected_product .selected_product_image img {
     width: 1.8rem;
     height: 3.3rem;
     margin-right: 1rem;
 }
 
-.vending_machine .shopping_cart .selected_product .selected_product_count {
+.shopping_cart .selected_product .selected_product_count {
     display: inline-block;
     width: 3rem;
     height: 3rem;
@@ -179,28 +169,35 @@ button {
     font-size: 1.4rem;
 }
 
-.vending_machine .shopping_cart .selected_product + .selected_product {
+.shopping_cart .selected_product + .selected_product {
     margin-top: 0.6rem;
 }
 
 /* Vending Machine - Left Side */
 
-.vending_machine .left_side {
+.wrapper .vending_machine {
     background-color: white;
     padding: 3.1rem 2.7rem 2.8rem;
 }
 
 /* Products */
 
-.left_side .product_list {
+.vending_machine .product_list {
     display: flex;
     flex-wrap: wrap;
     height: 28.4rem;
     margin-bottom: 0.8rem;
     justify-content: space-between;
+    padding: 0.1rem;
+    overflow-y: scroll;
 }
 
-.left_side .product_list .product {
+.vending_machine .product_list::-webkit-scrollbar {
+    width: 0;
+}
+
+
+.vending_machine .product_list .product {
     width: 9.4rem;
     height: 13rem;
     padding: 1.1rem 0 0.9rem;
@@ -211,7 +208,11 @@ button {
     align-items: center;
 }
 
-.left_side .product .product_price {
+.product_list .product img {
+    width: 3.6rem;
+}
+
+.product_list .product .product_price {
     width: 7rem;
     height: 2.2rem;
     border-radius: 1.1rem;
@@ -222,7 +223,7 @@ button {
     line-height: 2.2rem;
 }
 
-.left_side .product .product_price::after {
+.product_list .product .product_price::after {
     content: '원';
 }
 
@@ -230,22 +231,22 @@ button {
     border: 0.3rem solid var(--blue_violet);
 } */
 
-.left_side .product_list .selected {
+.vending_machine .product_list .selected {
     outline: 0.3rem solid var(--blue_violet);
 }
 
-.left_side .product_list .sold_out {
+.vending_machine .product_list .sold_out {
     position: relative;
     overflow: hidden;
     border: 0;
 }
 
-.left_side .product_list .sold_out::after {
+.vending_machine .product_list .sold_out::after {
     content: ' ';
     position: absolute;
     inset: 0;
     background-color: rgba(0, 0, 0, 0.7);
-    background-image: url(../images/sold_out.png);
+    background-image: url(../assets/images/Sold_Out.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: 6.2rem;
@@ -253,58 +254,58 @@ button {
 
 /* user_input */
 
-.left_side .user_input {
+.vending_machine .user_input {
     font-size: 1.3rem;
 }
 
 /* Balance & Change */
 
-.left_side .user_input .balance_change {
+.vending_machine .user_input .balance_change {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-areas:
     'balance    balance    change';
     column-gap: 1.2rem;
-    line-height: 3.2rem;
+    line-height: 3rem;
     margin-bottom: 1.2rem;
 }
 
-.left_side .user_input .balance_change .money_info::before {
+.vending_machine .user_input .balance_change .money_info::before {
     content: '잔액 :';
 }
 
-.left_side .user_input .balance_change .change_button {
+.vending_machine .user_input .balance_change .change_button {
     grid-area: change;
 }
 
 /* Insert Money */
 
-.left_side .user_input .insert_money {
+.vending_machine .user_input .insert_money {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-areas:
     'deposit    deposit    insert';
     column-gap: 1.2rem;
-    line-height: 3.2rem;
+    line-height: 3rem;
     margin-bottom: 1.2rem;
 }
 
-.left_side .user_input .insert_money .deposit {
+.vending_machine .user_input .insert_money .deposit {
     grid-area: deposit;
     padding: 0 0.6rem;
 }
 
-.left_side .user_input .insert_money .deposit::placeholder {
+.vending_machine .user_input .insert_money .deposit::placeholder {
     opacity: 60%;
 }
 
-.left_side .user_input .insert_money .deposit_button {
+.vending_machine .user_input .insert_money .deposit_button {
     grid-area: insert;
 }
 
 /* Product List & Get Products */
 
-.left_side .user_input .to_purchase {
+.vending_machine .user_input .to_purchase {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-areas:
@@ -313,7 +314,7 @@ button {
     height: 10.6rem;
 }
 
-.left_side .user_input .shopping_cart {
+.vending_machine .user_input .shopping_cart {
     grid-area: cart;
 }
 
@@ -328,32 +329,33 @@ button {
 
 /* Vending Machine - Right Side */
 
-.vending_machine .right_side {
+.wrapper .user_info {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
 }
 
-.right_side .total_amount {
+.user_info .total_amount {
     background-color: white;
     padding: 0.9rem 2.7rem;
     font-size: 1.4rem;
     line-height: 3.2rem;
+    margin-bottom: 2rem;
 }
 
-.right_side .total_amount .money_info::before {
+.user_info .total_amount .money_info::before {
     content: '소지금 :';
 }
 
 /* purchased list */
 
-.right_side .purchased_products {
+.user_info .purchased_products {
     background-color: white;
-    height: 47.4rem;
+    height: 47.5rem;
     padding: 2.4rem 2.7rem 2.6rem;
+    text-align: center;
 } 
 
-.right_side .purchased_products .purchased_products_title {
+.user_info .purchased_products .purchased_products_title {
     font-size: 1.4rem;
     font-weight: 700;
     line-height: 2rem;
@@ -361,12 +363,12 @@ button {
     margin-bottom: 1.3rem;
 } 
 
-.right_side .purchased_products .shopping_cart {
+.user_info .purchased_products .shopping_cart {
     height: 36.4rem;
     margin-bottom: 0.6rem;
 }
 
-.right_side .purchased_products .money_info {
+.user_info .purchased_products .money_info {
     font-size: 1.2rem;
     line-height: 2rem;
     float: right;
@@ -375,7 +377,7 @@ button {
     padding-right: 0;
 }
 
-.right_side .purchased_products .money_info::before {
+.user_info .purchased_products .money_info::before {
     content: '총금액 : ';
     position: static;
 }
@@ -398,19 +400,18 @@ button {
     
     .section .vending_machine_title .title_logo {
         width: 16.6rem;
-        height: 7rem;
     }
     
-    .vending_machine {
+    .wrapper {
         display: flex;
         flex-direction: column;
     }
     
-    .vending_machine .product_list .sold_out::after {
+    .wrapper .product_list .sold_out::after {
         background-position: center top 28%;
     }
     
-    .vending_machine .right_side {
+    .wrapper .user_info {
         margin-top: -1.4rem;
     }
 }

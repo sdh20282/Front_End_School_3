@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Virtual Vending Machine">
     <title>Vending Machine</title>
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/style.css">
@@ -15,91 +16,42 @@
         <h1 class="blind">온라인 편의점</h1>
     </header>
     <main>
-        <section class="section block_center">
+        <section class="section">
             <header class="vending_machine_title">
                 <h2 class="blind">콜라 자판기</h2>
-                <img class="title_logo" src="./images/logo.png" alt="음료수 이미지입니다.">
+                <img class="title_logo" src="../assets/images/Logo.png" alt="로고 이미지입니다.">
             </header>
-            <div class="vending_machine">
-                <section class="vending_machine_components left_side border_10px">
+            <div class="wrapper">
+                <section class="vending_machine components border_10px">
                     <header>
                         <h3 class="blind">콜라 구매</h3>
                     </header>
-                    <ul class="product_list">
-                        <li>
-                            <button class="product button_shadow light_gray_normal_border border_10px" data-stock="1">
-                                <img src="./images/Original_Cola.png" alt="오리지널 콜라, 1000원">
-                                <span class="product_name">Original_Cola</span>
-                                <span class="product_price">1000</span>
-                            </button>
-                        </li>
-                        <li>
-                            <button class="product button_shadow light_gray_normal_border border_10px" data-stock="20">
-                                <img src="./images/Violet_Cola.png" alt="바이올렛 콜라, 1000원">
-                                <span class="product_name">Violet_Cola</span>
-                                <span class="product_price">1000</span>
-                            </button>
-                        </li>
-                        <li>
-                            <button class="product button_shadow light_gray_normal_border border_10px" data-stock="20">
-                                <img src="./images/Yellow_Cola.png" alt="옐로우 콜라, 1000원">
-                                <span class="product_name">Yellow_Cola</span>
-                                <span class="product_price">1000</span>
-                            </button>
-                        </li>
-                        <li>
-                            <button class="product button_shadow light_gray_normal_border border_10px" data-stock="20">
-                                <img src="./images/Cool_Cola.png" alt="쿨 콜라, 1000원">
-                                <span class="product_name">Cool_Cola</span>
-                                <span class="product_price">1000</span>
-                            </button>
-                        </li>
-                        <li>
-                            <button class="product button_shadow light_gray_normal_border border_10px" data-stock="20">
-                                <img src="./images/Green_Cola.png" alt="그린 콜라, 1000원">
-                                <span class="product_name">Green_Cola</span>
-                                <span class="product_price">1000</span>
-                            </button>
-                        </li>
-                        <li>
-                            <button class="product button_shadow light_gray_normal_border border_10px" data-stock="20">
-                                <img src="./images/Orange_Cola.png" alt="오렌지 콜라, 1000원">
-                                <span class="product_name">Orange_Cola</span>
-                                <span class="product_price">1000</span>
-                            </button>
-                        </li>
-                    </ul>
+                    <ul class="product_list"></ul>
                     <form action="index.html" class="user_input">
                         <fieldset class="balance_change">
                             <legend class="blind">잔액 반환</legend>
                             <p class="money_info border_5px">0</p>
-                            <button class="change_button light_gray_normal_border border_5px button_shadow">거스름돈
-                                반환</button>
+                            <button class="change_button light_gray_normal_border border_5px">거스름돈 반환</button>
                         </fieldset>
 
                         <fieldset class="insert_money">
                             <legend class="blind">입금</legend>
-                            <input class="deposit light_gray_normal_border border_5px" type="number"
+                            <label for="deposit" class="blind">입금할 금액 입력</label>
+                            <input id="deposit" class="deposit light_gray_normal_border border_5px" type="number"
                                 placeholder="입금액 입력">
-                            <button class="deposit_button light_gray_normal_border border_5px button_shadow">입금</button>
+                            <button class="deposit_button light_gray_normal_border border_5px">입금</button>
                         </fieldset>
 
                         <fieldset class="to_purchase">
                             <legend class="blind">장바구니</legend>
                             <ul class="shopping_cart light_gray_normal_border border_5px">
                             </ul>
-                            <button class="buy_product_button button_shadow border_5px">획득</button>
-                            <input type="hidden" value="0" data-name="Original_Cola" data-price="1000">
-                            <input type="hidden" value="0" data-name="Violet_Cola" data-price="1000">
-                            <input type="hidden" value="0" data-name="Yellow_Cola" data-price="1000">
-                            <input type="hidden" value="0" data-name="Cool_Cola" data-price="1000">
-                            <input type="hidden" value="0" data-name="Green_Cola" data-price="1000">
-                            <input type="hidden" value="0" data-name="Orange_Cola" data-price="1000">
+                            <button class="buy_product_button border_5px">획득</button>
                         </fieldset>
                     </form>
 
                 </section>
-                <section class="vending_machine_components right_side">
+                <section class="components user_info">
                     <header>
                         <h3 class="blind">Purchase List</h3>
                     </header>
@@ -108,15 +60,8 @@
                     </div>
                     <div class="purchased_products text_center border_10px">
                         <p class="purchased_products_title">획득한 음료</p>
-                        <ul class="shopping_cart light_gray_normal_border border_5px">
-                        </ul>
+                        <ul class="shopping_cart light_gray_normal_border border_5px"></ul>
                         <p class="money_info border_5px">0</p>
-                        <input type="hidden" value="0" data-name="Original_Cola" data-price="1000">
-                        <input type="hidden" value="0" data-name="Violet_Cola" data-price="1000">
-                        <input type="hidden" value="0" data-name="Yellow_Cola" data-price="1000">
-                        <input type="hidden" value="0" data-name="Cool_Cola" data-price="1000">
-                        <input type="hidden" value="0" data-name="Green_Cola" data-price="1000">
-                        <input type="hidden" value="0" data-name="Orange_Cola" data-price="1000">
                     </div>
                 </section>
             </div>
