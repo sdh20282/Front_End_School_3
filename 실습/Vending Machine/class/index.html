@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Virtual Vending Machine">
+    <title>Vending Machine</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <header>
+        <h1 class="blind">온라인 편의점</h1>
+    </header>
+    <main>
+        <section class="section">
+            <header class="vending_machine_title">
+                <h2 class="blind">콜라 자판기</h2>
+                <img class="title_logo" src="./assets/images/Logo.png" alt="로고 이미지입니다.">
+            </header>
+            <div class="wrapper">
+                <section class="vending_machine components border_10px">
+                    <header>
+                        <h3 class="blind">콜라 구매</h3>
+                    </header>
+                    <ul class="product_list"></ul>
+                    <form action="index.html" class="user_input">
+                        <fieldset class="balance_change">
+                            <legend class="blind">잔액 반환</legend>
+                            <p class="money_info border_5px">0</p>
+                            <button class="change_button light_gray_normal_border border_5px">거스름돈 반환</button>
+                        </fieldset>
+
+                        <fieldset class="insert_money">
+                            <legend class="blind">입금</legend>
+                            <label for="deposit" class="blind">입금할 금액 입력</label>
+                            <input id="deposit" class="deposit light_gray_normal_border border_5px" type="number"
+                                placeholder="입금액 입력">
+                            <button class="deposit_button light_gray_normal_border border_5px">입금</button>
+                        </fieldset>
+
+                        <fieldset class="to_purchase">
+                            <legend class="blind">장바구니</legend>
+                            <ul class="shopping_cart light_gray_normal_border border_5px">
+                            </ul>
+                            <button class="buy_product_button border_5px">획득</button>
+                        </fieldset>
+                    </form>
+
+                </section>
+                <section class="components user_info">
+                    <header>
+                        <h3 class="blind">Purchase List</h3>
+                    </header>
+                    <div class="total_amount border_10px">
+                        <p class="money_info border_5px">25,000</p>
+                    </div>
+                    <div class="purchased_products text_center border_10px">
+                        <p class="purchased_products_title">획득한 음료</p>
+                        <ul class="shopping_cart light_gray_normal_border border_5px"></ul>
+                        <p class="money_info border_5px">0</p>
+                    </div>
+                </section>
+            </div>
+        </section>
+    </main>
+    <footer></footer>
+
+    <script type="module" src="./js/index.mjs"></script>
+</body>
+
+</html>

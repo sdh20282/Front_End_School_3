@@ -1,0 +1,417 @@
+/* Font */
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap');
+
+/* Initialize */
+
+:root {
+    --light_violet: #EAE8FE;
+    --blue_violet: #6327FE;
+    --light_gray: #B5B5B6;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 10px;
+}
+
+body {
+    background-color: var(--light_violet);
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 500;
+}
+
+button {
+    cursor: pointer;
+    background-color: white;
+    box-shadow: 0 0 0.1rem 0.1rem var(--light_gray);
+    box-sizing: border-box;
+}
+
+.blind {
+    position: absolute;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+}
+
+.light_gray_normal_border {
+    border: 0.1rem solid var(--light_gray);
+}
+
+.border_10px {
+    border-radius: 1rem;
+}
+
+.border_5px {
+    border-radius: 0.5rem;
+}
+
+
+/* Section */
+
+.section {
+    width: 74.8rem;
+    margin: 0 auto;
+    margin-bottom: 17.1rem;
+}
+
+/* Section Header */
+
+.section .vending_machine_title {
+    margin-bottom: 6.7rem;
+    text-align: center;
+}
+
+.section .vending_machine_title .title_logo {
+    width: 38.6rem;
+}
+
+
+/* Vending Machine */
+
+.wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+.wrapper .components {
+    width: 36rem;
+}
+
+/* share */
+
+/* share - balance */
+
+.product_name {
+    display: block;
+    font-size: 0.9rem;
+}
+
+.money_info {
+    grid-area: balance;
+    background-color: var(--light_violet);
+    padding-right: 1rem;
+    text-align: right;
+    position: relative;
+}
+
+.money_info::before {
+    content: ' ';
+    position: absolute;
+    left: 1rem;
+}
+
+.money_info::after {
+    content: ' 원';
+}
+
+/* share - shopping cart */
+
+.shopping_cart {
+    background-color: var(--light_violet);
+    overflow-y: scroll;
+    padding: 1rem 0.6rem 1rem 1.1rem;
+    text-align: center;
+}
+
+.shopping_cart::-webkit-scrollbar {
+    width: 1.2rem;
+}
+
+.shopping_cart::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+.shopping_cart::-webkit-scrollbar-thumb {
+    background-color: white;
+    border-radius: 10rem;
+    background-clip: padding-box;
+    border: 0.4rem solid transparent;
+}
+
+.shopping_cart::-webkit-scrollbar-button {
+    width: 0;
+    height: 0;
+}
+
+.shopping_cart .selected_product {
+    background-color: white;
+    height: 4.6rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.6rem 0.8rem 0.6rem 1rem;
+}
+
+.shopping_cart .selected_product .selected_product_image {
+    display: flex;
+    align-items: center;
+}
+
+.shopping_cart .selected_product .selected_product_image img {
+    width: 1.8rem;
+    height: 3.3rem;
+    margin-right: 1rem;
+}
+
+.shopping_cart .selected_product .selected_product_count {
+    display: inline-block;
+    width: 3rem;
+    height: 3rem;
+    line-height: 2.6rem;
+    font-size: 1.4rem;
+}
+
+.shopping_cart .selected_product + .selected_product {
+    margin-top: 0.6rem;
+}
+
+/* Vending Machine - Left Side */
+
+.wrapper .vending_machine {
+    background-color: white;
+    padding: 3.1rem 2.7rem 2.8rem;
+}
+
+/* Products */
+
+.vending_machine .product_list {
+    display: flex;
+    flex-wrap: wrap;
+    height: 28.4rem;
+    margin-bottom: 0.8rem;
+    justify-content: space-between;
+    padding: 0.1rem;
+    overflow-y: scroll;
+}
+
+.vending_machine .product_list::-webkit-scrollbar {
+    width: 0;
+}
+
+
+.vending_machine .product_list .product {
+    width: 9.4rem;
+    height: 13rem;
+    padding: 1.1rem 0 0.9rem;
+    margin-bottom: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.product_list .product img {
+    width: 3.6rem;
+}
+
+.product_list .product .product_price {
+    width: 7rem;
+    height: 2.2rem;
+    border-radius: 1.1rem;
+    background-color: var(--blue_violet);
+    display: inline-block;
+    font-size: 1.2rem;
+    color: white;
+    line-height: 2.2rem;
+}
+
+.product_list .product .product_price::after {
+    content: '원';
+}
+
+/* .product_list .product:hover {
+    border: 0.3rem solid var(--blue_violet);
+} */
+
+.vending_machine .product_list .selected {
+    outline: 0.3rem solid var(--blue_violet);
+}
+
+.vending_machine .product_list .sold_out {
+    position: relative;
+    overflow: hidden;
+    border: 0;
+}
+
+.vending_machine .product_list .sold_out::after {
+    content: ' ';
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    background-image: url(../assets/images/Sold_Out.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 6.2rem;
+}
+
+/* user_input */
+
+.vending_machine .user_input {
+    font-size: 1.3rem;
+}
+
+/* Balance & Change */
+
+.vending_machine .user_input .balance_change {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas:
+    'balance    balance    change';
+    column-gap: 1.2rem;
+    line-height: 3rem;
+    margin-bottom: 1.2rem;
+}
+
+.vending_machine .user_input .balance_change .money_info::before {
+    content: '잔액 :';
+}
+
+.vending_machine .user_input .balance_change .change_button {
+    grid-area: change;
+}
+
+/* Insert Money */
+
+.vending_machine .user_input .insert_money {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas:
+    'deposit    deposit    insert';
+    column-gap: 1.2rem;
+    line-height: 3rem;
+    margin-bottom: 1.2rem;
+}
+
+.vending_machine .user_input .insert_money .deposit {
+    grid-area: deposit;
+    padding: 0 0.6rem;
+}
+
+.vending_machine .user_input .insert_money .deposit::placeholder {
+    opacity: 60%;
+}
+
+.vending_machine .user_input .insert_money .deposit_button {
+    grid-area: insert;
+}
+
+/* Product List & Get Products */
+
+.vending_machine .user_input .to_purchase {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas:
+    'cart    cart    get';
+    column-gap: 1.2rem;
+    height: 10.6rem;
+}
+
+.vending_machine .user_input .shopping_cart {
+    grid-area: cart;
+}
+
+.vending_machine .buy_product_button {
+    grid-area: get;
+    width: 100%;
+    background-color: var(--blue_violet);
+    color: white;
+    font-weight: 700;
+    font-size: 13px;
+}
+
+/* Vending Machine - Right Side */
+
+.wrapper .user_info {
+    display: flex;
+    flex-direction: column;
+}
+
+.user_info .total_amount {
+    background-color: white;
+    padding: 0.9rem 2.7rem;
+    font-size: 1.4rem;
+    line-height: 3.2rem;
+    margin-bottom: 2rem;
+}
+
+.user_info .total_amount .money_info::before {
+    content: '소지금 :';
+}
+
+/* purchased list */
+
+.user_info .purchased_products {
+    background-color: white;
+    height: 47.5rem;
+    padding: 2.4rem 2.7rem 2.6rem;
+    text-align: center;
+} 
+
+.user_info .purchased_products .purchased_products_title {
+    font-size: 1.4rem;
+    font-weight: 700;
+    line-height: 2rem;
+    display: inline-block;
+    margin-bottom: 1.3rem;
+} 
+
+.user_info .purchased_products .shopping_cart {
+    height: 36.4rem;
+    margin-bottom: 0.6rem;
+}
+
+.user_info .purchased_products .money_info {
+    font-size: 1.2rem;
+    line-height: 2rem;
+    float: right;
+    background-color: white;
+    position: static;
+    padding-right: 0;
+}
+
+.user_info .purchased_products .money_info::before {
+    content: '총금액 : ';
+    position: static;
+}
+
+/* media */
+
+@media (max-width: 780px) {
+    body {
+        background-color: white;
+    }
+
+    .section {
+        width: 36rem;
+        margin-bottom: 0;
+    }
+    
+    .section .vending_machine_title {
+        margin-bottom: -1.3rem;
+    }
+    
+    .section .vending_machine_title .title_logo {
+        width: 16.6rem;
+    }
+    
+    .wrapper {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .wrapper .product_list .sold_out::after {
+        background-position: center top 28%;
+    }
+    
+    .wrapper .user_info {
+        margin-top: -1.4rem;
+    }
+}
