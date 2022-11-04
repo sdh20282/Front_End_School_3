@@ -98,14 +98,14 @@ button {
     height: 64px;
     border-radius: 33px;
     box-shadow: 0 0 1px 0 #666;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     background-color: #FCEE21;
     font-family: 'GmarketSansBold';
     font-size: 24px;
     color: #5B2386;
     padding: 5px 40px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     gap: 5px;
 }
 

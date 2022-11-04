@@ -63,23 +63,15 @@ function initProblemToShow() {
 function updateProblemToShow() {
     problemSelected.length = 0;
     problemToShow.length = 0;
-    let existSelected = false;
 
     $difficultyBtnList.forEach((button, index) => {
         if (button.classList.contains('selected')) {
             problemSelected.push(...problemList[index]);
-            existSelected = true;
         }
     });
 
-    if (!existSelected) {
+    if (!!!problemSelected.length) {
         initProblemToShow();
-
-        for (const key in problemList) {
-            const problems = problemList[key];
-    
-            problemToShow.push(...problems);
-        }
     } else {
         problemToShow.push(...problemSelected);
         displayProblems();
@@ -160,8 +152,7 @@ $difficultyBtnList.forEach((button) => {
 // clear input
 $resetBtn.addEventListener('click', (event) => {
     $userInput.value = '';
-    initProblemToShow();
-    displayProblems();
+    updateProblemToShow();
 });
 
 // remove default form action
