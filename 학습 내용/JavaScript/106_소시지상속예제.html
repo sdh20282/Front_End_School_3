@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 소시지 상속
+        class Sausage {
+            constructor(el1, el2) {
+                this.inside1 = el1;
+                this.inside2 = el2;
+            }
+
+            taste() {
+                console.log(`${this.inside1} 와 ${this.inside2} 맛이 난다!`);
+            }
+        }
+
+        class FireSausage extends Sausage {
+            constructor(el1, el2, el3) {
+                super(el1, el2);
+                this.inside3 = el3
+            }
+
+            taste() {
+                console.log(`${this.inside1} 와 ${this.inside2} 와 ${this.inside3} 맛이 난다!`);
+            }
+        }
+    </script>
+</body>
+
+</html>ㄴ

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>리액트 1분만에 추가해보기!</title>
+    </head>
+    <body>
+        <div id="root"></div>
+        <script
+            src="https://unpkg.com/react@17/umd/react.development.js"
+            crossorigin
+        ></script>
+        <script
+            src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"
+            crossorigin
+        ></script>
+        <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+        <script type="text/babel">
+            function Hello() {
+                return <h1>hello world 1</h1>;
+            }
+
+            const Hello2 = <h2>hello world 2</h2>;
+
+            // {}안에는 js코드가 가능합니다.
+            // <Hello2/>의 형태는 작동하지 않습니다.
+            // hello()는 작동하지 않습니다.
+            const app = (
+                <div>
+                    <Hello />
+                    <Hello />
+                    <Hello />
+                    {Hello2}
+                    {Hello2}
+                    {Hello2}
+                    {Hello()}
+                    {Hello()}
+                </div>
+            );
+
+            const domContainer = document.querySelector("#root");
+            ReactDOM.render(app, domContainer);
+        </script>
+    </body>
+</html>

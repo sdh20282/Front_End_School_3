@@ -1,0 +1,11 @@
+body {
+    font-size: 20px;
+    background-color: #fff;
+    color: #fff;
+    display: inline-block;
+}
+
+main {
+    overflow: hidden;
+    display: flex;
+}

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>제코베 스토어 관리자 페이지 CRUD</title>
+    </head>
+    <body>
+        <button id="btn-load">상품불러오기</button>
+
+        <br /><br />
+        <label for="inp-name">상품이름</label>
+        <input id="inp-name" type="text" />
+
+        <br /><br />
+        <label for="inp-price">제품가격</label>
+        <input id="inp-price" type="number" />
+
+        <br /><br />
+        <label for="inp-stock">재고</label>
+        <input id="inp-stock" type="number" />
+
+        <br /><br />
+        <label for="inp-date">출시날짜</label>
+        <input id="inp-date" type="date" />
+
+        <button type="button" id="btn-register">상품등록하기</button>
+
+        <script>
+            // Read
+            const btnLoad = document.querySelector("#btn-load");
+            btnLoad.addEventListener("click", (event) => {
+                // console.log("눌렀다.");
+                fetch("http://localhost:3001/product", {
+                    method: "GET",
+                })
+                    .then((response) => response.json())
+                    .then((data) => {
+                        for (item of data) {
+                            // console.log(i);
+                            const $container =
+                                document.createElement("section");
+                            const $productName = document.createElement("h2");
+                            const $price = document.createElement("p");
+
+                            $productName.innerText = item.productName;
+                            $price.innerText = item.price;
+
+                            $container.appendChild($productName);
+                            $container.appendChild($price);
+
+                            document.body.appendChild($container);
+                        }
+                    });
+            });
+
+            //create
+            const btnRegister = document.querySelector("#btn-register");
+            btnRegister.addEventListener("click", (event) => {
+                // console.log("눌렀다.");
+
+                const productInfo = {
+                    productName: document.querySelector("#inp-name").value,
+                    price: document.querySelector("#inp-price").value,
+                    stockCount: document.querySelector("#inp-stock").value,
+                    viewCount: 0,
+                    pubDate: document.querySelector("#inp-date").value,
+                    modDate: document.querySelector("#inp-date").value,
+                };
+
+                fetch("http://localhost:3001/product", {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify(productInfo),
+                })
+                    .then((response) => response.json())
+                    // .then((data) => console.log(data))
+                    .then((item) => {
+                        const $container = document.createElement("section");
+                        const $productName = document.createElement("h2");
+                        const $price = document.createElement("p");
+
+                        $productName.innerText = item.productName;
+                        $price.innerText = item.price;
+
+                        $container.appendChild($productName);
+                        $container.appendChild($price);
+
+                        document.body.appendChild($container);
+                    });
+            });
+
+            //update
+            // const btnRegister = document.querySelector("#상품등록하기");
+            // btnRegister.addEventListener("click", (event) => {
+            //     // console.log("눌렀다.");
+
+            //     const productInfo = {
+            //         productName: document.querySelector("#productname").value,
+            //         price: document.querySelector("#productprice").value,
+            //         stockCount: document.querySelector("#productstock").value,
+            //         viewCount: 0,
+            //         pubDate: document.querySelector("#productpubdate").value,
+            //         modDate: document.querySelector("#productpubdate").value,
+            //     };
+
+            //     fetch("http://localhost:3001/product", {
+            //         method: "PUT",
+            //         // headers: { "Content-Type": "application/json" },
+            //         // body: JSON.stringify(productInfo),
+            //     });
+            // });
+
+            //delete
+            // const btnRegister = document.querySelector("#상품등록하기");
+            // btnRegister.addEventListener("click", (event) => {
+            //     // console.log("눌렀다.");
+
+            //     const productInfo = {
+            //         productName: document.querySelector("#productname").value,
+            //         price: document.querySelector("#productprice").value,
+            //         stockCount: document.querySelector("#productstock").value,
+            //         viewCount: 0,
+            //         pubDate: document.querySelector("#productpubdate").value,
+            //         modDate: document.querySelector("#productpubdate").value,
+            //     };
+
+            //     fetch("http://localhost:3001/product", {
+            //         method: "DELETE",
+            //         // headers: { "Content-Type": "application/json" },
+            //         // body: JSON.stringify(productInfo),
+            //     });
+            // });
+        </script>
+    </body>
+</html>

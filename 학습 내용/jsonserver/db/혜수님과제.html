@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>제코베 스토어 관리자 페이지 CRUD</title>
+        <style>
+            input {
+                line-height: 2rem;
+                padding: 0.25rem 0.75rem;
+                border: 1px solid #d1d5db;
+                border-radius: 4px;
+                background-color: #f3f4f6;
+            }
+
+            button {
+                padding: 0.5rem 2rem;
+                border: none;
+                border-radius: 4px;
+                color: #fff;
+                background-color: #4d85c5;
+                cursor: pointer;
+            }
+
+            div {
+                display: grid;
+                gap: 8px;
+                grid-template-columns: 1fr 2fr;
+                max-width: 700px;
+                margin: 20px auto 80px;
+            }
+
+            section {
+                position: relative;
+                max-width: 700px;
+                padding: 8px 0;
+                margin: 0px auto;
+            }
+
+            section + section {
+                margin-top: 8px;
+                border-top: 1px solid #d1d5db;
+            }
+
+            section h2 {
+                font-size: 1.2rem;
+            }
+
+            section input {
+                display: block;
+                width: 500px;
+                line-height: 20px;
+                margin: 8px 0;
+            }
+
+            section button:nth-of-type(1) {
+                position: absolute;
+                top: 16px;
+                right: 4px;
+            }
+
+            section button:nth-of-type(2) {
+                position: absolute;
+                bottom: 12px;
+                right: 4px;
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <label for="inp-name">상품이름</label>
+            <input id="inp-name" type="text" />
+
+            <label for="inp-price">제품가격</label>
+            <input id="inp-price" type="number" />
+
+            <label for="inp-stock">재고</label>
+            <input id="inp-stock" type="number" />
+
+            <label for="inp-date">출시날짜</label>
+            <input id="inp-date" type="date" />
+
+            <button id="btn-load">상품불러오기</button>
+            <button type="button" id="btn-register">상품등록하기</button>
+        </div>
+
+        <script>
+            // 상품 리스트 아이템 만들기
+            const createListItem = (item) => {
+                const $container = document.createElement("section");
+                const $productName = document.createElement("h2");
+                const $price = document.createElement("p");
+                const $btnDelete = document.createElement("button");
+                const $btnUpdate = document.createElement("button");
+
+                $productName.innerText = item.productName;
+                $price.innerText = item.price;
+                $btnDelete.innerText = "삭제하기";
+                $btnUpdate.innerText = "수정하기";
+
+                $container.appendChild($productName);
+                $container.appendChild($price);
+                $container.appendChild($btnDelete);
+                $container.appendChild($btnUpdate);
+
+                document.body.appendChild($container);
+
+                $btnDelete.addEventListener("click", () =>
+                    deleteItem(item.id, $container)
+                );
+                $btnUpdate.addEventListener("click", () =>
+                    updateItem(item, $container)
+                );
+            };
+
+            // Read
+            const btnLoad = document.querySelector("#btn-load");
+            btnLoad.addEventListener("click", (event) => {
+                fetch("http://localhost:3001/product", {
+                    method: "GET",
+                })
+                    .then((response) => response.json())
+                    .then((data) => {
+                        for (item of data) {
+                            createListItem(item);
+                        }
+                    });
+            });
+
+            //create
+            const btnRegister = document.querySelector("#btn-register");
+            btnRegister.addEventListener("click", (event) => {
+                const productInfo = {
+                    productName: document.querySelector("#inp-name").value,
+                    price: document.querySelector("#inp-price").value,
+                    stockCount: document.querySelector("#inp-stock").value,
+                    viewCount: 0,
+                    pubDate: document.querySelector("#inp-date").value,
+                    modDate: document.querySelector("#inp-date").value,
+                };
+
+                fetch("http://localhost:3001/product", {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify(productInfo),
+                })
+                    .then((response) => response.json())
+                    .then((item) => {
+                        createListItem(item);
+                    });
+            });
+
+            //update
+            const updateItem = (item, container) => {
+                const h2 = container.querySelector("h2");
+                const p = container.querySelector("p");
+
+                // 수정할 내용을 입력할 input 요소 생성
+                if (!container.querySelector("input")) {
+                    const productName = document.createElement("input");
+                    const price = document.createElement("input");
+
+                    productName.type = "text";
+                    price.type = "number";
+
+                    productName.value = h2.innerText;
+                    price.value = p.innerText;
+
+                    h2.style.display = "none";
+                    p.style.display = "none";
+
+                    container.prepend(price);
+                    container.prepend(productName);
+                } else {
+                    // input에 작성한 수정 내용 적용
+                    const inputName =
+                        container.querySelector("input[type=text]");
+                    const inputPrice =
+                        container.querySelector("input[type=number]");
+                    const updateInfo = {
+                        productName: inputName.value,
+                        price: inputPrice.value,
+                    };
+
+                    fetch(`http://localhost:3001/product/${item.id}`, {
+                        method: "PUT",
+                        headers: { "Content-Type": "application/json" },
+                        body: JSON.stringify(updateInfo),
+                    }).then(() => {
+                        h2.style.display = "block";
+                        p.style.display = "block";
+
+                        h2.textContent = updateInfo.productName;
+                        p.textContent = updateInfo.price;
+
+                        inputName.remove();
+                        inputPrice.remove();
+                    });
+                }
+            };
+
+            //delete
+            const deleteItem = (id, container) => {
+                fetch(`http://localhost:3001/product/${id}`, {
+                    method: "DELETE",
+                }).then(() => {
+                    container.remove();
+                });
+            };
+        </script>
+    </body>
+</html>
