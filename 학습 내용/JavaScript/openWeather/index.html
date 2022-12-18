@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+        }
+
+        #weather_info {
+            overflow: hidden;
+            position: relative;
+            border-radius: 10px;
+            margin: 20px;
+            padding: 10px;
+            background: url("images/sky.jpeg") no-repeat;
+            background-size: cover;
+        }
+
+        #weather_info h1 {
+            background-color: rgba(130, 224, 170, 0.6);
+            padding: 10px;
+            margin-bottom: 20px;
+            text-align: center;
+            color: white;
+            border-radius: 10px;
+        }
+
+        #weather_info section {
+            float: left;
+            color: #344D67;
+            padding: 10px 20px;
+        }
+
+        #weather_info section+section {
+            float: right;
+        }
+
+        section h2 {
+            font-size: 2em;
+            color: white;
+        }
+
+        #weather_info .cont_temp {
+            display: flex;
+            gap: 20px;
+            margin-top: 10px;
+        }
+
+        .cont_temp span {
+            display: block;
+            font-size: 1.5em;
+        }
+
+        section figure {
+            width: 80px;
+            height: 80px;
+        }
+
+        section figure img {
+            display: block;
+            width: 100%;
+        }
+
+        section .temp {
+            font-size: 3.4em;
+        }
+
+        /* 로딩이미지 */
+        #weather_info .load_img {
+            position: absolute;
+            display: none;
+            width: 100px;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 10;
+        }
+    </style>
+</head>
+
+<body>
+    <article id="weather_info">
+        <h1 class="city">Seoul / KR</h1>
+        <section>
+            <h2 class="weather_condition">Clear</h2>
+            <figure class="icon"></figure>
+        </section>
+        <section>
+            <h2>현재 온도</h2>
+            <div class="cont_temp">
+                <strong class="temp">0</strong>
+                <div>
+                    <span class="temp_max">최대 : 0</span>
+                    <span class="temp_min">최저 : 0</span>
+                </div>
+            </div>
+        </section>
+        <img class="load_img" src="images/loading.gif" alt="">
+    </article>
+
+    <script>
+        // const url = "https://api.openweathermap.org/data/2.5/weather?q=seoul&appid=c40e3bb299d82217b3e7015d58fbfc40";
+
+        const weatherMain = document.querySelector("#weather_info"),
+            imgLoading = weatherMain.querySelector('.load_img'),
+            titCity = weatherMain.querySelector('.city'),
+            weatherIcon = weatherMain.querySelector('.icon'),
+            weatherCondition = weatherMain.querySelector('.weather_condition'),
+            weatherTemp = weatherMain.querySelector('.temp'),
+            tempMin = weatherMain.querySelector('.temp_min'),
+            tempMax = weatherMain.querySelector('.temp_max');
+
+
+        imgLoading.style.display = "block";
+        navigator.geolocation.getCurrentPosition(success, error);
+
+        function success(position) {
+            const lat = position.coords.latitude;
+            const lon = position.coords.longitude;
+
+            const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=c40e3bb299d82217b3e7015d58fbfc40`;
+
+            callWeather(url);
+        }
+
+        function error() {
+            alert('사용자의 위치를 찾을 수 없습니다.');
+        }
+
+        async function callWeather(url) {
+
+            const response = await fetch(url);
+
+            if (response.ok) {
+                let data = await response.json();
+                console.log(data);
+                render(data);
+            } else {
+                alert('Error : ', response.status);
+            }
+        }
+
+        function render(data) {
+            const sys = data.sys, // 국가명
+                city = data.name,
+                main = data.main,
+                weather = data.weather[0],
+                wmain = weather.main,
+                icon = weather.icon,
+                country = sys.country,
+                temp = main.temp,
+                temp_min = main.temp_min,
+                temp_max = main.temp_max,
+                icon_url = `http://openweathermap.org/img/wn/${icon}.png`;
+
+            titCity.textContent = `${city} / ${country}`;
+            weatherIcon.innerHTML = `<img src="${icon_url}" alt="">`;
+            weatherCondition.textContent = wmain;
+            weatherTemp.innerHTML = `${parseInt(temp - 273.15)} &deg;`;
+            tempMin.innerHTML = `${parseInt(temp_min - 273.15)} &deg;`;
+            tempMax.innerHTML = `${parseInt(temp_max - 273.15)} &deg;`;
+            // 켈빈 값 : K
+            // 0K : 절대영도
+            // -273.15C : 절대영도 (섭씨)
+            // 1K
+            // -272.15C
+            imgLoading.style.display = "none";
+        }
+
+        // callWeather(url);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .layout-grid {
+            display: grid;
+        }
+
+        .layout-flex {
+            display: flex;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container"></div>
+    <script>
+        const container = document.querySelector('.container');
+        if (container.style.grid !== undefined) {
+            container.classList.add('layout-grid');
+        } else {
+            container.classList.add('layout-flex');
+        }
+    </script>
+
+</body>
+
+</html>

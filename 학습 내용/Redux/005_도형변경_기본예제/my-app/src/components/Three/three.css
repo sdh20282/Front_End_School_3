@@ -1,0 +1,8 @@
+.three {
+    border: 5px solid black;
+    border-radius: 0px;
+    padding: 10px;
+    width: 100px;
+    height: 200px;
+    display: inline-block;
+}

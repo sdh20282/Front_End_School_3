@@ -1,0 +1,105 @@
+.cont {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    max-width: 960px;
+    margin: 60px auto;
+    padding: 0 30px
+}
+
+.side_menu form {
+    padding: 20px;
+    background: teal;
+    border-radius: 10px;
+}
+
+.side_menu fieldset {
+    border: none;
+}
+
+.side_menu legend {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.side_menu input {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-top: 8px;
+    border: 0;
+    border-radius: 4px;
+    color: #555;
+    font-size: 1em;
+}
+
+.side_menu label {
+    margin: 20px auto;
+    display: block;
+    color: #fff;
+}
+
+.side_menu textarea {
+    height: 200px;
+    width: 100%;
+    border-radius: 4px;
+}
+
+.side_menu button {
+    display: block;
+    width: 100%;
+    border: 2px solid #fff;
+    margin-top: 20px;
+    padding: 6px 12px;
+    color: #fff;
+    background-color: transparent;
+    font-size: 1em;
+    border-radius: 4px;
+    cursor: pointer;
+
+}
+
+.content_list {
+    margin: 0;
+}
+
+.content_list li {
+    border: 1px solid #f2f2f2;
+    box-shadow: 3px 3px 5px rgba(50, 50, 50, 0.1);
+    padding: 30px;
+    position: relative;
+    overflow: hidden;
+    border-left: 4px solid teal;
+}
+
+.content_list li+li {
+    margin: 30px auto;
+}
+
+.content_list .title {
+    flex-shrink: 0;
+    margin-right: 20px;
+    color: #777;
+    font-size: 1.4em;
+}
+
+.content_list .text {
+    margin-right: 40px;
+    color: #777;
+    font-weight: bold;
+    font-size: 1.6em;
+    word-break: break-all;
+}
+
+.content_list button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: teal;
+    color: #fff;
+    border: none;
+    padding: 12px 8px;
+    line-height: 0;
+    cursor: pointer;
+}

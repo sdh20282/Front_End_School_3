@@ -1,0 +1,11 @@
+{
+  "name": "hojun",
+  "version": "1.0.0",
+  "description": "이호준이 만든 패키지",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "leehojun",
+  "license": "MIT"
+}
